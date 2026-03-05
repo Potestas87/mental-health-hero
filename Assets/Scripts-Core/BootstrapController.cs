@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using Firebase;
 using Firebase.Auth;
@@ -33,27 +34,48 @@ public class BootstrapController : MonoBehaviour
 
     private async Task SignInAnonymouslyIfNeededAsync()
     {
-        if (Auth == null) return;
-
-        if (Auth.CurrentUser != null)
+        if (Auth == null)
         {
-            User = Auth.CurrentUser;
-            Debug.Log("Already signed in: " + User.UserId);
             return;
         }
 
-        var result = await Auth.SignInAnonymouslyAsync();
-        User = result.User;
-        Debug.Log("Signed in anonymously: " + User.UserId);
+        try
+        {
+            if (Auth.CurrentUser != null)
+            {
+                User = Auth.CurrentUser;
+                Debug.Log("Already signed in: " + User.UserId);
+                return;
+            }
+
+            var result = await Auth.SignInAnonymouslyAsync();
+            User = result.User;
+            Debug.Log("Signed in anonymously: " + User.UserId);
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError("Anonymous sign-in failed: " + ex);
+        }
     }
 
     private async Task RouteAsync()
     {
-        if (Db == null || User == null) return;
+        if (Db == null || User == null)
+        {
+            SceneManager.LoadScene("OnboardingScene");
+            return;
+        }
 
-        var userDoc = Db.Collection("users").Document(User.UserId);
-        var snap = await userDoc.GetSnapshotAsync();
-
-        SceneManager.LoadScene(snap.Exists ? "HomeScene" : "OnboardingScene");
+        try
+        {
+            var userDoc = Db.Collection("users").Document(User.UserId);
+            var snap = await userDoc.GetSnapshotAsync();
+            SceneManager.LoadScene(snap.Exists ? "HomeScene" : "OnboardingScene");
+        }
+        catch (Exception ex)
+        {
+            Debug.LogWarning("RouteAsync fallback to Onboarding: " + ex.Message);
+            SceneManager.LoadScene("OnboardingScene");
+        }
     }
 }
