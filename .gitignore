@@ -33,3 +33,5 @@ Thumbs.db
 
 # Firebase desktop binaries exceed GitHub size limit
 Assets/Firebase/Plugins/x86_64/
+Assets/GoogleService-Info.plist
+Assets/StreamingAssets/google-services-desktop.json
