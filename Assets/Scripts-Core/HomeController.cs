@@ -65,6 +65,11 @@ public class HomeController : MonoBehaviour
         SceneManager.LoadScene("TaskScene");
     }
 
+    public void GoToDungeonScene()
+    {
+        SceneManager.LoadScene("DungeonScene");
+    }
+
     private void BindUi()
     {
         if (classText != null) classText.text = "Class: " + CurrentClass;
