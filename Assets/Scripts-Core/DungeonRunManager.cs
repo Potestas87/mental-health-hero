@@ -19,16 +19,19 @@ public class DungeonRunManager : MonoBehaviour
     public int totalFloors = 3;
     public int maxRunsPerDay = 2;
     public bool enforceDailyLives = true;
+    public bool useAuthoritativeFunctions;
 
     [Header("Player Reference")]
     public HeroController2D player;
     public DungeonSpawner spawner;
+    public CloudFunctionClient functionClient;
 
     private bool _runActive;
     private bool _bossDefeated;
     private bool _resultSaved;
     private int _floorsCleared;
     private Timestamp _runStartedAt;
+    private string _activeRunId;
 
     private FirebaseAuth _auth;
     private FirebaseFirestore _db;
@@ -56,13 +59,28 @@ public class DungeonRunManager : MonoBehaviour
 
         try
         {
-            var uid = _user.UserId;
-            var userRef = _db.Collection("users").Document(uid);
-            var dayKey = DateTime.Now.ToString("yyyy_MM_dd");
-            var dailyRef = userRef.Collection("daily_state").Document(dayKey);
-
-            if (enforceDailyLives)
+            if (useAuthoritativeFunctions)
             {
+                if (functionClient == null)
+                {
+                    SetStatus("CloudFunctionClient is not assigned.");
+                    return;
+                }
+
+                var response = await functionClient.StartRunAsync();
+                _activeRunId = response.TryGetValue("runId", out var runIdObj) ? runIdObj?.ToString() : null;
+                if (string.IsNullOrEmpty(_activeRunId))
+                {
+                    SetStatus("startRun response missing runId.");
+                    return;
+                }
+            }
+            else if (enforceDailyLives)
+            {
+                var uid = _user.UserId;
+                var userRef = _db.Collection("users").Document(uid);
+                var dayKey = DateTime.Now.ToString("yyyy_MM_dd");
+                var dailyRef = userRef.Collection("daily_state").Document(dayKey);
                 var dailySnap = await dailyRef.GetSnapshotAsync();
                 var dailyData = dailySnap.Exists ? dailySnap.ToDictionary() : new Dictionary<string, object>();
                 var runsUsed = ReadInt(dailyData, "runsUsed", 0);
@@ -86,15 +104,17 @@ public class DungeonRunManager : MonoBehaviour
             _floorsCleared = 0;
             _runStartedAt = Timestamp.GetCurrentTimestamp();
 
+            var activeClass = await LoadPlayerClassAsync();
             if (player != null)
             {
+                player.ApplyClassProfile(activeClass);
                 player.ResetHealthToFull();
                 player.enabled = true;
             }
 
             UpdateFloorHud();
             UpdateHpHud();
-            SetStatus("Run started.");
+            SetStatus("Run started. Class: " + activeClass);
 
             if (spawner != null)
             {
@@ -206,6 +226,29 @@ public class DungeonRunManager : MonoBehaviour
 
         try
         {
+            if (useAuthoritativeFunctions)
+            {
+                if (functionClient == null)
+                {
+                    SetStatus("CloudFunctionClient is not assigned.");
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(_activeRunId))
+                {
+                    SetStatus("No active runId for endRun.");
+                    return;
+                }
+
+                var response = await functionClient.EndRunAsync(_activeRunId, result, _floorsCleared, _bossDefeated);
+                var xpAwardedFromServer = CloudFunctionClient.ReadInt(response, "xpAwarded", 0);
+                var shardsAwardedFromServer = CloudFunctionClient.ReadInt(response, "shardsAwarded", 0);
+                var alreadyEnded = CloudFunctionClient.ReadBool(response, "alreadyEnded", false);
+                SetStatus("Run " + result + (alreadyEnded ? " (already ended)" : "") + " | +" + xpAwardedFromServer + " XP, +" + shardsAwardedFromServer + " shards");
+                _activeRunId = null;
+                return;
+            }
+
             var uid = _user.UserId;
             var userRef = _db.Collection("users").Document(uid);
             var dayKey = DateTime.Now.ToString("yyyy_MM_dd");
@@ -273,6 +316,7 @@ public class DungeonRunManager : MonoBehaviour
             });
 
             SetStatus("Run " + result + " | +" + xpAwarded + " XP, +" + shardsAwarded + " shards");
+            _activeRunId = null;
         }
         catch (Exception ex)
         {
@@ -341,6 +385,34 @@ public class DungeonRunManager : MonoBehaviour
         }
 
         SetStatus("Floor cleared: " + _floorsCleared + "/" + totalFloors + " via " + source + ". Floor " + nextFloor + " started.");
+    }
+
+    private async Task<string> LoadPlayerClassAsync()
+    {
+        if (_db == null || _user == null)
+        {
+            return "warrior";
+        }
+
+        try
+        {
+            var userSnap = await _db.Collection("users").Document(_user.UserId).GetSnapshotAsync();
+            if (!userSnap.Exists)
+            {
+                return "warrior";
+            }
+
+            if (userSnap.TryGetValue<string>("class", out var classId) && !string.IsNullOrWhiteSpace(classId))
+            {
+                return classId.Trim().ToLowerInvariant();
+            }
+        }
+        catch (Exception ex)
+        {
+            Debug.LogWarning("LoadPlayerClassAsync failed, defaulting to warrior: " + ex.Message);
+        }
+
+        return "warrior";
     }
 
     private async Task<bool> EnsureFirebaseReadyAsync()

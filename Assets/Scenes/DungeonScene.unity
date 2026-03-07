@@ -731,6 +731,7 @@ GameObject:
   m_Component:
   - component: {fileID: 511736376}
   - component: {fileID: 511736375}
+  - component: {fileID: 511736377}
   m_Layer: 0
   m_Name: DungeonManager
   m_TagString: Untagged
@@ -756,8 +757,10 @@ MonoBehaviour:
   totalFloors: 3
   maxRunsPerDay: 2
   enforceDailyLives: 1
+  useAuthoritativeFunctions: 0
   player: {fileID: 884719653}
   spawner: {fileID: 2044488357}
+  functionClient: {fileID: 511736377}
 --- !u!4 &511736376
 Transform:
   m_ObjectHideFlags: 0
@@ -773,6 +776,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &511736377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511736374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fab417c293b64453b483cd189d523ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CloudFunctionClient
 --- !u!1 &717065704
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ public class HeroController2D : MonoBehaviour
     public int maxHp = 100;
     public int attackDamage = 20;
     public float attackRange = 1.2f;
+    public float attackCooldownSeconds = 0.3f;
     public LayerMask enemyLayerMask;
 
     [Header("Optional References")]
@@ -17,9 +18,11 @@ public class HeroController2D : MonoBehaviour
     private Rigidbody2D _rb;
     private Vector2 _moveInput;
     private int _currentHp;
+    private float _nextAttackTime;
 
     public int MaxHp => maxHp;
     public int CurrentHp => _currentHp;
+    public string ActiveClass { get; private set; } = "warrior";
 
     private void Awake()
     {
@@ -55,6 +58,13 @@ public class HeroController2D : MonoBehaviour
 
     public void PerformAttack()
     {
+        if (Time.time < _nextAttackTime)
+        {
+            return;
+        }
+
+        _nextAttackTime = Time.time + Mathf.Max(0.05f, attackCooldownSeconds);
+
         var origin = attackOrigin != null ? (Vector2)attackOrigin.position : (Vector2)transform.position;
         var hits = Physics2D.OverlapCircleAll(origin, attackRange, enemyLayerMask);
 
@@ -97,6 +107,40 @@ public class HeroController2D : MonoBehaviour
         {
             runManager.OnPlayerHpChanged(_currentHp, maxHp);
         }
+    }
+
+    public void ApplyClassProfile(string classId)
+    {
+        var normalized = string.IsNullOrEmpty(classId) ? "warrior" : classId.Trim().ToLowerInvariant();
+        ActiveClass = normalized;
+
+        switch (normalized)
+        {
+            case "ranger":
+                maxHp = 90;
+                moveSpeed = 5.2f;
+                attackDamage = 19;
+                attackRange = 1.5f;
+                attackCooldownSeconds = 0.24f;
+                break;
+            case "mage":
+                maxHp = 80;
+                moveSpeed = 4.1f;
+                attackDamage = 16;
+                attackRange = 2.25f;
+                attackCooldownSeconds = 0.2f;
+                break;
+            default:
+                ActiveClass = "warrior";
+                maxHp = 130;
+                moveSpeed = 3.5f;
+                attackDamage = 24;
+                attackRange = 1.15f;
+                attackCooldownSeconds = 0.34f;
+                break;
+        }
+
+        ResetHealthToFull();
     }
 
     private void OnDrawGizmosSelected()
