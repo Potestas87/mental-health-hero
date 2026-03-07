@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Firebase;
@@ -104,17 +105,18 @@ public class DungeonRunManager : MonoBehaviour
             _floorsCleared = 0;
             _runStartedAt = Timestamp.GetCurrentTimestamp();
 
-            var activeClass = await LoadPlayerClassAsync();
+            var profile = await LoadPlayerProfileAsync();
             if (player != null)
             {
-                player.ApplyClassProfile(activeClass);
+                player.ApplyClassProfile(profile.ClassId);
+                player.ApplyUpgradeBonuses(profile.PurchasedNodeIds);
                 player.ResetHealthToFull();
                 player.enabled = true;
             }
 
             UpdateFloorHud();
             UpdateHpHud();
-            SetStatus("Run started. Class: " + activeClass);
+            SetStatus("Run started. Class: " + profile.ClassId + " | Upgrades: " + profile.PurchasedNodeIds.Count);
 
             if (spawner != null)
             {
@@ -387,11 +389,18 @@ public class DungeonRunManager : MonoBehaviour
         SetStatus("Floor cleared: " + _floorsCleared + "/" + totalFloors + " via " + source + ". Floor " + nextFloor + " started.");
     }
 
-    private async Task<string> LoadPlayerClassAsync()
+    private sealed class PlayerProfile
     {
+        public string ClassId = "warrior";
+        public List<string> PurchasedNodeIds = new List<string>();
+    }
+
+    private async Task<PlayerProfile> LoadPlayerProfileAsync()
+    {
+        var profile = new PlayerProfile();
         if (_db == null || _user == null)
         {
-            return "warrior";
+            return profile;
         }
 
         try
@@ -399,20 +408,39 @@ public class DungeonRunManager : MonoBehaviour
             var userSnap = await _db.Collection("users").Document(_user.UserId).GetSnapshotAsync();
             if (!userSnap.Exists)
             {
-                return "warrior";
+                return profile;
             }
 
             if (userSnap.TryGetValue<string>("class", out var classId) && !string.IsNullOrWhiteSpace(classId))
             {
-                return classId.Trim().ToLowerInvariant();
+                profile.ClassId = classId.Trim().ToLowerInvariant();
+            }
+
+            if (userSnap.TryGetValue<List<string>>("purchasedUpgrades", out var purchasedList) && purchasedList != null)
+            {
+                profile.PurchasedNodeIds = purchasedList;
+            }
+            else if (userSnap.TryGetValue<ArrayList>("purchasedUpgrades", out var purchasedArrayList) && purchasedArrayList != null)
+            {
+                var parsed = new List<string>();
+                for (var i = 0; i < purchasedArrayList.Count; i++)
+                {
+                    var value = purchasedArrayList[i]?.ToString();
+                    if (!string.IsNullOrWhiteSpace(value))
+                    {
+                        parsed.Add(value.Trim().ToLowerInvariant());
+                    }
+                }
+
+                profile.PurchasedNodeIds = parsed;
             }
         }
         catch (Exception ex)
         {
-            Debug.LogWarning("LoadPlayerClassAsync failed, defaulting to warrior: " + ex.Message);
+            Debug.LogWarning("LoadPlayerProfileAsync failed, using defaults: " + ex.Message);
         }
 
-        return "warrior";
+        return profile;
     }
 
     private async Task<bool> EnsureFirebaseReadyAsync()

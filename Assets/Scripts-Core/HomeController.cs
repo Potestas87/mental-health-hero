@@ -70,6 +70,11 @@ public class HomeController : MonoBehaviour
         SceneManager.LoadScene("DungeonScene");
     }
 
+    public void GoToUpgradeScene()
+    {
+        SceneManager.LoadScene("UpgradeScene");
+    }
+
     private void BindUi()
     {
         if (classText != null) classText.text = "Class: " + CurrentClass;

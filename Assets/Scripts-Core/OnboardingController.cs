@@ -28,6 +28,7 @@ public class OnboardingController : MonoBehaviour
                 { "xp", 0 },
                 { "skillPoints", 0 },
                 { "shards", 0 },
+                { "purchasedUpgrades", new string[0] },
                 { "createdAt", Timestamp.GetCurrentTimestamp() },
                 { "updatedAt", Timestamp.GetCurrentTimestamp() }
             };

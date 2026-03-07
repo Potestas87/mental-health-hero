@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -139,6 +140,47 @@ public class HeroController2D : MonoBehaviour
                 attackCooldownSeconds = 0.34f;
                 break;
         }
+
+        ResetHealthToFull();
+    }
+
+    public void ApplyUpgradeBonuses(ICollection<string> purchasedNodeIds)
+    {
+        if (purchasedNodeIds == null || purchasedNodeIds.Count == 0)
+        {
+            return;
+        }
+
+        var hpBonus = 0;
+        var damageBonus = 0;
+        var moveSpeedBonus = 0f;
+        var rangeBonus = 0f;
+        var cooldownMultiplier = 1f;
+
+        foreach (var nodeId in purchasedNodeIds)
+        {
+            if (!UpgradeCatalog.TryGetNode(nodeId, out var node))
+            {
+                continue;
+            }
+
+            if (!string.Equals(node.ClassId, ActiveClass, System.StringComparison.OrdinalIgnoreCase))
+            {
+                continue;
+            }
+
+            hpBonus += node.BonusMaxHp;
+            damageBonus += node.BonusAttackDamage;
+            moveSpeedBonus += node.BonusMoveSpeed;
+            rangeBonus += node.BonusAttackRange;
+            cooldownMultiplier *= node.AttackCooldownMultiplier;
+        }
+
+        maxHp = Mathf.Max(1, maxHp + hpBonus);
+        attackDamage = Mathf.Max(1, attackDamage + damageBonus);
+        moveSpeed = Mathf.Max(0.5f, moveSpeed + moveSpeedBonus);
+        attackRange = Mathf.Max(0.4f, attackRange + rangeBonus);
+        attackCooldownSeconds = Mathf.Max(0.05f, attackCooldownSeconds * cooldownMultiplier);
 
         ResetHealthToFull();
     }
