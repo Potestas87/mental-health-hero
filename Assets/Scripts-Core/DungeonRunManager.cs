@@ -16,6 +16,13 @@ public class DungeonRunManager : MonoBehaviour
     public TMP_Text floorText;
     public TMP_Text hpText;
 
+    [Header("Result Panel (Optional)")]
+    public GameObject resultPanel;
+    public TMP_Text resultTitleText;
+    public TMP_Text resultFloorsText;
+    public TMP_Text resultXpText;
+    public TMP_Text resultShardsText;
+
     [Header("Run Settings")]
     public int totalFloors = 3;
     public int maxRunsPerDay = 2;
@@ -32,6 +39,8 @@ public class DungeonRunManager : MonoBehaviour
     private bool _resultSaved;
     private int _floorsCleared;
     private Timestamp _runStartedAt;
+    private DateTime _runStartedUtc;
+    private string _activeClassId = "warrior";
     private string _activeRunId;
 
     private FirebaseAuth _auth;
@@ -40,6 +49,7 @@ public class DungeonRunManager : MonoBehaviour
 
     private void Start()
     {
+        ShowResultPanel(false, string.Empty, 0, 0);
         UpdateFloorHud();
         UpdateHpHud();
     }
@@ -104,8 +114,11 @@ public class DungeonRunManager : MonoBehaviour
             _resultSaved = false;
             _floorsCleared = 0;
             _runStartedAt = Timestamp.GetCurrentTimestamp();
+            ShowResultPanel(false, string.Empty, 0, 0);
 
             var profile = await LoadPlayerProfileAsync();
+            _activeClassId = profile.ClassId;
+            _runStartedUtc = DateTime.UtcNow;
             if (player != null)
             {
                 player.ApplyClassProfile(profile.ClassId);
@@ -117,6 +130,7 @@ public class DungeonRunManager : MonoBehaviour
             UpdateFloorHud();
             UpdateHpHud();
             SetStatus("Run started. Class: " + profile.ClassId + " | Upgrades: " + profile.PurchasedNodeIds.Count);
+            AnalyticsService.LogDungeonRunStart(_activeClassId);
 
             if (spawner != null)
             {
@@ -214,6 +228,7 @@ public class DungeonRunManager : MonoBehaviour
 
         _runActive = false;
         _resultSaved = true;
+        var runDurationSec = _runStartedUtc == default ? 0 : Mathf.Max(0, Mathf.RoundToInt((float)(DateTime.UtcNow - _runStartedUtc).TotalSeconds));
 
         if (spawner != null)
         {
@@ -247,6 +262,8 @@ public class DungeonRunManager : MonoBehaviour
                 var shardsAwardedFromServer = CloudFunctionClient.ReadInt(response, "shardsAwarded", 0);
                 var alreadyEnded = CloudFunctionClient.ReadBool(response, "alreadyEnded", false);
                 SetStatus("Run " + result + (alreadyEnded ? " (already ended)" : "") + " | +" + xpAwardedFromServer + " XP, +" + shardsAwardedFromServer + " shards");
+                ShowResultPanel(true, result, xpAwardedFromServer, shardsAwardedFromServer);
+                AnalyticsService.LogDungeonRunEnd(_activeClassId, _floorsCleared, result, xpAwardedFromServer, shardsAwardedFromServer, runDurationSec);
                 _activeRunId = null;
                 return;
             }
@@ -318,12 +335,15 @@ public class DungeonRunManager : MonoBehaviour
             });
 
             SetStatus("Run " + result + " | +" + xpAwarded + " XP, +" + shardsAwarded + " shards");
+            ShowResultPanel(true, result, xpAwarded, shardsAwarded);
+            AnalyticsService.LogDungeonRunEnd(_activeClassId, _floorsCleared, result, xpAwarded, shardsAwarded, runDurationSec);
             _activeRunId = null;
         }
         catch (Exception ex)
         {
             Debug.LogError("EndRun failed: " + ex);
             SetStatus("Run save failed.");
+            ShowResultPanel(true, "error", 0, 0);
         }
     }
 
@@ -351,6 +371,39 @@ public class DungeonRunManager : MonoBehaviour
         if (runStatusText != null)
         {
             runStatusText.text = message;
+        }
+    }
+
+    private void ShowResultPanel(bool show, string result, int xpAwarded, int shardsAwarded)
+    {
+        if (resultPanel != null)
+        {
+            resultPanel.SetActive(show);
+        }
+
+        if (!show)
+        {
+            return;
+        }
+
+        if (resultTitleText != null)
+        {
+            resultTitleText.text = "Result: " + result.ToUpperInvariant();
+        }
+
+        if (resultFloorsText != null)
+        {
+            resultFloorsText.text = "Floors Cleared: " + _floorsCleared + " / " + totalFloors;
+        }
+
+        if (resultXpText != null)
+        {
+            resultXpText.text = "XP Gained: +" + xpAwarded;
+        }
+
+        if (resultShardsText != null)
+        {
+            resultShardsText.text = "Shards Gained: +" + shardsAwarded;
         }
     }
 

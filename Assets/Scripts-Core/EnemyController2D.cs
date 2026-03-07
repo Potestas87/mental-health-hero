@@ -28,7 +28,7 @@ public class EnemyController2D : MonoBehaviour
     {
         if (target == null)
         {
-            var hero = FindObjectOfType<HeroController2D>();
+            var hero = FindFirstObjectByType<HeroController2D>();
             if (hero != null)
             {
                 _hero = hero;

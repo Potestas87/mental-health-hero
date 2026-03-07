@@ -7,17 +7,24 @@ using UnityEngine.SceneManagement;
 
 public class HomeController : MonoBehaviour
 {
+    private const int MaxRunsPerDay = 2;
+
     [Header("Optional UI Text Fields")]
     public TMP_Text classText;
     public TMP_Text levelText;
     public TMP_Text xpText;
+    public TMP_Text nextLevelText;
     public TMP_Text skillPointsText;
     public TMP_Text shardsText;
+    public TMP_Text runsText;
+    public TMP_Text playStateText;
 
     public int CurrentLevel { get; private set; }
     public int CurrentXp { get; private set; }
     public int CurrentSkillPoints { get; private set; }
     public int CurrentShards { get; private set; }
+    public int CurrentRunsUsed { get; private set; }
+    public int CurrentRunsRemaining { get; private set; }
     public string CurrentClass { get; private set; }
 
     private void Start()
@@ -52,6 +59,13 @@ public class HomeController : MonoBehaviour
             CurrentSkillPoints = ReadInt(data, "skillPoints", 0);
             CurrentShards = ReadInt(data, "shards", 0);
 
+            var dayKey = DateTime.Now.ToString("yyyy_MM_dd");
+            var dailyRef = BootstrapController.Db.Collection("users").Document(uid).Collection("daily_state").Document(dayKey);
+            var dailySnap = await dailyRef.GetSnapshotAsync();
+            var dailyData = dailySnap.Exists ? dailySnap.ToDictionary() : new Dictionary<string, object>();
+            CurrentRunsUsed = ReadInt(dailyData, "runsUsed", 0);
+            CurrentRunsRemaining = Mathf.Max(0, MaxRunsPerDay - CurrentRunsUsed);
+
             BindUi();
         }
         catch (Exception ex)
@@ -79,9 +93,24 @@ public class HomeController : MonoBehaviour
     {
         if (classText != null) classText.text = "Class: " + CurrentClass;
         if (levelText != null) levelText.text = "Level: " + CurrentLevel;
-        if (xpText != null) xpText.text = "XP: " + CurrentXp + " / " + XpProgressionService.GetXpRequired(CurrentLevel);
+        if (xpText != null)
+        {
+            xpText.text = CurrentLevel >= XpProgressionService.LevelCap
+                ? "XP: MAX"
+                : "XP: " + CurrentXp + " / " + XpProgressionService.GetXpRequired(CurrentLevel);
+        }
+
+        if (nextLevelText != null)
+        {
+            nextLevelText.text = CurrentLevel >= XpProgressionService.LevelCap
+                ? "Next Level: MAX"
+                : "Next Level XP Needed: " + Mathf.Max(0, XpProgressionService.GetXpRequired(CurrentLevel) - CurrentXp);
+        }
+
         if (skillPointsText != null) skillPointsText.text = "Skill Points: " + CurrentSkillPoints;
         if (shardsText != null) shardsText.text = "Shards: " + CurrentShards;
+        if (runsText != null) runsText.text = "Runs: " + CurrentRunsUsed + " / " + MaxRunsPerDay + " used";
+        if (playStateText != null) playStateText.text = CurrentRunsRemaining > 0 ? "Dungeon: Ready" : "Dungeon: No lives remaining today";
     }
 
     private static int ReadInt(Dictionary<string, object> data, string key, int fallback)
