@@ -42,6 +42,7 @@ public class DungeonRunManager : MonoBehaviour
     private DateTime _runStartedUtc;
     private string _activeClassId = "warrior";
     private string _activeRunId;
+    private string _activeRunDayKey;
 
     private FirebaseAuth _auth;
     private FirebaseFirestore _db;
@@ -80,33 +81,72 @@ public class DungeonRunManager : MonoBehaviour
 
                 var response = await functionClient.StartRunAsync();
                 _activeRunId = response.TryGetValue("runId", out var runIdObj) ? runIdObj?.ToString() : null;
+                _activeRunDayKey = response.TryGetValue("dayKey", out var dayKeyObj) ? dayKeyObj?.ToString() : DateTime.Now.ToString("yyyy_MM_dd");
                 if (string.IsNullOrEmpty(_activeRunId))
                 {
                     SetStatus("startRun response missing runId.");
                     return;
                 }
             }
-            else if (enforceDailyLives)
+            else
             {
                 var uid = _user.UserId;
                 var userRef = _db.Collection("users").Document(uid);
                 var dayKey = DateTime.Now.ToString("yyyy_MM_dd");
                 var dailyRef = userRef.Collection("daily_state").Document(dayKey);
-                var dailySnap = await dailyRef.GetSnapshotAsync();
-                var dailyData = dailySnap.Exists ? dailySnap.ToDictionary() : new Dictionary<string, object>();
-                var runsUsed = ReadInt(dailyData, "runsUsed", 0);
-                if (runsUsed >= maxRunsPerDay)
-                {
-                    SetStatus("No lives remaining today.");
-                    return;
-                }
+                var generatedRunId = Guid.NewGuid().ToString("N");
+                _activeRunDayKey = dayKey;
 
-                await dailyRef.SetAsync(new Dictionary<string, object>
+                if (enforceDailyLives)
                 {
-                    { "runsUsed", runsUsed + 1 },
-                    { "serverDayKey", dayKey },
-                    { "updatedAt", Timestamp.GetCurrentTimestamp() }
-                }, SetOptions.MergeAll);
+                    var txResult = await _db.RunTransactionAsync(async tx =>
+                    {
+                        var userSnap = await tx.GetSnapshotAsync(userRef);
+                        var dailySnap = await tx.GetSnapshotAsync(dailyRef);
+                        var userData = userSnap.Exists ? userSnap.ToDictionary() : new Dictionary<string, object>();
+                        var dailyData = dailySnap.Exists ? dailySnap.ToDictionary() : new Dictionary<string, object>();
+
+                        var existingRunId = ReadString(userData, "activeRunId", string.Empty);
+                        if (!string.IsNullOrEmpty(existingRunId))
+                        {
+                            throw new InvalidOperationException("An active run is already in progress.");
+                        }
+
+                        var runsUsed = ReadInt(dailyData, "runsUsed", 0);
+                        if (runsUsed >= maxRunsPerDay)
+                        {
+                            throw new InvalidOperationException("No lives remaining today.");
+                        }
+
+                        tx.Set(dailyRef, new Dictionary<string, object>
+                        {
+                            { "runsUsed", runsUsed + 1 },
+                            { "serverDayKey", dayKey },
+                            { "updatedAt", Timestamp.GetCurrentTimestamp() }
+                        }, SetOptions.MergeAll);
+
+                        tx.Set(userRef, new Dictionary<string, object>
+                        {
+                            { "activeRunId", generatedRunId },
+                            { "activeRunDayKey", dayKey },
+                            { "updatedAt", Timestamp.GetCurrentTimestamp() }
+                        }, SetOptions.MergeAll);
+
+                        return generatedRunId;
+                    });
+
+                    _activeRunId = txResult;
+                }
+                else
+                {
+                    _activeRunId = generatedRunId;
+                    await userRef.SetAsync(new Dictionary<string, object>
+                    {
+                        { "activeRunId", generatedRunId },
+                        { "activeRunDayKey", dayKey },
+                        { "updatedAt", Timestamp.GetCurrentTimestamp() }
+                    }, SetOptions.MergeAll);
+                }
             }
 
             _runActive = true;
@@ -265,79 +305,115 @@ public class DungeonRunManager : MonoBehaviour
                 ShowResultPanel(true, result, xpAwardedFromServer, shardsAwardedFromServer);
                 AnalyticsService.LogDungeonRunEnd(_activeClassId, _floorsCleared, result, xpAwardedFromServer, shardsAwardedFromServer, runDurationSec);
                 _activeRunId = null;
+                _activeRunDayKey = null;
+                return;
+            }
+
+            if (string.IsNullOrEmpty(_activeRunId))
+            {
+                SetStatus("No active runId for local endRun.");
+                ShowResultPanel(true, "error", 0, 0);
                 return;
             }
 
             var uid = _user.UserId;
             var userRef = _db.Collection("users").Document(uid);
-            var dayKey = DateTime.Now.ToString("yyyy_MM_dd");
+            var dayKey = string.IsNullOrEmpty(_activeRunDayKey) ? DateTime.Now.ToString("yyyy_MM_dd") : _activeRunDayKey;
             var dailyRef = userRef.Collection("daily_state").Document(dayKey);
-            var runLogsRef = userRef.Collection("run_logs");
+            var runLogRef = userRef.Collection("run_logs").Document(_activeRunId);
 
-            var userSnap = await userRef.GetSnapshotAsync();
-            var dailySnap = await dailyRef.GetSnapshotAsync();
-            if (!userSnap.Exists)
+            var txResult = await _db.RunTransactionAsync(async tx =>
             {
-                SetStatus("Run saved failed: user doc missing.");
-                return;
-            }
+                var userSnap = await tx.GetSnapshotAsync(userRef);
+                var dailySnap = await tx.GetSnapshotAsync(dailyRef);
+                var runLogSnap = await tx.GetSnapshotAsync(runLogRef);
 
-            var userData = userSnap.ToDictionary();
-            var dailyData = dailySnap.Exists ? dailySnap.ToDictionary() : new Dictionary<string, object>();
+                if (!userSnap.Exists)
+                {
+                    throw new InvalidOperationException("Run saved failed: user doc missing.");
+                }
 
-            var currentLevel = ReadInt(userData, "level", 1);
-            var currentXp = ReadInt(userData, "xp", 0);
-            var currentSkillPoints = ReadInt(userData, "skillPoints", 0);
-            var currentShards = ReadInt(userData, "shards", 0);
-            var bossClearCount = ReadInt(dailyData, "bossClearCount", 0);
+                if (runLogSnap.Exists)
+                {
+                    var existing = runLogSnap.ToDictionary();
+                    var existingXp = ReadInt(existing, "xpAwarded", 0);
+                    var existingShards = ReadInt(existing, "shardsAwarded", 0);
 
-            var floorXp = _floorsCleared * 8;
-            var bossXp = _bossDefeated ? 20 : 0;
-            var xpAwarded = floorXp + bossXp;
+                    tx.Set(userRef, new Dictionary<string, object>
+                    {
+                        { "activeRunId", FieldValue.Delete },
+                        { "activeRunDayKey", FieldValue.Delete },
+                        { "updatedAt", Timestamp.GetCurrentTimestamp() }
+                    }, SetOptions.MergeAll);
 
-            var bossShards = _bossDefeated ? 5 : 0;
-            var firstBossBonus = (_bossDefeated && bossClearCount == 0) ? 3 : 0;
-            var shardsAwarded = bossShards + firstBossBonus;
+                    return new LocalRunTxResult(existingXp, existingShards, true);
+                }
 
-            var xpResult = XpProgressionService.ApplyXp(currentLevel, currentXp, currentSkillPoints, xpAwarded);
+                var userData = userSnap.ToDictionary();
+                var dailyData = dailySnap.Exists ? dailySnap.ToDictionary() : new Dictionary<string, object>();
 
-            await userRef.SetAsync(new Dictionary<string, object>
-            {
-                { "level", xpResult.Level },
-                { "xp", xpResult.Xp },
-                { "skillPoints", xpResult.SkillPoints },
-                { "shards", currentShards + shardsAwarded },
-                { "updatedAt", Timestamp.GetCurrentTimestamp() }
-            }, SetOptions.MergeAll);
+                var currentLevel = ReadInt(userData, "level", 1);
+                var currentXp = ReadInt(userData, "xp", 0);
+                var currentSkillPoints = ReadInt(userData, "skillPoints", 0);
+                var currentShards = ReadInt(userData, "shards", 0);
+                var bossClearCount = ReadInt(dailyData, "bossClearCount", 0);
 
-            var dailyUpdates = new Dictionary<string, object>
-            {
-                { "serverDayKey", dayKey },
-                { "updatedAt", Timestamp.GetCurrentTimestamp() }
-            };
+                var floorXp = _floorsCleared * 8;
+                var bossXp = _bossDefeated ? 20 : 0;
+                var xpAwarded = floorXp + bossXp;
 
-            if (_bossDefeated)
-            {
-                dailyUpdates["bossClearCount"] = bossClearCount + 1;
-            }
+                var bossShards = _bossDefeated ? 5 : 0;
+                var firstBossBonus = (_bossDefeated && bossClearCount == 0) ? 3 : 0;
+                var shardsAwarded = bossShards + firstBossBonus;
 
-            await dailyRef.SetAsync(dailyUpdates, SetOptions.MergeAll);
+                var xpResult = XpProgressionService.ApplyXp(currentLevel, currentXp, currentSkillPoints, xpAwarded);
 
-            await runLogsRef.AddAsync(new Dictionary<string, object>
-            {
-                { "startedAt", _runStartedAt },
-                { "endedAt", Timestamp.GetCurrentTimestamp() },
-                { "result", result },
-                { "floorsCleared", _floorsCleared },
-                { "bossDefeated", _bossDefeated },
-                { "xpAwarded", xpAwarded },
-                { "shardsAwarded", shardsAwarded }
+                tx.Set(userRef, new Dictionary<string, object>
+                {
+                    { "level", xpResult.Level },
+                    { "xp", xpResult.Xp },
+                    { "skillPoints", xpResult.SkillPoints },
+                    { "shards", currentShards + shardsAwarded },
+                    { "activeRunId", FieldValue.Delete },
+                    { "activeRunDayKey", FieldValue.Delete },
+                    { "updatedAt", Timestamp.GetCurrentTimestamp() }
+                }, SetOptions.MergeAll);
+
+                var dailyUpdates = new Dictionary<string, object>
+                {
+                    { "serverDayKey", dayKey },
+                    { "updatedAt", Timestamp.GetCurrentTimestamp() }
+                };
+
+                if (_bossDefeated)
+                {
+                    dailyUpdates["bossClearCount"] = bossClearCount + 1;
+                }
+
+                tx.Set(dailyRef, dailyUpdates, SetOptions.MergeAll);
+                tx.Set(runLogRef, new Dictionary<string, object>
+                {
+                    { "runId", _activeRunId },
+                    { "idempotencyKey", _activeRunId },
+                    { "startedAt", _runStartedAt },
+                    { "endedAt", Timestamp.GetCurrentTimestamp() },
+                    { "result", result },
+                    { "floorsCleared", _floorsCleared },
+                    { "bossDefeated", _bossDefeated },
+                    { "xpAwarded", xpAwarded },
+                    { "shardsAwarded", shardsAwarded },
+                    { "dayKey", dayKey }
+                }, SetOptions.MergeAll);
+
+                return new LocalRunTxResult(xpAwarded, shardsAwarded, false);
             });
 
-            SetStatus("Run " + result + " | +" + xpAwarded + " XP, +" + shardsAwarded + " shards");
-            ShowResultPanel(true, result, xpAwarded, shardsAwarded);
-            AnalyticsService.LogDungeonRunEnd(_activeClassId, _floorsCleared, result, xpAwarded, shardsAwarded, runDurationSec);
+            var txSuffix = txResult.AlreadyEnded ? " (already ended)" : "";
+            SetStatus("Run " + result + txSuffix + " | +" + txResult.XpAwarded + " XP, +" + txResult.ShardsAwarded + " shards");
+            ShowResultPanel(true, result, txResult.XpAwarded, txResult.ShardsAwarded);
+            AnalyticsService.LogDungeonRunEnd(_activeClassId, _floorsCleared, result, txResult.XpAwarded, txResult.ShardsAwarded, runDurationSec);
             _activeRunId = null;
+            _activeRunDayKey = null;
         }
         catch (Exception ex)
         {
@@ -448,6 +524,20 @@ public class DungeonRunManager : MonoBehaviour
         public List<string> PurchasedNodeIds = new List<string>();
     }
 
+    private sealed class LocalRunTxResult
+    {
+        public int XpAwarded { get; }
+        public int ShardsAwarded { get; }
+        public bool AlreadyEnded { get; }
+
+        public LocalRunTxResult(int xpAwarded, int shardsAwarded, bool alreadyEnded)
+        {
+            XpAwarded = xpAwarded;
+            ShardsAwarded = shardsAwarded;
+            AlreadyEnded = alreadyEnded;
+        }
+    }
+
     private async Task<PlayerProfile> LoadPlayerProfileAsync()
     {
         var profile = new PlayerProfile();
@@ -544,5 +634,15 @@ public class DungeonRunManager : MonoBehaviour
         if (raw is double doubleVal) return Mathf.RoundToInt((float)doubleVal);
 
         return fallback;
+    }
+
+    private static string ReadString(Dictionary<string, object> data, string key, string fallback)
+    {
+        if (!data.TryGetValue(key, out var raw) || raw == null)
+        {
+            return fallback;
+        }
+
+        return raw.ToString();
     }
 }
