@@ -4,6 +4,7 @@ using Firebase.Firestore;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class HomeController : MonoBehaviour
 {
@@ -18,6 +19,10 @@ public class HomeController : MonoBehaviour
     public TMP_Text shardsText;
     public TMP_Text runsText;
     public TMP_Text playStateText;
+    public Button playDungeonButton;
+
+    [Header("Behavior")]
+    public bool enforceDailyLivesOnHome = true;
 
     public int CurrentLevel { get; private set; }
     public int CurrentXp { get; private set; }
@@ -32,11 +37,19 @@ public class HomeController : MonoBehaviour
         Refresh();
     }
 
+    private void OnEnable()
+    {
+        Refresh();
+    }
+
     public async void Refresh()
     {
+        SetHomeState("Loading profile...");
+
         if (BootstrapController.Db == null || BootstrapController.User == null)
         {
             Debug.LogError("HomeController: Firebase not ready.");
+            SetHomeState("Home unavailable. Firebase not ready.");
             return;
         }
 
@@ -49,6 +62,7 @@ public class HomeController : MonoBehaviour
             if (!snap.Exists)
             {
                 Debug.LogWarning("HomeController: user doc missing.");
+                SetHomeState("Profile missing. Restart from onboarding.");
                 return;
             }
 
@@ -71,6 +85,7 @@ public class HomeController : MonoBehaviour
         catch (Exception ex)
         {
             Debug.LogError("HomeController.Refresh failed: " + ex);
+            SetHomeState("Failed to load home data.");
         }
     }
 
@@ -81,12 +96,23 @@ public class HomeController : MonoBehaviour
 
     public void GoToDungeonScene()
     {
+        if (enforceDailyLivesOnHome && CurrentRunsRemaining <= 0)
+        {
+            SetHomeState("Dungeon: No lives remaining today");
+            return;
+        }
+
         SceneManager.LoadScene("DungeonScene");
     }
 
     public void GoToUpgradeScene()
     {
         SceneManager.LoadScene("UpgradeScene");
+    }
+
+    public bool CanStartDungeonFromHome()
+    {
+        return !enforceDailyLivesOnHome || CurrentRunsRemaining > 0;
     }
 
     private void BindUi()
@@ -110,7 +136,22 @@ public class HomeController : MonoBehaviour
         if (skillPointsText != null) skillPointsText.text = "Skill Points: " + CurrentSkillPoints;
         if (shardsText != null) shardsText.text = "Shards: " + CurrentShards;
         if (runsText != null) runsText.text = "Runs: " + CurrentRunsUsed + " / " + MaxRunsPerDay + " used";
-        if (playStateText != null) playStateText.text = CurrentRunsRemaining > 0 ? "Dungeon: Ready" : "Dungeon: No lives remaining today";
+        var canPlay = !enforceDailyLivesOnHome || CurrentRunsRemaining > 0;
+        if (playStateText != null) playStateText.text = canPlay ? "Dungeon: Ready" : "Dungeon: No lives remaining today";
+        if (playDungeonButton != null) playDungeonButton.interactable = canPlay;
+    }
+
+    private void SetHomeState(string status)
+    {
+        if (playStateText != null)
+        {
+            playStateText.text = status;
+        }
+
+        if (playDungeonButton != null)
+        {
+            playDungeonButton.interactable = false;
+        }
     }
 
     private static int ReadInt(Dictionary<string, object> data, string key, int fallback)

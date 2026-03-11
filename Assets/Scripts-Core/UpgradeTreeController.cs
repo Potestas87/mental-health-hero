@@ -6,13 +6,18 @@ using Firebase.Firestore;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UpgradeTreeController : MonoBehaviour
 {
     [Header("Optional UI")]
     public TMP_Text summaryText;
+    public TMP_Text skillPointsHeadlineText;
+    public TMP_Text inputHintText;
+    public TMP_Text feedbackText;
     public TMP_Text nodesText;
     public TMP_InputField nodeIdInput;
+    public Button buyButton;
 
     private FirebaseFirestore _db;
     private string _uid;
@@ -20,17 +25,29 @@ public class UpgradeTreeController : MonoBehaviour
     private string _playerClass = "warrior";
     private int _skillPoints;
     private HashSet<string> _purchasedNodeIds = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+    private bool _isBusy;
 
     private void Start()
     {
+        if (nodeIdInput != null)
+        {
+            nodeIdInput.onValueChanged.AddListener(_ => UpdateBuyButtonState());
+        }
+
+        SetInputHint();
         Refresh();
     }
 
     public async void Refresh()
     {
+        _isBusy = true;
+        UpdateBuyButtonState();
+
         if (BootstrapController.Db == null || BootstrapController.User == null)
         {
             SetSummary("Firebase not ready.");
+            _isBusy = false;
+            UpdateBuyButtonState();
             return;
         }
 
@@ -45,6 +62,8 @@ public class UpgradeTreeController : MonoBehaviour
             if (!snap.Exists)
             {
                 SetSummary("User profile missing.");
+                _isBusy = false;
+                UpdateBuyButtonState();
                 return;
             }
 
@@ -59,6 +78,11 @@ public class UpgradeTreeController : MonoBehaviour
         {
             Debug.LogError("UpgradeTreeController.Refresh failed: " + ex);
             SetSummary("Failed to load upgrade tree.");
+        }
+        finally
+        {
+            _isBusy = false;
+            UpdateBuyButtonState();
         }
     }
 
@@ -85,22 +109,31 @@ public class UpgradeTreeController : MonoBehaviour
 
     private async System.Threading.Tasks.Task BuyNodeByIdInternalAsync(string nodeIdRaw)
     {
+        _isBusy = true;
+        UpdateBuyButtonState();
+
         var nodeId = (nodeIdRaw ?? string.Empty).Trim().ToLowerInvariant();
         if (string.IsNullOrEmpty(nodeId))
         {
             SetSummary("Enter a node id.");
+            _isBusy = false;
+            UpdateBuyButtonState();
             return;
         }
 
         if (BootstrapController.Db == null || BootstrapController.User == null)
         {
             SetSummary("Firebase not ready.");
+            _isBusy = false;
+            UpdateBuyButtonState();
             return;
         }
 
         if (!UpgradeCatalog.TryGetNode(nodeId, out var node))
         {
             SetSummary("Unknown node id: " + nodeId);
+            _isBusy = false;
+            UpdateBuyButtonState();
             return;
         }
 
@@ -163,12 +196,21 @@ public class UpgradeTreeController : MonoBehaviour
             var message = ex.InnerException != null ? ex.InnerException.Message : ex.Message;
             SetSummary("Purchase failed: " + message);
             Debug.LogError("BuyNodeByIdInternalAsync failed: " + ex);
+            _isBusy = false;
+            UpdateBuyButtonState();
         }
     }
 
     private void RenderUi()
     {
         SetSummary("Class: " + _playerClass + " | Skill Points: " + _skillPoints + " | Purchased: " + _purchasedNodeIds.Count);
+        SetInputHint();
+        UpdateBuyButtonState();
+
+        if (skillPointsHeadlineText != null)
+        {
+            skillPointsHeadlineText.text = "Skill Points Available: " + _skillPoints;
+        }
 
         if (nodesText == null)
         {
@@ -176,29 +218,40 @@ public class UpgradeTreeController : MonoBehaviour
         }
 
         var nodes = UpgradeCatalog.GetNodesForClass(_playerClass);
-        var sb = new StringBuilder();
+        var available = new List<UpgradeNodeDefinition>();
+        var locked = new List<UpgradeNodeDefinition>();
+        var ownedNodes = new List<UpgradeNodeDefinition>();
 
         for (var i = 0; i < nodes.Count; i++)
         {
             var node = nodes[i];
-            var owned = _purchasedNodeIds.Contains(node.Id);
+            var isOwned = _purchasedNodeIds.Contains(node.Id);
             var unlocked = IsUnlocked(node, _purchasedNodeIds);
-            var state = owned ? "OWNED" : (unlocked ? "AVAILABLE" : "LOCKED");
-
-            sb.Append("[").Append(state).Append("] ").Append(node.Id).Append(" - ").Append(node.Name)
-              .Append(" (Cost ").Append(node.CostSkillPoints).Append(")");
-
-            if (node.RequiresNodeIds.Length > 0)
+            if (isOwned)
             {
-                sb.Append(" req:");
-                for (var r = 0; r < node.RequiresNodeIds.Length; r++)
-                {
-                    sb.Append(' ').Append(node.RequiresNodeIds[r]);
-                }
+                ownedNodes.Add(node);
             }
-
-            sb.AppendLine();
+            else if (unlocked)
+            {
+                available.Add(node);
+            }
+            else
+            {
+                locked.Add(node);
+            }
         }
+
+        var sb = new StringBuilder();
+        sb.AppendLine("AVAILABLE NODES");
+        AppendNodeList(sb, available, "AVAILABLE");
+        sb.AppendLine();
+
+        sb.AppendLine("LOCKED NODES");
+        AppendNodeList(sb, locked, "LOCKED");
+        sb.AppendLine();
+
+        sb.AppendLine("OWNED NODES");
+        AppendNodeList(sb, ownedNodes, "OWNED");
 
         nodesText.text = sb.ToString();
     }
@@ -222,6 +275,59 @@ public class UpgradeTreeController : MonoBehaviour
         if (summaryText != null)
         {
             summaryText.text = message;
+        }
+
+        if (feedbackText != null)
+        {
+            feedbackText.text = message;
+        }
+    }
+
+    private void SetInputHint()
+    {
+        if (inputHintText == null)
+        {
+            return;
+        }
+
+        inputHintText.text = "Enter node id then Buy (example: war_hp_1, rng_speed_1, mag_range_1).";
+    }
+
+    private void UpdateBuyButtonState()
+    {
+        if (buyButton == null)
+        {
+            return;
+        }
+
+        var hasInput = nodeIdInput != null && !string.IsNullOrWhiteSpace(nodeIdInput.text);
+        buyButton.interactable = !_isBusy && hasInput && _skillPoints > 0;
+    }
+
+    private static void AppendNodeList(StringBuilder sb, List<UpgradeNodeDefinition> nodes, string state)
+    {
+        if (nodes.Count == 0)
+        {
+            sb.AppendLine("- none");
+            return;
+        }
+
+        for (var i = 0; i < nodes.Count; i++)
+        {
+            var node = nodes[i];
+            sb.Append("[").Append(state).Append("] ").Append(node.Id).Append(" - ").Append(node.Name)
+              .Append(" (Cost ").Append(node.CostSkillPoints).Append(")");
+
+            if (node.RequiresNodeIds.Length > 0)
+            {
+                sb.Append(" req:");
+                for (var r = 0; r < node.RequiresNodeIds.Length; r++)
+                {
+                    sb.Append(' ').Append(node.RequiresNodeIds[r]);
+                }
+            }
+
+            sb.AppendLine();
         }
     }
 

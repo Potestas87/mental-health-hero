@@ -4,11 +4,20 @@ using Firebase.Firestore;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class TaskController : MonoBehaviour
 {
     [Header("Optional Debug Output")]
     public TMP_Text statusText;
+
+    [Header("Optional Controls")]
+    public Button seedTasksButton;
+    public Button loadTasksButton;
+    public Button completeEasyButton;
+    public Button completeMediumButton;
+    public Button completeHardButton;
+    public Button backHomeButton;
 
     private const string CategoryMind = "mind";
     private const string CategoryBody = "body";
@@ -21,10 +30,18 @@ public class TaskController : MonoBehaviour
 
     private string _selectedTaskId;
     private string _selectedDifficulty = DifficultyEasy;
+    private bool _isBusy;
+
+    private void Start()
+    {
+        SetStatus("Task screen ready.");
+        UpdateControlState();
+    }
 
     public async void SeedStarterTasks()
     {
         if (!IsReady()) return;
+        SetBusy(true, "Seeding starter tasks...");
 
         var uid = BootstrapController.User.UserId;
         var tasks = BootstrapController.Db.Collection("users").Document(uid).Collection("tasks");
@@ -50,13 +67,18 @@ public class TaskController : MonoBehaviour
         catch (Exception ex)
         {
             Debug.LogError("SeedStarterTasks failed: " + ex);
-            SetStatus("Seed tasks failed.");
+            SetStatus("Seed tasks failed: " + ex.Message);
+        }
+        finally
+        {
+            SetBusy(false);
         }
     }
 
     public async void LoadActiveTasks()
     {
         if (!IsReady()) return;
+        SetBusy(true, "Loading active tasks...");
 
         var uid = BootstrapController.User.UserId;
         var tasks = BootstrapController.Db.Collection("users").Document(uid).Collection("tasks");
@@ -97,7 +119,11 @@ public class TaskController : MonoBehaviour
         catch (Exception ex)
         {
             Debug.LogError("LoadActiveTasks failed: " + ex);
-            SetStatus("Load tasks failed.");
+            SetStatus("Load tasks failed: " + ex.Message);
+        }
+        finally
+        {
+            SetBusy(false);
         }
     }
 
@@ -118,6 +144,7 @@ public class TaskController : MonoBehaviour
         var uid = BootstrapController.User.UserId;
         var db = BootstrapController.Db;
         var dayKey = DateTime.UtcNow.ToString("yyyy_MM_dd");
+        SetBusy(true, "Completing task...");
 
         try
         {
@@ -218,7 +245,11 @@ public class TaskController : MonoBehaviour
         catch (Exception ex)
         {
             Debug.LogError("CompleteSelectedTask failed: " + ex);
-            SetStatus("Complete task failed.");
+            SetStatus("Complete task failed: " + ex.Message);
+        }
+        finally
+        {
+            SetBusy(false);
         }
     }
 
@@ -229,6 +260,12 @@ public class TaskController : MonoBehaviour
 
     private bool IsReady()
     {
+        if (_isBusy)
+        {
+            SetStatus("Please wait...");
+            return false;
+        }
+
         if (BootstrapController.Db == null || BootstrapController.User == null)
         {
             SetStatus("Firebase not ready.");
@@ -297,5 +334,28 @@ public class TaskController : MonoBehaviour
         }
 
         Debug.Log(message);
+    }
+
+    private void SetBusy(bool busy, string status = null)
+    {
+        _isBusy = busy;
+        UpdateControlState();
+
+        if (!string.IsNullOrWhiteSpace(status))
+        {
+            SetStatus(status);
+        }
+    }
+
+    private void UpdateControlState()
+    {
+        var canInteract = !_isBusy;
+
+        if (seedTasksButton != null) seedTasksButton.interactable = canInteract;
+        if (loadTasksButton != null) loadTasksButton.interactable = canInteract;
+        if (completeEasyButton != null) completeEasyButton.interactable = canInteract;
+        if (completeMediumButton != null) completeMediumButton.interactable = canInteract;
+        if (completeHardButton != null) completeHardButton.interactable = canInteract;
+        if (backHomeButton != null) backHomeButton.interactable = canInteract;
     }
 }

@@ -8,6 +8,7 @@ using Firebase.Firestore;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class DungeonRunManager : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class DungeonRunManager : MonoBehaviour
     public TMP_Text runStatusText;
     public TMP_Text floorText;
     public TMP_Text hpText;
+    public Button startRunButton;
+    public Button quitRunButton;
+    public Button backHomeButton;
+    public Button clearFloorButton;
 
     [Header("Result Panel (Optional)")]
     public GameObject resultPanel;
@@ -28,6 +33,7 @@ public class DungeonRunManager : MonoBehaviour
     public int maxRunsPerDay = 2;
     public bool enforceDailyLives = true;
     public bool useAuthoritativeFunctions;
+    public bool allowManualFloorClearForDebug;
 
     [Header("Player Reference")]
     public HeroController2D player;
@@ -53,6 +59,7 @@ public class DungeonRunManager : MonoBehaviour
         ShowResultPanel(false, string.Empty, 0, 0);
         UpdateFloorHud();
         UpdateHpHud();
+        ApplyHudControlState();
     }
 
     public async void StartRun()
@@ -155,6 +162,7 @@ public class DungeonRunManager : MonoBehaviour
             _floorsCleared = 0;
             _runStartedAt = Timestamp.GetCurrentTimestamp();
             ShowResultPanel(false, string.Empty, 0, 0);
+            ApplyHudControlState();
 
             var profile = await LoadPlayerProfileAsync();
             _activeClassId = profile.ClassId;
@@ -196,6 +204,12 @@ public class DungeonRunManager : MonoBehaviour
 
     public void ClearFloor()
     {
+        if (!allowManualFloorClearForDebug)
+        {
+            SetStatus("Manual floor clear is disabled. Defeat enemies to progress.");
+            return;
+        }
+
         if (!_runActive)
         {
             SetStatus("Start run first.");
@@ -268,6 +282,7 @@ public class DungeonRunManager : MonoBehaviour
 
         _runActive = false;
         _resultSaved = true;
+        ApplyHudControlState();
         var runDurationSec = _runStartedUtc == default ? 0 : Mathf.Max(0, Mathf.RoundToInt((float)(DateTime.UtcNow - _runStartedUtc).TotalSeconds));
 
         if (spawner != null)
@@ -306,6 +321,7 @@ public class DungeonRunManager : MonoBehaviour
                 AnalyticsService.LogDungeonRunEnd(_activeClassId, _floorsCleared, result, xpAwardedFromServer, shardsAwardedFromServer, runDurationSec);
                 _activeRunId = null;
                 _activeRunDayKey = null;
+                ApplyHudControlState();
                 return;
             }
 
@@ -414,12 +430,14 @@ public class DungeonRunManager : MonoBehaviour
             AnalyticsService.LogDungeonRunEnd(_activeClassId, _floorsCleared, result, txResult.XpAwarded, txResult.ShardsAwarded, runDurationSec);
             _activeRunId = null;
             _activeRunDayKey = null;
+            ApplyHudControlState();
         }
         catch (Exception ex)
         {
             Debug.LogError("EndRun failed: " + ex);
             SetStatus("Run save failed.");
             ShowResultPanel(true, "error", 0, 0);
+            ApplyHudControlState();
         }
     }
 
@@ -447,6 +465,29 @@ public class DungeonRunManager : MonoBehaviour
         if (runStatusText != null)
         {
             runStatusText.text = message;
+        }
+    }
+
+    private void ApplyHudControlState()
+    {
+        if (startRunButton != null)
+        {
+            startRunButton.interactable = !_runActive;
+        }
+
+        if (quitRunButton != null)
+        {
+            quitRunButton.interactable = _runActive;
+        }
+
+        if (backHomeButton != null)
+        {
+            backHomeButton.interactable = !_runActive;
+        }
+
+        if (clearFloorButton != null)
+        {
+            clearFloorButton.interactable = _runActive && allowManualFloorClearForDebug;
         }
     }
 
