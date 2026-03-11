@@ -29,6 +29,10 @@ public class OnboardingController : MonoBehaviour
                 { "skillPoints", 0 },
                 { "shards", 0 },
                 { "purchasedUpgrades", new string[0] },
+                { "ownedCosmeticIds", new string[0] },
+                { "equippedTintId", string.Empty },
+                { "equippedWeaponId", string.Empty },
+                { "equippedArmorId", string.Empty },
                 { "createdAt", Timestamp.GetCurrentTimestamp() },
                 { "updatedAt", Timestamp.GetCurrentTimestamp() }
             };

@@ -17,6 +17,7 @@ public class HeroController2D : MonoBehaviour
     public Transform attackOrigin;
 
     private Rigidbody2D _rb;
+    private SpriteRenderer _spriteRenderer;
     private Vector2 _moveInput;
     private int _currentHp;
     private float _nextAttackTime;
@@ -28,6 +29,7 @@ public class HeroController2D : MonoBehaviour
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
         _currentHp = maxHp;
     }
 
@@ -183,6 +185,16 @@ public class HeroController2D : MonoBehaviour
         attackCooldownSeconds = Mathf.Max(0.05f, attackCooldownSeconds * cooldownMultiplier);
 
         ResetHealthToFull();
+    }
+
+    public void ApplyCosmeticTint(string tintId)
+    {
+        if (_spriteRenderer == null)
+        {
+            return;
+        }
+
+        _spriteRenderer.color = CosmeticsCatalog.GetTintColor(tintId);
     }
 
     private void OnDrawGizmosSelected()

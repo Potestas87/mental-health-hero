@@ -12,6 +12,7 @@ public class SceneReliabilityValidator : MonoBehaviour
     public TaskController taskController;
     public DungeonRunManager dungeonRunManager;
     public UpgradeTreeController upgradeTreeController;
+    public CosmeticsController cosmeticsController;
 
     [Header("Behavior")]
     public bool validateOnStart = true;
@@ -46,6 +47,11 @@ public class SceneReliabilityValidator : MonoBehaviour
         if (upgradeTreeController != null)
         {
             ValidateUpgrade(upgradeTreeController, issues);
+        }
+
+        if (cosmeticsController != null)
+        {
+            ValidateCosmetics(cosmeticsController, issues);
         }
 
         if (issues.Count == 0)
@@ -89,6 +95,14 @@ public class SceneReliabilityValidator : MonoBehaviour
         if (controller.summaryText == null) issues.Add("UpgradeTreeController.summaryText is not assigned.");
         if (controller.nodesText == null) issues.Add("UpgradeTreeController.nodesText is not assigned.");
         if (controller.nodeIdInput == null) issues.Add("UpgradeTreeController.nodeIdInput is not assigned.");
+    }
+
+    private static void ValidateCosmetics(CosmeticsController controller, List<string> issues)
+    {
+        if (controller.shardsText == null) issues.Add("CosmeticsController.shardsText is not assigned.");
+        if (controller.equippedText == null) issues.Add("CosmeticsController.equippedText is not assigned.");
+        if (controller.catalogText == null) issues.Add("CosmeticsController.catalogText is not assigned.");
+        if (controller.cosmeticIdInput == null) issues.Add("CosmeticsController.cosmeticIdInput is not assigned.");
     }
 
     private void SetStatus(string message)

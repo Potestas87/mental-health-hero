@@ -171,6 +171,7 @@ public class DungeonRunManager : MonoBehaviour
             {
                 player.ApplyClassProfile(profile.ClassId);
                 player.ApplyUpgradeBonuses(profile.PurchasedNodeIds);
+                player.ApplyCosmeticTint(profile.EquippedTintId);
                 player.ResetHealthToFull();
                 player.enabled = true;
             }
@@ -563,6 +564,7 @@ public class DungeonRunManager : MonoBehaviour
     {
         public string ClassId = "warrior";
         public List<string> PurchasedNodeIds = new List<string>();
+        public string EquippedTintId = string.Empty;
     }
 
     private sealed class LocalRunTxResult
@@ -617,6 +619,11 @@ public class DungeonRunManager : MonoBehaviour
                 }
 
                 profile.PurchasedNodeIds = parsed;
+            }
+
+            if (userSnap.TryGetValue<string>("equippedTintId", out var equippedTintId) && !string.IsNullOrWhiteSpace(equippedTintId))
+            {
+                profile.EquippedTintId = equippedTintId.Trim().ToLowerInvariant();
             }
         }
         catch (Exception ex)
