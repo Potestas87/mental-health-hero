@@ -14,6 +14,17 @@ public class DungeonSpawner : MonoBehaviour
     public HeroController2D player;
     public DungeonRunManager runManager;
 
+    [Header("Enemy Variety")]
+    public bool randomizeFloorArchetypes = true;
+    public EnemyArchetype[] floorArchetypePool =
+    {
+        EnemyArchetype.Chaser,
+        EnemyArchetype.Tank,
+        EnemyArchetype.Skirmisher,
+        EnemyArchetype.Bruiser,
+        EnemyArchetype.RangedProxy
+    };
+
     private GameObject _activeEnemy;
 
     public void SpawnFloorEnemy(int floorNumber)
@@ -31,7 +42,7 @@ public class DungeonSpawner : MonoBehaviour
             return;
         }
 
-        SpawnEnemy(normalEnemyPrefab, spawnPoint.position, false);
+        SpawnEnemy(normalEnemyPrefab, spawnPoint.position, false, PickFloorArchetype(floorNumber));
     }
 
     public void SpawnBoss()
@@ -48,7 +59,7 @@ public class DungeonSpawner : MonoBehaviour
             return;
         }
 
-        SpawnEnemy(bossEnemyPrefab, bossSpawnPoint.position, true);
+        SpawnEnemy(bossEnemyPrefab, bossSpawnPoint.position, true, EnemyArchetype.Bruiser);
     }
 
     public void DespawnActiveEnemy()
@@ -60,7 +71,7 @@ public class DungeonSpawner : MonoBehaviour
         }
     }
 
-    private void SpawnEnemy(GameObject prefab, Vector3 position, bool makeBoss)
+    private void SpawnEnemy(GameObject prefab, Vector3 position, bool makeBoss, EnemyArchetype archetype)
     {
         DespawnActiveEnemy();
 
@@ -72,6 +83,7 @@ public class DungeonSpawner : MonoBehaviour
         }
 
         enemy.isBoss = makeBoss;
+        enemy.archetype = archetype;
 
         if (player != null)
         {
@@ -82,6 +94,26 @@ public class DungeonSpawner : MonoBehaviour
         {
             enemy.runManager = runManager;
         }
+    }
+
+    private EnemyArchetype PickFloorArchetype(int floorNumber)
+    {
+        if (!randomizeFloorArchetypes || floorArchetypePool == null || floorArchetypePool.Length == 0)
+        {
+            return EnemyArchetype.Chaser;
+        }
+
+        // Slightly bias to tougher archetypes later in run.
+        if (floorNumber >= 3)
+        {
+            var weightedRoll = Random.Range(0, 100);
+            if (weightedRoll < 35) return EnemyArchetype.Bruiser;
+            if (weightedRoll < 60) return EnemyArchetype.Tank;
+            if (weightedRoll < 80) return EnemyArchetype.RangedProxy;
+        }
+
+        var index = Random.Range(0, floorArchetypePool.Length);
+        return floorArchetypePool[index];
     }
 
     private Transform GetFloorSpawnPoint(int floorNumber)

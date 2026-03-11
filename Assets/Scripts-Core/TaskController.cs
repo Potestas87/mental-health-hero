@@ -13,6 +13,7 @@ public class TaskController : MonoBehaviour
 
     [Header("Optional Controls")]
     public Button seedTasksButton;
+    public Button seedMvpTasksButton;
     public Button loadTasksButton;
     public Button completeEasyButton;
     public Button completeMediumButton;
@@ -32,6 +33,20 @@ public class TaskController : MonoBehaviour
     private string _selectedDifficulty = DifficultyEasy;
     private bool _isBusy;
 
+    private sealed class TaskTemplate
+    {
+        public string Title;
+        public string Category;
+        public string Difficulty;
+
+        public TaskTemplate(string title, string category, string difficulty)
+        {
+            Title = title;
+            Category = category;
+            Difficulty = difficulty;
+        }
+    }
+
     private void Start()
     {
         SetStatus("Task screen ready.");
@@ -40,34 +55,94 @@ public class TaskController : MonoBehaviour
 
     public async void SeedStarterTasks()
     {
+        var starter = new List<TaskTemplate>
+        {
+            new TaskTemplate("5-minute breathing", CategoryMind, DifficultyEasy),
+            new TaskTemplate("10-minute walk", CategoryBody, DifficultyMedium),
+            new TaskTemplate("Message one friend", CategorySocial, DifficultyEasy),
+            new TaskTemplate("Make your bed", CategoryRoutine, DifficultyEasy),
+            new TaskTemplate("Journal for 10 minutes", CategoryMind, DifficultyHard)
+        };
+
+        await SeedTemplatesAsync(starter, "starter");
+    }
+
+    public async void SeedMvpTaskTemplates()
+    {
+        var templates = new List<TaskTemplate>
+        {
+            // Mind (5)
+            new TaskTemplate("5-minute breathing", CategoryMind, DifficultyEasy),
+            new TaskTemplate("10-minute guided meditation", CategoryMind, DifficultyMedium),
+            new TaskTemplate("Write 3 gratitudes", CategoryMind, DifficultyEasy),
+            new TaskTemplate("Journal for 10 minutes", CategoryMind, DifficultyHard),
+            new TaskTemplate("5-minute thought reframing", CategoryMind, DifficultyMedium),
+
+            // Body (5)
+            new TaskTemplate("10-minute walk", CategoryBody, DifficultyMedium),
+            new TaskTemplate("Drink one full bottle of water", CategoryBody, DifficultyEasy),
+            new TaskTemplate("15-minute stretch routine", CategoryBody, DifficultyMedium),
+            new TaskTemplate("20-minute workout", CategoryBody, DifficultyHard),
+            new TaskTemplate("Go to bed on schedule", CategoryBody, DifficultyHard),
+
+            // Social (5)
+            new TaskTemplate("Message one friend", CategorySocial, DifficultyEasy),
+            new TaskTemplate("Call a family member", CategorySocial, DifficultyMedium),
+            new TaskTemplate("Thank someone directly", CategorySocial, DifficultyEasy),
+            new TaskTemplate("Have a 10-minute check-in chat", CategorySocial, DifficultyMedium),
+            new TaskTemplate("Plan one social activity", CategorySocial, DifficultyHard),
+
+            // Routine (5)
+            new TaskTemplate("Make your bed", CategoryRoutine, DifficultyEasy),
+            new TaskTemplate("Tidy one small area", CategoryRoutine, DifficultyEasy),
+            new TaskTemplate("Review tomorrow's top 3 tasks", CategoryRoutine, DifficultyMedium),
+            new TaskTemplate("No phone for first 30 minutes after waking", CategoryRoutine, DifficultyHard),
+            new TaskTemplate("Prepare meals/snacks for tomorrow", CategoryRoutine, DifficultyHard)
+        };
+
+        await SeedTemplatesAsync(templates, "MVP");
+    }
+
+    private async System.Threading.Tasks.Task SeedTemplatesAsync(List<TaskTemplate> templates, string label)
+    {
         if (!IsReady()) return;
-        SetBusy(true, "Seeding starter tasks...");
+        SetBusy(true, "Seeding " + label + " templates...");
 
         var uid = BootstrapController.User.UserId;
-        var tasks = BootstrapController.Db.Collection("users").Document(uid).Collection("tasks");
-
-        var starter = new List<Dictionary<string, object>>
-        {
-            BuildTask("5-minute breathing", CategoryMind, DifficultyEasy),
-            BuildTask("10-minute walk", CategoryBody, DifficultyMedium),
-            BuildTask("Message one friend", CategorySocial, DifficultyEasy),
-            BuildTask("Make your bed", CategoryRoutine, DifficultyEasy),
-            BuildTask("Journal for 10 minutes", CategoryMind, DifficultyHard)
-        };
+        var tasksRef = BootstrapController.Db.Collection("users").Document(uid).Collection("tasks");
 
         try
         {
-            foreach (var task in starter)
+            var existingSnap = await tasksRef.GetSnapshotAsync();
+            var existingTitles = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+            foreach (var doc in existingSnap.Documents)
             {
-                await tasks.AddAsync(task);
+                if (doc.TryGetValue<string>("title", out var title) && !string.IsNullOrWhiteSpace(title))
+                {
+                    existingTitles.Add(title.Trim());
+                }
             }
 
-            SetStatus("Seeded starter tasks.");
+            var createdCount = 0;
+            for (var i = 0; i < templates.Count; i++)
+            {
+                var template = templates[i];
+                if (existingTitles.Contains(template.Title))
+                {
+                    continue;
+                }
+
+                await tasksRef.AddAsync(BuildTask(template.Title, template.Category, template.Difficulty));
+                existingTitles.Add(template.Title);
+                createdCount += 1;
+            }
+
+            SetStatus("Seeded " + createdCount + " " + label + " templates (deduped).");
         }
         catch (Exception ex)
         {
-            Debug.LogError("SeedStarterTasks failed: " + ex);
-            SetStatus("Seed tasks failed: " + ex.Message);
+            Debug.LogError("SeedTemplatesAsync failed: " + ex);
+            SetStatus("Seed templates failed: " + ex.Message);
         }
         finally
         {
@@ -94,7 +169,6 @@ public class TaskController : MonoBehaviour
                 return;
             }
 
-            // For MVP speed, auto-select first active task and let buttons choose difficulty.
             DocumentSnapshot first = null;
             foreach (var doc in snap.Documents)
             {
@@ -178,14 +252,12 @@ public class TaskController : MonoBehaviour
             var bonusXp = 0;
             var bonusesApplied = new List<string>();
 
-            // Bonus applies to first 3 completed tasks of the day.
             if (tasksCompletedCount < 3)
             {
                 bonusXp += 8;
                 bonusesApplied.Add("first_three_tasks_bonus");
             }
 
-            // Streak trigger bonus on first completed task of day.
             if (!firstTaskCompleted)
             {
                 bonusXp += 12;
@@ -195,7 +267,6 @@ public class TaskController : MonoBehaviour
 
             var totalXpBeforeCap = baseXp + bonusXp;
 
-            // XP granted only for first 6 completed tasks/day.
             var xpAwarded = taskXpGrantedCount < 6 ? totalXpBeforeCap : 0;
             if (xpAwarded == 0)
             {
@@ -352,6 +423,7 @@ public class TaskController : MonoBehaviour
         var canInteract = !_isBusy;
 
         if (seedTasksButton != null) seedTasksButton.interactable = canInteract;
+        if (seedMvpTasksButton != null) seedMvpTasksButton.interactable = canInteract;
         if (loadTasksButton != null) loadTasksButton.interactable = canInteract;
         if (completeEasyButton != null) completeEasyButton.interactable = canInteract;
         if (completeMediumButton != null) completeMediumButton.interactable = canInteract;
