@@ -1,0 +1,559 @@
+fileFormatVersion: 2
+guid: 5b246a927bad74a9887d4823bf6dc282
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5698103678860772177
+    second: This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_0
+  - first:
+      213: -8701854816657992867
+    second: This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_1
+  - first:
+      213: 2339212720181003302
+    second: This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_2
+  - first:
+      213: 5317230187462809106
+    second: This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_3
+  - first:
+      213: -8193137958283297840
+    second: This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_4
+  - first:
+      213: 4331176610496026762
+    second: This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_5
+  - first:
+      213: -3389986668859604784
+    second: This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_6
+  - first:
+      213: -5439123444188351833
+    second: This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_7
+  - first:
+      213: 1391414597044439194
+    second: This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_8
+  - first:
+      213: 183074922319372982
+    second: This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_9
+  - first:
+      213: 189116376472148603
+    second: This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_10
+  - first:
+      213: -1265906340223012958
+    second: This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_11
+  - first:
+      213: -3917161063170278357
+    second: This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_12
+  - first:
+      213: 5483599594956297563
+    second: This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_13
+  - first:
+      213: -8060062530352897826
+    second: This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_14
+  - first:
+      213: 940686446747987802
+    second: This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1592
+        width: 236
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 153c7d72b1bb31f40800000000000000
+      internalID: 5698103678860772177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_1
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 1592
+        width: 236
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d53141e062dcc3780800000000000000
+      internalID: -8701854816657992867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_2
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 1592
+        width: 237
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 624c678439d867020800000000000000
+      internalID: 2339212720181003302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_3
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 1592
+        width: 237
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21654b00fa89ac940800000000000000
+      internalID: 5317230187462809106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_4
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1062
+        width: 241
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0db31c0af602c4e80800000000000000
+      internalID: -8193137958283297840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_5
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 1062
+        width: 242
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8898100e2e6b1c30800000000000000
+      internalID: 4331176610496026762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_6
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 1062
+        width: 241
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d04059e51954f0d0800000000000000
+      internalID: -3389986668859604784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_7
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 1062
+        width: 239
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a277a39b0a5484b0800000000000000
+      internalID: -5439123444188351833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_8
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 532
+        width: 237
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a988028343c4f4310800000000000000
+      internalID: 1391414597044439194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_9
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 532
+        width: 237
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b2e0200ca96a8200800000000000000
+      internalID: 183074922319372982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_10
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 532
+        width: 237
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7ad4d8a750ef9200800000000000000
+      internalID: 189116376472148603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_11
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 532
+        width: 237
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2afa71004e89e6ee0800000000000000
+      internalID: -1265906340223012958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_12
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 2
+        width: 237
+        height: 526
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2c7ebd54c273a9c0800000000000000
+      internalID: -3917161063170278357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_13
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 2
+        width: 237
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5598db37c8a91c40800000000000000
+      internalID: 5483599594956297563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_14
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 2
+        width: 237
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed021ea25d7e42090800000000000000
+      internalID: -8060062530352897826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_15
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 2
+        width: 237
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5f207fd65dfd0d00800000000000000
+      internalID: 940686446747987802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_0: 5698103678860772177
+      This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_1: -8701854816657992867
+      This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_10: 189116376472148603
+      This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_11: -1265906340223012958
+      This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_12: -3917161063170278357
+      This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_13: 5483599594956297563
+      This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_14: -8060062530352897826
+      This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_15: 940686446747987802
+      This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_2: 2339212720181003302
+      This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_3: 5317230187462809106
+      This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_4: -8193137958283297840
+      This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_5: 4331176610496026762
+      This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_6: -3389986668859604784
+      This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_7: -5439123444188351833
+      This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_8: 1391414597044439194
+      This-16-bit-pixel-art-sprite-features-a-female-ran-max-px-16 (1)_9: 183074922319372982
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

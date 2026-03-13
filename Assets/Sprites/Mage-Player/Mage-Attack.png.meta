@@ -1,0 +1,559 @@
+fileFormatVersion: 2
+guid: c3ebc5ae5c2d044a4a5515d8287f2ffc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3014951961582396108
+    second: This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_0
+  - first:
+      213: 3950027046261627387
+    second: This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_1
+  - first:
+      213: 6991477967851932249
+    second: This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_2
+  - first:
+      213: 2229106704101444018
+    second: This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_3
+  - first:
+      213: -1098630885961762394
+    second: This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_4
+  - first:
+      213: 4006591354032590022
+    second: This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_5
+  - first:
+      213: 6097113159333585739
+    second: This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_6
+  - first:
+      213: -763627891160050336
+    second: This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_7
+  - first:
+      213: -2101142191837049022
+    second: This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_8
+  - first:
+      213: 3449291813679897848
+    second: This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_9
+  - first:
+      213: -4290728144516711380
+    second: This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_10
+  - first:
+      213: -5524808771632122904
+    second: This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_11
+  - first:
+      213: -26444127195147949
+    second: This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_12
+  - first:
+      213: 9078079815362238078
+    second: This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_13
+  - first:
+      213: 6546497302250105873
+    second: This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_14
+  - first:
+      213: 8973339676670048654
+    second: This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1226
+        width: 403
+        height: 405
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc26cfcc5d247d920800000000000000
+      internalID: 3014951961582396108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_1
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 1226
+        width: 404
+        height: 405
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf91c91aba051d630800000000000000
+      internalID: 3950027046261627387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_2
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 1226
+        width: 400
+        height: 402
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95ac8c85b28b60160800000000000000
+      internalID: 6991477967851932249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_3
+      rect:
+        serializedVersion: 2
+        x: 1651
+        y: 1226
+        width: 398
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b98860bcb06fee10800000000000000
+      internalID: 2229106704101444018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_4
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 818
+        width: 396
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a9f9fea701e0c0f0800000000000000
+      internalID: -1098630885961762394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_5
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 818
+        width: 393
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cc8341db954a9730800000000000000
+      internalID: 4006591354032590022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_6
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 818
+        width: 393
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4320715d1c4d9450800000000000000
+      internalID: 6097113159333585739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_7
+      rect:
+        serializedVersion: 2
+        x: 1651
+        y: 818
+        width: 387
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06513d69a7c0765f0800000000000000
+      internalID: -763627891160050336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_8
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 410
+        width: 387
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24f87f01f4e37d2e0800000000000000
+      internalID: -2101142191837049022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_9
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 410
+        width: 386
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fc9d0121a85edf20800000000000000
+      internalID: 3449291813679897848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_10
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 410
+        width: 386
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2c7f4e5c754474c0800000000000000
+      internalID: -4290728144516711380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_11
+      rect:
+        serializedVersion: 2
+        x: 1651
+        y: 410
+        width: 386
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e3b7e2a1bfe353b0800000000000000
+      internalID: -5524808771632122904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_12
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2
+        width: 387
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3515328d43d02aff0800000000000000
+      internalID: -26444127195147949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_13
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 1
+        width: 385
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e765f4d8e71dbfd70800000000000000
+      internalID: 9078079815362238078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_14
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 2
+        width: 384
+        height: 404
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11cabaf8c94d9da50800000000000000
+      internalID: 6546497302250105873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_15
+      rect:
+        serializedVersion: 2
+        x: 1662
+        y: 2
+        width: 382
+        height: 405
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8936d4a4e4b78c70800000000000000
+      internalID: 8973339676670048654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_0: 3014951961582396108
+      This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_1: 3950027046261627387
+      This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_10: -4290728144516711380
+      This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_11: -5524808771632122904
+      This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_12: -26444127195147949
+      This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_13: 9078079815362238078
+      This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_14: 6546497302250105873
+      This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_15: 8973339676670048654
+      This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_2: 6991477967851932249
+      This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_3: 2229106704101444018
+      This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_4: -1098630885961762394
+      This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_5: 4006591354032590022
+      This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_6: 6097113159333585739
+      This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_7: -763627891160050336
+      This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_8: -2101142191837049022
+      This-16-bit-pixel-art-sprite-depicts-a-human-mage--max-px-16 (2)_9: 3449291813679897848
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

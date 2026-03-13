@@ -4,6 +4,7 @@ public class DungeonSpawner : MonoBehaviour
 {
     [Header("Prefabs")]
     public GameObject normalEnemyPrefab;
+    public GameObject[] floorEnemyPrefabs;
     public GameObject bossEnemyPrefab;
 
     [Header("Spawn Points")]
@@ -29,9 +30,10 @@ public class DungeonSpawner : MonoBehaviour
 
     public void SpawnFloorEnemy(int floorNumber)
     {
-        if (normalEnemyPrefab == null)
+        var prefabToSpawn = PickFloorEnemyPrefab();
+        if (prefabToSpawn == null)
         {
-            Debug.LogWarning("DungeonSpawner: normalEnemyPrefab is not assigned.");
+            Debug.LogWarning("DungeonSpawner: no floor enemy prefab is assigned.");
             return;
         }
 
@@ -42,7 +44,9 @@ public class DungeonSpawner : MonoBehaviour
             return;
         }
 
-        SpawnEnemy(normalEnemyPrefab, spawnPoint.position, false, PickFloorArchetype(floorNumber));
+        var overrideArchetype = floorEnemyPrefabs == null || floorEnemyPrefabs.Length == 0;
+        var archetype = PickFloorArchetype(floorNumber);
+        SpawnEnemy(prefabToSpawn, spawnPoint.position, false, archetype, overrideArchetype);
     }
 
     public void SpawnBoss()
@@ -59,7 +63,7 @@ public class DungeonSpawner : MonoBehaviour
             return;
         }
 
-        SpawnEnemy(bossEnemyPrefab, bossSpawnPoint.position, true, EnemyArchetype.Bruiser);
+        SpawnEnemy(bossEnemyPrefab, bossSpawnPoint.position, true, EnemyArchetype.Bruiser, true);
     }
 
     public void DespawnActiveEnemy()
@@ -71,7 +75,7 @@ public class DungeonSpawner : MonoBehaviour
         }
     }
 
-    private void SpawnEnemy(GameObject prefab, Vector3 position, bool makeBoss, EnemyArchetype archetype)
+    private void SpawnEnemy(GameObject prefab, Vector3 position, bool makeBoss, EnemyArchetype archetype, bool overrideArchetype)
     {
         DespawnActiveEnemy();
 
@@ -83,7 +87,10 @@ public class DungeonSpawner : MonoBehaviour
         }
 
         enemy.isBoss = makeBoss;
-        enemy.archetype = archetype;
+        if (overrideArchetype)
+        {
+            enemy.archetype = archetype;
+        }
 
         if (player != null)
         {
@@ -114,6 +121,42 @@ public class DungeonSpawner : MonoBehaviour
 
         var index = Random.Range(0, floorArchetypePool.Length);
         return floorArchetypePool[index];
+    }
+
+    private GameObject PickFloorEnemyPrefab()
+    {
+        if (floorEnemyPrefabs != null && floorEnemyPrefabs.Length > 0)
+        {
+            var validCount = 0;
+            for (var i = 0; i < floorEnemyPrefabs.Length; i++)
+            {
+                if (floorEnemyPrefabs[i] != null)
+                {
+                    validCount++;
+                }
+            }
+
+            if (validCount > 0)
+            {
+                var pick = Random.Range(0, validCount);
+                for (var i = 0; i < floorEnemyPrefabs.Length; i++)
+                {
+                    if (floorEnemyPrefabs[i] == null)
+                    {
+                        continue;
+                    }
+
+                    if (pick == 0)
+                    {
+                        return floorEnemyPrefabs[i];
+                    }
+
+                    pick--;
+                }
+            }
+        }
+
+        return normalEnemyPrefab;
     }
 
     private Transform GetFloorSpawnPoint(int floorNumber)

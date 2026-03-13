@@ -142,6 +142,13 @@ public class EnemyController2D : MonoBehaviour
         {
             switch (archetype)
             {
+                case EnemyArchetype.Chaser:
+                    maxHp = 42;
+                    contactDamage = 10;
+                    moveSpeed = 2.1f;
+                    attackCooldownSeconds = 0.95f;
+                    attackRange = 0.95f;
+                    break;
                 case EnemyArchetype.Tank:
                     maxHp = 95;
                     contactDamage = 14;
@@ -171,11 +178,11 @@ public class EnemyController2D : MonoBehaviour
                     attackRange = 2.5f;
                     break;
                 default:
-                    maxHp = 42;
+                    maxHp = 40;
                     contactDamage = 10;
-                    moveSpeed = 2.1f;
-                    attackCooldownSeconds = 0.95f;
-                    attackRange = 0.95f;
+                    moveSpeed = 2f;
+                    attackCooldownSeconds = 1f;
+                    attackRange = 0.9f;
                     break;
             }
         }

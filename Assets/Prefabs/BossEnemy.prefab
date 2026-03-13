@@ -12,6 +12,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: BossEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3305811166292741680, guid: 46f216724742d47abaf569731dde5e7e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 3440463435230094750, guid: 89882c3c5d49d49db84722107db259cc, type: 3}
+    - target: {fileID: 3305811166292741680, guid: 46f216724742d47abaf569731dde5e7e, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3305811166292741680, guid: 46f216724742d47abaf569731dde5e7e, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3305811166292741680, guid: 46f216724742d47abaf569731dde5e7e, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4875850143008543209, guid: 46f216724742d47abaf569731dde5e7e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7
@@ -56,6 +72,10 @@ PrefabInstance:
       propertyPath: maxHp
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 5399963985161356866, guid: 46f216724742d47abaf569731dde5e7e, type: 3}
+      propertyPath: isBoss
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8988349784561292736, guid: 46f216724742d47abaf569731dde5e7e, type: 3}
       propertyPath: m_Size.x
       value: 2
@@ -63,6 +83,14 @@ PrefabInstance:
     - target: {fileID: 8988349784561292736, guid: 46f216724742d47abaf569731dde5e7e, type: 3}
       propertyPath: m_Size.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8988349784561292736, guid: 46f216724742d47abaf569731dde5e7e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 4.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 8988349784561292736, guid: 46f216724742d47abaf569731dde5e7e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 5.82
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

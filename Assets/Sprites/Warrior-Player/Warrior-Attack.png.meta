@@ -1,0 +1,559 @@
+fileFormatVersion: 2
+guid: 54e5751241dbf4ddc990ecdf6df69631
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4567763934998281705
+    second: A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_0
+  - first:
+      213: 6236942056318904666
+    second: A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_1
+  - first:
+      213: -8766424692298519742
+    second: A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_2
+  - first:
+      213: -3981442702158632795
+    second: A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_3
+  - first:
+      213: 2404074294829603320
+    second: A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_4
+  - first:
+      213: -1020738676487011065
+    second: A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_5
+  - first:
+      213: -1929958568106950586
+    second: A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_6
+  - first:
+      213: 4276071293450802426
+    second: A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_7
+  - first:
+      213: 3458897223741597842
+    second: A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_8
+  - first:
+      213: -7979705369725230794
+    second: A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_9
+  - first:
+      213: 1567986227107524138
+    second: A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_10
+  - first:
+      213: 171766565689649158
+    second: A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_11
+  - first:
+      213: 3347485711373900982
+    second: A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_12
+  - first:
+      213: -5899439840853482464
+    second: A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_13
+  - first:
+      213: -2704553891414956978
+    second: A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_14
+  - first:
+      213: -4118006684908731785
+    second: A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_0
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 2028
+        width: 196
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7124694f6ea0c90c0800000000000000
+      internalID: -4567763934998281705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_1
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 2028
+        width: 210
+        height: 419
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a59259761c11e8650800000000000000
+      internalID: 6236942056318904666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_2
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 2028
+        width: 221
+        height: 419
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24b65595037675680800000000000000
+      internalID: -8766424692298519742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_3
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 2028
+        width: 236
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a8634cf4f21fb8c0800000000000000
+      internalID: -3981442702158632795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_4
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 1389
+        width: 329
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f957f475dcfc5120800000000000000
+      internalID: 2404074294829603320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_5
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 1389
+        width: 264
+        height: 475
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7054d73f49b95d1f0800000000000000
+      internalID: -1020738676487011065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_6
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 1389
+        width: 235
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64083cc58e86735e0800000000000000
+      internalID: -1929958568106950586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_7
+      rect:
+        serializedVersion: 2
+        x: 1478
+        y: 1388
+        width: 241
+        height: 533
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af451609f28a75b30800000000000000
+      internalID: 4276071293450802426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_8
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 748
+        width: 301
+        height: 533
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 298e3bfe2b8700030800000000000000
+      internalID: 3458897223741597842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_9
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 748
+        width: 307
+        height: 533
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63120499e34624190800000000000000
+      internalID: -7979705369725230794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_10
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 748
+        width: 332
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2ee27f7a2b92c510800000000000000
+      internalID: 1567986227107524138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_11
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 748
+        width: 324
+        height: 501
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 608683c08cc326200800000000000000
+      internalID: 171766565689649158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_12
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 108
+        width: 385
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bc132dc488a47e20800000000000000
+      internalID: 3347485711373900982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_13
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 108
+        width: 391
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0242428a8baf02ea0800000000000000
+      internalID: -5899439840853482464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_14
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 108
+        width: 348
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e44af4aa09e777ad0800000000000000
+      internalID: -2704553891414956978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_15
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 108
+        width: 273
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 772c45bfcb6e9d6c0800000000000000
+      internalID: -4118006684908731785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_0: -4567763934998281705
+      A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_1: 6236942056318904666
+      A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_10: 1567986227107524138
+      A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_11: 171766565689649158
+      A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_12: 3347485711373900982
+      A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_13: -5899439840853482464
+      A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_14: -2704553891414956978
+      A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_15: -4118006684908731785
+      A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_2: -8766424692298519742
+      A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_3: -3981442702158632795
+      A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_4: 2404074294829603320
+      A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_5: -1020738676487011065
+      A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_6: -1929958568106950586
+      A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_7: 4276071293450802426
+      A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_8: 3458897223741597842
+      A-16-bit-pixel-art-human-warrior-in-a-three-quarte-max-px-16 (2)_9: -7979705369725230794
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

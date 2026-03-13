@@ -1,0 +1,1079 @@
+fileFormatVersion: 2
+guid: 019be7f8a35af4f16a27879be9ec1b89
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -308816110183463418
+    second: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_0
+  - first:
+      213: 7505881333457115736
+    second: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_1
+  - first:
+      213: 8894765680951835116
+    second: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_2
+  - first:
+      213: 1129586992558085453
+    second: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_3
+  - first:
+      213: -3875172802343852525
+    second: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_4
+  - first:
+      213: -7354702415824110144
+    second: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_5
+  - first:
+      213: -1578674584896357739
+    second: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_6
+  - first:
+      213: 674991065307136508
+    second: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_7
+  - first:
+      213: 6745193267598975233
+    second: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_8
+  - first:
+      213: 7595587857873130417
+    second: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_9
+  - first:
+      213: 3090016598229556563
+    second: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_10
+  - first:
+      213: 6357580031394611458
+    second: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_11
+  - first:
+      213: -6453462959004237363
+    second: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_12
+  - first:
+      213: 949418094357462210
+    second: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_13
+  - first:
+      213: -6290373231306502350
+    second: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_14
+  - first:
+      213: -2922892746336099743
+    second: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_15
+  - first:
+      213: 7312416050713465978
+    second: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_16
+  - first:
+      213: 6658479802104780447
+    second: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_17
+  - first:
+      213: -5902115842976926804
+    second: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_18
+  - first:
+      213: -7647234819632654300
+    second: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_19
+  - first:
+      213: -7284755551959443951
+    second: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_20
+  - first:
+      213: -3001270249470289027
+    second: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_21
+  - first:
+      213: 2379979679170476322
+    second: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_22
+  - first:
+      213: 3544060633850560281
+    second: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_23
+  - first:
+      213: 4205659698675971267
+    second: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_24
+  - first:
+      213: 5603565508042421744
+    second: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_25
+  - first:
+      213: -8878719549525062060
+    second: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_26
+  - first:
+      213: 3571597382925357802
+    second: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_27
+  - first:
+      213: 6213432156944485920
+    second: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_28
+  - first:
+      213: 1324710287031559076
+    second: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_29
+  - first:
+      213: 8773150966362196608
+    second: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_30
+  - first:
+      213: -6422366299825509169
+    second: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_31
+  - first:
+      213: -7999490192369532323
+    second: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_32
+  - first:
+      213: -1193899986908441149
+    second: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_33
+  - first:
+      213: 1302196004568001714
+    second: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_34
+  - first:
+      213: 7035065034759807903
+    second: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 3
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2291
+        width: 361
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 606c89b426dd6bbf0800000000000000
+      internalID: -308816110183463418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_1
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 2291
+        width: 361
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85a52fe0e4f3a2860800000000000000
+      internalID: 7505881333457115736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_2
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 2291
+        width: 361
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce93875a24e807b70800000000000000
+      internalID: 8894765680951835116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_3
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 2291
+        width: 361
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d45935a82691daf00800000000000000
+      internalID: 1129586992558085453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_4
+      rect:
+        serializedVersion: 2
+        x: 1698
+        y: 2291
+        width: 361
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3162a092ede983ac0800000000000000
+      internalID: -3875172802343852525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_5
+      rect:
+        serializedVersion: 2
+        x: 2122
+        y: 2291
+        width: 361
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cdb814ae19dee990800000000000000
+      internalID: -7354702415824110144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_6
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1833
+        width: 361
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59ab05744db671ae0800000000000000
+      internalID: -1578674584896357739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_7
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 1833
+        width: 361
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf1c1323ccc0e5900800000000000000
+      internalID: 674991065307136508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_8
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 1833
+        width: 361
+        height: 445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 101e7901a8dbb9d50800000000000000
+      internalID: 6745193267598975233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_9
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 1833
+        width: 361
+        height: 446
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b35cc0e9e2f86960800000000000000
+      internalID: 7595587857873130417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_10
+      rect:
+        serializedVersion: 2
+        x: 1698
+        y: 1833
+        width: 361
+        height: 446
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35d988779b1f1ea20800000000000000
+      internalID: 3090016598229556563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_11
+      rect:
+        serializedVersion: 2
+        x: 2122
+        y: 1833
+        width: 360
+        height: 447
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 201846aca59aa3850800000000000000
+      internalID: 6357580031394611458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_12
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1375
+        width: 360
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc1496571a1b076a0800000000000000
+      internalID: -6453462959004237363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_13
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 1375
+        width: 360
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cc31810ab20d2d00800000000000000
+      internalID: 949418094357462210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_14
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 1375
+        width: 360
+        height: 447
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23f895bbfda14b8a0800000000000000
+      internalID: -6290373231306502350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_15
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 1375
+        width: 360
+        height: 447
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 162221a888ccf67d0800000000000000
+      internalID: -2922892746336099743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_16
+      rect:
+        serializedVersion: 2
+        x: 1698
+        y: 1375
+        width: 360
+        height: 446
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7414a0c7abea7560800000000000000
+      internalID: 7312416050713465978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_17
+      rect:
+        serializedVersion: 2
+        x: 2122
+        y: 1375
+        width: 360
+        height: 446
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9691941a1ca76c50800000000000000
+      internalID: 6658479802104780447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_18
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 917
+        width: 360
+        height: 446
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca3b72c59e8771ea0800000000000000
+      internalID: -5902115842976926804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_19
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 917
+        width: 360
+        height: 446
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4281cc5c2709fd590800000000000000
+      internalID: -7647234819632654300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_20
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 917
+        width: 360
+        height: 446
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11617e9fb6957ea90800000000000000
+      internalID: -7284755551959443951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_21
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 917
+        width: 360
+        height: 445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7b10690c985956d0800000000000000
+      internalID: -3001270249470289027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_22
+      rect:
+        serializedVersion: 2
+        x: 1698
+        y: 917
+        width: 360
+        height: 445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 229ba9598e2670120800000000000000
+      internalID: 2379979679170476322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_23
+      rect:
+        serializedVersion: 2
+        x: 2121
+        y: 917
+        width: 360
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91fbb178e580f2130800000000000000
+      internalID: 3544060633850560281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_24
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 459
+        width: 360
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c4f1c1a6318d5a30800000000000000
+      internalID: 4205659698675971267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_25
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 459
+        width: 360
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f5ff7ef32dd3cd40800000000000000
+      internalID: 5603565508042421744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_26
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 459
+        width: 360
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45e0e367c9378c480800000000000000
+      internalID: -8878719549525062060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_27
+      rect:
+        serializedVersion: 2
+        x: 1273
+        y: 459
+        width: 360
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae21bf985ecd09130800000000000000
+      internalID: 3571597382925357802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_28
+      rect:
+        serializedVersion: 2
+        x: 1697
+        y: 459
+        width: 360
+        height: 445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02e4aa660ab8a3650800000000000000
+      internalID: 6213432156944485920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_29
+      rect:
+        serializedVersion: 2
+        x: 2121
+        y: 459
+        width: 360
+        height: 446
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a362d8ccf0526210800000000000000
+      internalID: 1324710287031559076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_30
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 360
+        height: 445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08ac4ee525e70c970800000000000000
+      internalID: 8773150966362196608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_31
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 1
+        width: 360
+        height: 447
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcce571a0eb2fd6a0800000000000000
+      internalID: -6422366299825509169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_32
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 1
+        width: 360
+        height: 447
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d52c79b9d0a1cf090800000000000000
+      internalID: -7999490192369532323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_33
+      rect:
+        serializedVersion: 2
+        x: 1273
+        y: 1
+        width: 360
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c59af6994a6e6fe0800000000000000
+      internalID: -1193899986908441149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_34
+      rect:
+        serializedVersion: 2
+        x: 1698
+        y: 1
+        width: 359
+        height: 447
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bc6538ed54521210800000000000000
+      internalID: 1302196004568001714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_35
+      rect:
+        serializedVersion: 2
+        x: 2122
+        y: 1
+        width: 360
+        height: 446
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9321a0306291a160800000000000000
+      internalID: 7035065034759807903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_0: -308816110183463418
+      This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_1: 7505881333457115736
+      This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_10: 3090016598229556563
+      This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_11: 6357580031394611458
+      This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_12: -6453462959004237363
+      This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_13: 949418094357462210
+      This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_14: -6290373231306502350
+      This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_15: -2922892746336099743
+      This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_16: 7312416050713465978
+      This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_17: 6658479802104780447
+      This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_18: -5902115842976926804
+      This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_19: -7647234819632654300
+      This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_2: 8894765680951835116
+      This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_20: -7284755551959443951
+      This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_21: -3001270249470289027
+      This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_22: 2379979679170476322
+      This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_23: 3544060633850560281
+      This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_24: 4205659698675971267
+      This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_25: 5603565508042421744
+      This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_26: -8878719549525062060
+      This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_27: 3571597382925357802
+      This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_28: 6213432156944485920
+      This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_29: 1324710287031559076
+      This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_3: 1129586992558085453
+      This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_30: 8773150966362196608
+      This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_31: -6422366299825509169
+      This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_32: -7999490192369532323
+      This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_33: -1193899986908441149
+      This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_34: 1302196004568001714
+      This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_35: 7035065034759807903
+      This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_4: -3875172802343852525
+      This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_5: -7354702415824110144
+      This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_6: -1578674584896357739
+      This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_7: 674991065307136508
+      This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_8: 6745193267598975233
+      This-16-bit-pixel-art-sprite-features-an-orc-warri-max-px-36_9: 7595587857873130417
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
