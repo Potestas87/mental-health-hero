@@ -312,20 +312,9 @@ public class HeroController2D : MonoBehaviour
         }
 
         // Fallback by clip name in case base clip object refs differ from controller internals.
-        if (baseIdleStateClip != null && archetype.idleClip != null)
-        {
-            overrideController[baseIdleStateClip.name] = archetype.idleClip;
-        }
-
-        if (baseRunStateClip != null && archetype.runClip != null)
-        {
-            overrideController[baseRunStateClip.name] = archetype.runClip;
-        }
-
-        if (baseAttackStateClip != null && archetype.attackClip != null)
-        {
-            overrideController[baseAttackStateClip.name] = archetype.attackClip;
-        }
+        TrySetOverrideByName(overrideController, baseIdleStateClip, archetype.idleClip, "idle");
+        TrySetOverrideByName(overrideController, baseRunStateClip, archetype.runClip, "run");
+        TrySetOverrideByName(overrideController, baseAttackStateClip, archetype.attackClip, "attack");
 
         _animator.runtimeAnimatorController = overrideController;
         Debug.Log(
@@ -334,6 +323,30 @@ public class HeroController2D : MonoBehaviour
             " run=" + (archetype.runClip != null ? archetype.runClip.name : "null") +
             " attack=" + (archetype.attackClip != null ? archetype.attackClip.name : "null")
         );
+    }
+
+    private void TrySetOverrideByName(
+        AnimatorOverrideController overrideController,
+        AnimationClip baseClip,
+        AnimationClip replacementClip,
+        string label)
+    {
+        if (overrideController == null || baseClip == null || replacementClip == null)
+        {
+            return;
+        }
+
+        try
+        {
+            overrideController[baseClip.name] = replacementClip;
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogWarning(
+                "HeroController2D: Failed " + label + " clip override by name. base=" + baseClip.name +
+                " replacement=" + replacementClip.name + " error=" + ex.Message
+            );
+        }
     }
 
     private void ApplyAnimatorSpeedForCurrentClip()

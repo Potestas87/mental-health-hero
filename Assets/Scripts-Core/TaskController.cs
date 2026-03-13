@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Threading.Tasks;
 
 public class TaskController : MonoBehaviour
 {
@@ -32,6 +33,15 @@ public class TaskController : MonoBehaviour
     private string _selectedTaskId;
     private string _selectedDifficulty = DifficultyEasy;
     private bool _isBusy;
+    private string _selectedEasyTaskId;
+    private string _selectedMediumTaskId;
+    private string _selectedHardTaskId;
+    private string _selectedEasyTaskTitle = "Easy";
+    private string _selectedMediumTaskTitle = "Medium";
+    private string _selectedHardTaskTitle = "Hard";
+    private bool _easyCompletedToday;
+    private bool _mediumCompletedToday;
+    private bool _hardCompletedToday;
 
     private sealed class TaskTemplate
     {
@@ -49,8 +59,9 @@ public class TaskController : MonoBehaviour
 
     private void Start()
     {
-        SetStatus("Task screen ready.");
+        SetStatus("Task screen ready. Loading daily tasks...");
         UpdateControlState();
+        _ = InitializeDailyTaskStateAsync();
     }
 
     public async void SeedStarterTasks()
@@ -152,43 +163,61 @@ public class TaskController : MonoBehaviour
 
     public async void LoadActiveTasks()
     {
+        await InitializeDailyTaskStateAsync();
+    }
+
+    private async Task InitializeDailyTaskStateAsync()
+    {
         if (!IsReady()) return;
-        SetBusy(true, "Loading active tasks...");
+        SetBusy(true, "Loading today's task set...");
 
         var uid = BootstrapController.User.UserId;
-        var tasks = BootstrapController.Db.Collection("users").Document(uid).Collection("tasks");
+        var userRef = BootstrapController.Db.Collection("users").Document(uid);
+        var tasks = userRef.Collection("tasks");
+        var dayKey = DateTime.UtcNow.ToString("yyyy_MM_dd");
+        var dailyRef = userRef.Collection("daily_state").Document(dayKey);
 
         try
         {
-            var query = tasks.WhereEqualTo("active", true);
-            var snap = await query.GetSnapshotAsync();
+            var dailySnap = await dailyRef.GetSnapshotAsync();
+            var dailyData = dailySnap.Exists ? dailySnap.ToDictionary() : new Dictionary<string, object>();
+            _easyCompletedToday = ReadBool(dailyData, "completed_easy", false);
+            _mediumCompletedToday = ReadBool(dailyData, "completed_medium", false);
+            _hardCompletedToday = ReadBool(dailyData, "completed_hard", false);
 
-            if (snap.Count == 0)
+            var activeSnap = await tasks.WhereEqualTo("active", true).GetSnapshotAsync();
+            var easyTasks = new List<DocumentSnapshot>();
+            var mediumTasks = new List<DocumentSnapshot>();
+            var hardTasks = new List<DocumentSnapshot>();
+
+            foreach (var doc in activeSnap.Documents)
             {
-                SetStatus("No active tasks found.");
-                return;
+                if (!doc.TryGetValue<string>("difficulty", out var difficulty))
+                {
+                    continue;
+                }
+
+                var normalized = (difficulty ?? string.Empty).Trim().ToLowerInvariant();
+                switch (normalized)
+                {
+                    case DifficultyEasy:
+                        easyTasks.Add(doc);
+                        break;
+                    case DifficultyMedium:
+                        mediumTasks.Add(doc);
+                        break;
+                    case DifficultyHard:
+                        hardTasks.Add(doc);
+                        break;
+                }
             }
 
-            DocumentSnapshot first = null;
-            foreach (var doc in snap.Documents)
-            {
-                first = doc;
-                break;
-            }
+            _selectedEasyTaskId = PickTaskIdForDay(easyTasks, dayKey, out _selectedEasyTaskTitle, "Easy");
+            _selectedMediumTaskId = PickTaskIdForDay(mediumTasks, dayKey, out _selectedMediumTaskTitle, "Medium");
+            _selectedHardTaskId = PickTaskIdForDay(hardTasks, dayKey, out _selectedHardTaskTitle, "Hard");
 
-            if (first == null)
-            {
-                SetStatus("No active tasks found.");
-                return;
-            }
-            _selectedTaskId = first.Id;
-
-            if (first.TryGetValue<string>("difficulty", out var loadedDifficulty))
-            {
-                _selectedDifficulty = loadedDifficulty;
-            }
-
-            SetStatus("Selected task: " + first.GetValue<string>("title") + " (" + _selectedDifficulty + ")");
+            UpdateDifficultyButtonLabels();
+            SetStatus("Today's tasks loaded.");
         }
         catch (Exception ex)
         {
@@ -201,9 +230,9 @@ public class TaskController : MonoBehaviour
         }
     }
 
-    public void CompleteSelectedAsEasy() => CompleteSelectedTask(DifficultyEasy);
-    public void CompleteSelectedAsMedium() => CompleteSelectedTask(DifficultyMedium);
-    public void CompleteSelectedAsHard() => CompleteSelectedTask(DifficultyHard);
+    public void CompleteSelectedAsEasy() => CompleteTaskForDifficulty(DifficultyEasy, _selectedEasyTaskId);
+    public void CompleteSelectedAsMedium() => CompleteTaskForDifficulty(DifficultyMedium, _selectedMediumTaskId);
+    public void CompleteSelectedAsHard() => CompleteTaskForDifficulty(DifficultyHard, _selectedHardTaskId);
 
     public async void CompleteSelectedTask(string difficultyOverride = null)
     {
@@ -211,7 +240,7 @@ public class TaskController : MonoBehaviour
 
         if (string.IsNullOrEmpty(_selectedTaskId))
         {
-            SetStatus("No task selected. Run LoadActiveTasks first.");
+            SetStatus("No task selected for " + _selectedDifficulty + ". Run Load Tasks first.");
             return;
         }
 
@@ -294,6 +323,22 @@ public class TaskController : MonoBehaviour
                 { "updatedAt", Timestamp.GetCurrentTimestamp() }
             };
 
+            if (difficulty == DifficultyEasy)
+            {
+                dailyUpdates["completed_easy"] = true;
+                dailyUpdates["completed_easy_task_id"] = _selectedTaskId;
+            }
+            else if (difficulty == DifficultyMedium)
+            {
+                dailyUpdates["completed_medium"] = true;
+                dailyUpdates["completed_medium_task_id"] = _selectedTaskId;
+            }
+            else if (difficulty == DifficultyHard)
+            {
+                dailyUpdates["completed_hard"] = true;
+                dailyUpdates["completed_hard_task_id"] = _selectedTaskId;
+            }
+
             var logData = new Dictionary<string, object>
             {
                 { "taskId", _selectedTaskId },
@@ -309,6 +354,11 @@ public class TaskController : MonoBehaviour
             await userRef.SetAsync(userUpdates, SetOptions.MergeAll);
             await dailyRef.SetAsync(dailyUpdates, SetOptions.MergeAll);
             await taskLogsRef.AddAsync(logData);
+
+            if (difficulty == DifficultyEasy) _easyCompletedToday = true;
+            if (difficulty == DifficultyMedium) _mediumCompletedToday = true;
+            if (difficulty == DifficultyHard) _hardCompletedToday = true;
+            UpdateDifficultyButtonLabels();
 
             SetStatus($"Task complete. +{xpAwarded} XP | L{xpResult.Level} XP {xpResult.Xp}/{XpProgressionService.GetXpRequired(xpResult.Level)}");
             Debug.Log($"task_completed difficulty={difficulty} xp_awarded={xpAwarded} levels_gained={xpResult.LevelsGained}");
@@ -425,9 +475,87 @@ public class TaskController : MonoBehaviour
         if (seedTasksButton != null) seedTasksButton.interactable = canInteract;
         if (seedMvpTasksButton != null) seedMvpTasksButton.interactable = canInteract;
         if (loadTasksButton != null) loadTasksButton.interactable = canInteract;
-        if (completeEasyButton != null) completeEasyButton.interactable = canInteract;
-        if (completeMediumButton != null) completeMediumButton.interactable = canInteract;
-        if (completeHardButton != null) completeHardButton.interactable = canInteract;
+        if (completeEasyButton != null) completeEasyButton.interactable = canInteract && !_easyCompletedToday && !string.IsNullOrEmpty(_selectedEasyTaskId);
+        if (completeMediumButton != null) completeMediumButton.interactable = canInteract && !_mediumCompletedToday && !string.IsNullOrEmpty(_selectedMediumTaskId);
+        if (completeHardButton != null) completeHardButton.interactable = canInteract && !_hardCompletedToday && !string.IsNullOrEmpty(_selectedHardTaskId);
         if (backHomeButton != null) backHomeButton.interactable = canInteract;
+    }
+
+    private void CompleteTaskForDifficulty(string difficulty, string taskId)
+    {
+        if (difficulty == DifficultyEasy && _easyCompletedToday)
+        {
+            SetStatus("Easy task already completed today.");
+            return;
+        }
+
+        if (difficulty == DifficultyMedium && _mediumCompletedToday)
+        {
+            SetStatus("Medium task already completed today.");
+            return;
+        }
+
+        if (difficulty == DifficultyHard && _hardCompletedToday)
+        {
+            SetStatus("Hard task already completed today.");
+            return;
+        }
+
+        if (string.IsNullOrEmpty(taskId))
+        {
+            SetStatus("No " + difficulty + " task available for today.");
+            return;
+        }
+
+        _selectedTaskId = taskId;
+        _selectedDifficulty = difficulty;
+        CompleteSelectedTask(difficulty);
+    }
+
+    private static string PickTaskIdForDay(List<DocumentSnapshot> docs, string dayKey, out string title, string fallbackTitle)
+    {
+        title = fallbackTitle;
+        if (docs == null || docs.Count == 0)
+        {
+            return null;
+        }
+
+        docs.Sort((a, b) => string.CompareOrdinal(a.Id, b.Id));
+        var hash = 17;
+        for (var i = 0; i < dayKey.Length; i++)
+        {
+            hash = hash * 31 + dayKey[i];
+        }
+
+        var index = Mathf.Abs(hash) % docs.Count;
+        var picked = docs[index];
+        if (picked.TryGetValue<string>("title", out var loadedTitle) && !string.IsNullOrWhiteSpace(loadedTitle))
+        {
+            title = loadedTitle.Trim();
+        }
+
+        return picked.Id;
+    }
+
+    private void UpdateDifficultyButtonLabels()
+    {
+        SetButtonText(completeEasyButton, _easyCompletedToday ? "Easy Complete" : "Easy: " + _selectedEasyTaskTitle);
+        SetButtonText(completeMediumButton, _mediumCompletedToday ? "Medium Complete" : "Medium: " + _selectedMediumTaskTitle);
+        SetButtonText(completeHardButton, _hardCompletedToday ? "Hard Complete" : "Hard: " + _selectedHardTaskTitle);
+        UpdateControlState();
+    }
+
+    private static void SetButtonText(Button button, string value)
+    {
+        if (button == null)
+        {
+            return;
+        }
+
+        var tmp = button.GetComponentInChildren<TMP_Text>(true);
+        if (tmp != null)
+        {
+            tmp.text = value;
+        }
     }
 }

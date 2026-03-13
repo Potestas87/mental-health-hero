@@ -16,6 +16,7 @@ public class UpgradeTreeController : MonoBehaviour
     public TMP_Text inputHintText;
     public TMP_Text feedbackText;
     public TMP_Text nodesText;
+    public TMP_Text purchasedNodesText;
     public TMP_InputField nodeIdInput;
     public Button buyButton;
 
@@ -45,7 +46,7 @@ public class UpgradeTreeController : MonoBehaviour
 
         if (BootstrapController.Db == null || BootstrapController.User == null)
         {
-            SetSummary("Firebase not ready.");
+            SetFeedback("Firebase not ready.");
             _isBusy = false;
             UpdateBuyButtonState();
             return;
@@ -61,7 +62,7 @@ public class UpgradeTreeController : MonoBehaviour
 
             if (!snap.Exists)
             {
-                SetSummary("User profile missing.");
+                SetFeedback("User profile missing.");
                 _isBusy = false;
                 UpdateBuyButtonState();
                 return;
@@ -77,7 +78,7 @@ public class UpgradeTreeController : MonoBehaviour
         catch (Exception ex)
         {
             Debug.LogError("UpgradeTreeController.Refresh failed: " + ex);
-            SetSummary("Failed to load upgrade tree.");
+            SetFeedback("Failed to load upgrade tree.");
         }
         finally
         {
@@ -90,7 +91,7 @@ public class UpgradeTreeController : MonoBehaviour
     {
         if (nodeIdInput == null)
         {
-            SetSummary("Node input is not assigned.");
+            SetFeedback("Node input is not assigned.");
             return;
         }
 
@@ -115,7 +116,7 @@ public class UpgradeTreeController : MonoBehaviour
         var nodeId = (nodeIdRaw ?? string.Empty).Trim().ToLowerInvariant();
         if (string.IsNullOrEmpty(nodeId))
         {
-            SetSummary("Enter a node id.");
+            SetFeedback("Enter a node id.");
             _isBusy = false;
             UpdateBuyButtonState();
             return;
@@ -123,7 +124,7 @@ public class UpgradeTreeController : MonoBehaviour
 
         if (BootstrapController.Db == null || BootstrapController.User == null)
         {
-            SetSummary("Firebase not ready.");
+            SetFeedback("Firebase not ready.");
             _isBusy = false;
             UpdateBuyButtonState();
             return;
@@ -131,7 +132,7 @@ public class UpgradeTreeController : MonoBehaviour
 
         if (!UpgradeCatalog.TryGetNode(nodeId, out var node))
         {
-            SetSummary("Unknown node id: " + nodeId);
+            SetFeedback("Unknown node id: " + nodeId);
             _isBusy = false;
             UpdateBuyButtonState();
             return;
@@ -188,13 +189,13 @@ public class UpgradeTreeController : MonoBehaviour
                 });
             });
 
-            SetSummary("Purchased: " + node.Name);
+            SetFeedback("Purchased: " + node.Name);
             Refresh();
         }
         catch (Exception ex)
         {
             var message = ex.InnerException != null ? ex.InnerException.Message : ex.Message;
-            SetSummary("Purchase failed: " + message);
+            SetFeedback("Purchase failed: " + message);
             Debug.LogError("BuyNodeByIdInternalAsync failed: " + ex);
             _isBusy = false;
             UpdateBuyButtonState();
@@ -242,18 +243,21 @@ public class UpgradeTreeController : MonoBehaviour
         }
 
         var sb = new StringBuilder();
-        sb.AppendLine("AVAILABLE NODES");
+        sb.AppendLine("UNPURCHASED NODES");
         AppendNodeList(sb, available, "AVAILABLE");
         sb.AppendLine();
 
-        sb.AppendLine("LOCKED NODES");
+        sb.AppendLine("LOCKED (UNPURCHASED)");
         AppendNodeList(sb, locked, "LOCKED");
-        sb.AppendLine();
-
-        sb.AppendLine("OWNED NODES");
-        AppendNodeList(sb, ownedNodes, "OWNED");
-
         nodesText.text = sb.ToString();
+
+        if (purchasedNodesText != null)
+        {
+            var purchasedSb = new StringBuilder();
+            purchasedSb.AppendLine("PURCHASED NODES");
+            AppendNodeList(purchasedSb, ownedNodes, "OWNED");
+            purchasedNodesText.text = purchasedSb.ToString();
+        }
     }
 
     private static bool IsUnlocked(UpgradeNodeDefinition node, HashSet<string> purchased)
@@ -276,7 +280,11 @@ public class UpgradeTreeController : MonoBehaviour
         {
             summaryText.text = message;
         }
+    }
 
+    private void SetFeedback(string message)
+    {
+        Debug.Log(message);
         if (feedbackText != null)
         {
             feedbackText.text = message;

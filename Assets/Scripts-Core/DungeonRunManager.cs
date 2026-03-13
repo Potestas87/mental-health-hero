@@ -37,6 +37,7 @@ public class DungeonRunManager : MonoBehaviour
 
     [Header("Player Reference")]
     public HeroController2D player;
+    public Transform playerSpawnPoint;
     public DungeonSpawner spawner;
     public CloudFunctionClient functionClient;
 
@@ -169,6 +170,12 @@ public class DungeonRunManager : MonoBehaviour
             _runStartedUtc = DateTime.UtcNow;
             if (player != null)
             {
+                if (playerSpawnPoint != null)
+                {
+                    player.transform.position = playerSpawnPoint.position;
+                    player.transform.rotation = playerSpawnPoint.rotation;
+                }
+
                 player.ApplyClassProfile(profile.ClassId);
                 player.ApplyUpgradeBonuses(profile.PurchasedNodeIds);
                 player.ApplyCosmeticTint(profile.EquippedTintId);
@@ -191,7 +198,7 @@ public class DungeonRunManager : MonoBehaviour
         catch (Exception ex)
         {
             Debug.LogError("StartRun failed: " + ex);
-            SetStatus("Start run failed.");
+            SetStatus("Start run failed: " + ex.Message);
         }
     }
 
