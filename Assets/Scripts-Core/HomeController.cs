@@ -115,6 +115,11 @@ public class HomeController : MonoBehaviour
         SceneManager.LoadScene("CosmeticsScene");
     }
 
+    public void GoToPomodoroScene()
+    {
+        SceneManager.LoadScene("PomodoroScene");
+    }
+
     public bool CanStartDungeonFromHome()
     {
         return !enforceDailyLivesOnHome || CurrentRunsRemaining > 0;

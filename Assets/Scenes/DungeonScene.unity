@@ -541,7 +541,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 245.5, y: 25}
+  m_AnchoredPosition: {x: 0.000015259, y: -360}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &345009612
@@ -1872,7 +1872,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -245.5, y: 25}
+  m_AnchoredPosition: {x: -0.000015259, y: 222}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &804564444
@@ -2077,7 +2077,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1257307857241519892, guid: 648411f3213aa441793c0674ab1e278d, type: 3}
+  m_Sprite: {fileID: -1808982527863717971, guid: 8525923a458444806aad9cb78e2ecf24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2141,7 +2141,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.42, y: 5.2301254}
+    oldSize: {x: 1.625, y: 2.625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2196,10 +2196,10 @@ MonoBehaviour:
     attackRange: 1.15
     attackCooldownSeconds: 0.34
     idleSprite: {fileID: 4398115620639439662, guid: 648411f3213aa441793c0674ab1e278d, type: 3}
-    animatorController: {fileID: 0}
-    idleClip: {fileID: 7400000, guid: 0c61abb652f2d4eb3bc65f040ad7093a, type: 2}
-    runClip: {fileID: 7400000, guid: d5e8a70efae3b42dba604986476db4b7, type: 2}
-    attackClip: {fileID: 7400000, guid: a65dfedcf5f2f4d87ad384c65045b062, type: 2}
+    animatorController: {fileID: 9100000, guid: fe8fc8ffbf0014a7588c602a899329fe, type: 2}
+    idleClip: {fileID: 0}
+    runClip: {fileID: 0}
+    attackClip: {fileID: 0}
     invertHorizontalFacing: 0
     idleAnimSpeed: 1
     runAnimSpeed: 0.2
@@ -2211,7 +2211,7 @@ MonoBehaviour:
     attackRange: 1.5
     attackCooldownSeconds: 0.24
     idleSprite: {fileID: 5698103678860772177, guid: 5b246a927bad74a9887d4823bf6dc282, type: 3}
-    animatorController: {fileID: 0}
+    animatorController: {fileID: 9100000, guid: 2f772207db7104c6494a6a038243eea0, type: 2}
     idleClip: {fileID: 7400000, guid: 6a683b6dc6b544988812d60af5b542fe, type: 2}
     runClip: {fileID: 7400000, guid: d173d3da508614041b1ee4955b9b804d, type: 2}
     attackClip: {fileID: 7400000, guid: bd3be8a70ff3740e59c61d188f81ee81, type: 2}
@@ -2226,7 +2226,7 @@ MonoBehaviour:
     attackRange: 2.25
     attackCooldownSeconds: 0.2
     idleSprite: {fileID: 2957333713612672743, guid: 5402bdf5e510c4b77ac212b19f35eda7, type: 3}
-    animatorController: {fileID: 0}
+    animatorController: {fileID: 9100000, guid: f87b2ddb3c3454c43b9672e87542abc4, type: 2}
     idleClip: {fileID: 7400000, guid: 74e09108814534eceb775e99cedb8931, type: 2}
     runClip: {fileID: 7400000, guid: 70ff4966d47a84d4d8daf04be984c7c3, type: 2}
     attackClip: {fileID: 7400000, guid: 245d236b47c7649a498648a64e681112, type: 2}
@@ -2242,6 +2242,7 @@ MonoBehaviour:
   runClipKeyword: run
   movementClipKeyword: movement
   attackClipKeyword: attack
+  useSpriteFlipForFacing: 0
   moveSpeed: 4
   maxHp: 100
   attackDamage: 20
@@ -2262,7 +2263,7 @@ Animator:
   m_GameObject: {fileID: 884719648}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8a5018d1243fe40f885ad81bad33ed05, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3539,7 +3540,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
@@ -3753,7 +3754,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -45.5, y: 25}
+  m_AnchoredPosition: {x: 0.000011444, y: 25}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1882690977
@@ -3890,7 +3891,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 75, y: 25}
+  m_AnchoredPosition: {x: 0, y: -165}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1905805387

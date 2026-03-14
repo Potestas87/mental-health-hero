@@ -80,6 +80,13 @@ public class DungeonSpawner : MonoBehaviour
         DespawnActiveEnemy();
 
         _activeEnemy = Instantiate(prefab, position, Quaternion.identity);
+        var enemyRenderer = _activeEnemy.GetComponent<SpriteRenderer>();
+        if (enemyRenderer != null)
+        {
+            // Keep enemies visible above floor sprites while still below the player.
+            enemyRenderer.sortingOrder = 1;
+        }
+
         var enemy = _activeEnemy.GetComponent<EnemyController2D>();
         if (enemy == null)
         {

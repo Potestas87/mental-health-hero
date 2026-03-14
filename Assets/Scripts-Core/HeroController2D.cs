@@ -26,6 +26,11 @@ public class HeroController2D : MonoBehaviour
     }
 
     private const string AttackTriggerName = "Attack";
+    private const string SpeedParam = "Speed";
+    private const string MoveXParam = "MoveX";
+    private const string MoveYParam = "MoveY";
+    private const string FaceXParam = "FaceX";
+    private const string FaceYParam = "FaceY";
 
     [Header("Class Archetypes")]
     public List<PlayerClassArchetype> classArchetypes = new List<PlayerClassArchetype>
@@ -70,6 +75,7 @@ public class HeroController2D : MonoBehaviour
     public string runClipKeyword = "run";
     public string movementClipKeyword = "movement";
     public string attackClipKeyword = "attack";
+    public bool useSpriteFlipForFacing;
 
     [Header("Runtime Combat Stats")]
     public float moveSpeed = 4f;
@@ -93,6 +99,7 @@ public class HeroController2D : MonoBehaviour
     private float _idleAnimSpeed = 1f;
     private float _runAnimSpeed = 1f;
     private float _attackAnimSpeed = 1f;
+    private Vector2 _facingDirection = Vector2.down;
 
     public int MaxHp => maxHp;
     public int CurrentHp => _currentHp;
@@ -120,8 +127,12 @@ public class HeroController2D : MonoBehaviour
         }
 
         _moveInput = _moveInput.normalized;
+        if (_moveInput.sqrMagnitude > 0.0001f)
+        {
+            _facingDirection = _moveInput;
+        }
 
-        if (_spriteRenderer != null)
+        if (_spriteRenderer != null && useSpriteFlipForFacing)
         {
             if (_moveInput.x < -0.01f) _spriteRenderer.flipX = !_invertHorizontalFacing;
             else if (_moveInput.x > 0.01f) _spriteRenderer.flipX = _invertHorizontalFacing;
@@ -129,7 +140,11 @@ public class HeroController2D : MonoBehaviour
 
         if (_animator != null)
         {
-            _animator.SetFloat("Speed", _moveInput.sqrMagnitude);
+            _animator.SetFloat(SpeedParam, _moveInput.sqrMagnitude);
+            _animator.SetFloat(MoveXParam, _moveInput.x);
+            _animator.SetFloat(MoveYParam, _moveInput.y);
+            _animator.SetFloat(FaceXParam, _facingDirection.x);
+            _animator.SetFloat(FaceYParam, _facingDirection.y);
             ApplyAnimatorSpeedForCurrentClip();
         }
 
