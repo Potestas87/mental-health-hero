@@ -40,6 +40,8 @@ public class EnemyController2D : MonoBehaviour
     [Header("Optional References")]
     public Transform target;
     public DungeonRunManager runManager;
+    public DungeonSpawner spawner;
+    public bool reportDefeatToRunManager = true;
 
     private Rigidbody2D _rb;
     private HeroController2D _hero;
@@ -102,9 +104,14 @@ public class EnemyController2D : MonoBehaviour
         _currentHp = Mathf.Max(0, _currentHp - amount);
         if (_currentHp <= 0)
         {
-            if (runManager != null)
+            if (reportDefeatToRunManager && runManager != null)
             {
                 runManager.OnEnemyDefeated(isBoss);
+            }
+
+            if (spawner != null)
+            {
+                spawner.NotifySpawnedEnemyDefeated(this);
             }
 
             Destroy(gameObject);

@@ -34,6 +34,10 @@ public class DungeonRunManager : MonoBehaviour
     public bool enforceDailyLives = true;
     public bool useAuthoritativeFunctions;
     public bool allowManualFloorClearForDebug;
+    public bool useWaveSpawning;
+    public int wavesToSpawn = 3;
+    public int enemiesPerWave = 3;
+    public float secondsBetweenWaves = 20f;
 
     [Header("Player Reference")]
     public HeroController2D player;
@@ -190,9 +194,19 @@ public class DungeonRunManager : MonoBehaviour
 
             if (spawner != null)
             {
+                spawner.StopWaveSpawning();
+                spawner.DespawnAllSpawnedEnemies();
                 spawner.DespawnActiveEnemy();
-                spawner.SpawnFloorEnemy(1);
-                SetStatus("Run started. Floor 1 enemy spawned.");
+                if (useWaveSpawning)
+                {
+                    spawner.StartWaveSpawning(wavesToSpawn, enemiesPerWave, secondsBetweenWaves);
+                    SetStatus("Run started. Wave mode active: " + wavesToSpawn + " waves, " + enemiesPerWave + " enemies every " + secondsBetweenWaves + "s.");
+                }
+                else
+                {
+                    spawner.SpawnFloorEnemy(1);
+                    SetStatus("Run started. Floor 1 enemy spawned.");
+                }
             }
         }
         catch (Exception ex)
@@ -295,6 +309,8 @@ public class DungeonRunManager : MonoBehaviour
 
         if (spawner != null)
         {
+            spawner.StopWaveSpawning();
+            spawner.DespawnAllSpawnedEnemies();
             spawner.DespawnActiveEnemy();
         }
 
@@ -474,6 +490,11 @@ public class DungeonRunManager : MonoBehaviour
         {
             runStatusText.text = message;
         }
+    }
+
+    public void SetExternalStatus(string message)
+    {
+        SetStatus(message);
     }
 
     private void ApplyHudControlState()
