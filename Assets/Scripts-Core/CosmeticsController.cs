@@ -19,15 +19,20 @@ public class CosmeticsController : MonoBehaviour
     public Button buyButton;
     public Button equipButton;
 
+    private const string EquippedByCategoryField = "equippedCosmeticIdsByCategory";
+    private const string OwnedCosmeticsField = "ownedCosmeticIds";
+    private const string ShardsField = "shards";
+    private const string UpdatedAtField = "updatedAt";
+    private const string DefaultNoTintId = "tint_default";
+    private const string DefaultTestingTintId = "tint_crimson";
+
     private FirebaseFirestore _db;
     private string _uid;
     private bool _isBusy;
 
     private int _currentShards;
     private HashSet<string> _owned = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
-    private string _equippedTint = string.Empty;
-    private string _equippedWeapon = string.Empty;
-    private string _equippedArmor = string.Empty;
+    private readonly Dictionary<string, string> _equippedByCategory = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
 
     private void Start()
     {
@@ -57,14 +62,27 @@ public class CosmeticsController : MonoBehaviour
             }
 
             var data = snap.ToDictionary();
-            _currentShards = ReadInt(data, "shards", 0);
-            _owned = ReadStringSet(data, "ownedCosmeticIds");
-            _equippedTint = ReadString(data, "equippedTintId", string.Empty);
-            _equippedWeapon = ReadString(data, "equippedWeaponId", string.Empty);
-            _equippedArmor = ReadString(data, "equippedArmorId", string.Empty);
+            _currentShards = ReadInt(data, ShardsField, 0);
+            _owned = ReadStringSet(data, OwnedCosmeticsField);
+
+            _equippedByCategory.Clear();
+            var loadedMap = ReadStringMap(data, EquippedByCategoryField);
+            foreach (var kv in loadedMap)
+            {
+                _equippedByCategory[kv.Key] = kv.Value;
+            }
+
+            // Backward compatibility for existing user docs.
+            var legacyTint = ReadString(data, "equippedTintId", string.Empty);
+            if (!_equippedByCategory.ContainsKey(CosmeticsCatalog.TintCategoryKey) && !string.IsNullOrWhiteSpace(legacyTint))
+            {
+                _equippedByCategory[CosmeticsCatalog.TintCategoryKey] = legacyTint.Trim().ToLowerInvariant();
+            }
+
+            var grantedDefault = await EnsureDefaultTintUnlockedAsync();
 
             RenderUi();
-            SetBusy(false, "Cosmetics loaded.");
+            SetBusy(false, grantedDefault ? "Cosmetics loaded. Granted default no-tint + crimson tint." : "Cosmetics loaded.");
         }
         catch (Exception ex)
         {
@@ -93,6 +111,12 @@ public class CosmeticsController : MonoBehaviour
             return;
         }
 
+        if (!CosmeticsCatalog.IsEnabledInMvp(cosmetic) || cosmetic.Category != CosmeticCategory.Tint)
+        {
+            SetStatus("Only tint cosmetics are active right now.");
+            return;
+        }
+
         if (BootstrapController.Db == null || BootstrapController.User == null)
         {
             SetStatus("Firebase not ready.");
@@ -113,8 +137,8 @@ public class CosmeticsController : MonoBehaviour
                 }
 
                 var data = snap.ToDictionary();
-                var shards = ReadInt(data, "shards", 0);
-                var owned = ReadStringSet(data, "ownedCosmeticIds");
+                var shards = ReadInt(data, ShardsField, 0);
+                var owned = ReadStringSet(data, OwnedCosmeticsField);
 
                 if (owned.Contains(cosmetic.Id))
                 {
@@ -129,9 +153,9 @@ public class CosmeticsController : MonoBehaviour
                 owned.Add(cosmetic.Id);
                 tx.Update(userRef, new Dictionary<string, object>
                 {
-                    { "shards", shards - cosmetic.ShardCost },
-                    { "ownedCosmeticIds", new List<string>(owned) },
-                    { "updatedAt", Timestamp.GetCurrentTimestamp() }
+                    { ShardsField, shards - cosmetic.ShardCost },
+                    { OwnedCosmeticsField, new List<string>(owned) },
+                    { UpdatedAtField, Timestamp.GetCurrentTimestamp() }
                 });
             });
 
@@ -165,6 +189,12 @@ public class CosmeticsController : MonoBehaviour
             return;
         }
 
+        if (!CosmeticsCatalog.IsEnabledInMvp(cosmetic) || cosmetic.Category != CosmeticCategory.Tint)
+        {
+            SetStatus("Only tint cosmetics are active right now.");
+            return;
+        }
+
         if (!_owned.Contains(cosmetic.Id))
         {
             SetStatus("Cosmetic not owned.");
@@ -177,23 +207,20 @@ public class CosmeticsController : MonoBehaviour
             return;
         }
 
+        var categoryKey = CosmeticsCatalog.GetCategoryKey(cosmetic.Category);
+        var mapToSave = new Dictionary<string, object>();
+        foreach (var kv in _equippedByCategory)
+        {
+            mapToSave[kv.Key] = kv.Value;
+        }
+        mapToSave[categoryKey] = cosmetic.Id;
+
         var updates = new Dictionary<string, object>
         {
-            { "updatedAt", Timestamp.GetCurrentTimestamp() }
+            { EquippedByCategoryField, mapToSave },
+            { "equippedTintId", cosmetic.Id }, // legacy bridge for existing tint application paths
+            { UpdatedAtField, Timestamp.GetCurrentTimestamp() }
         };
-
-        switch (cosmetic.Slot)
-        {
-            case CosmeticSlot.Tint:
-                updates["equippedTintId"] = cosmetic.Id;
-                break;
-            case CosmeticSlot.Weapon:
-                updates["equippedWeaponId"] = cosmetic.Id;
-                break;
-            case CosmeticSlot.Armor:
-                updates["equippedArmorId"] = cosmetic.Id;
-                break;
-        }
 
         SetBusy(true, "Equipping " + cosmetic.Name + "...");
 
@@ -216,6 +243,51 @@ public class CosmeticsController : MonoBehaviour
         SceneManager.LoadScene("HomeScene");
     }
 
+    private async System.Threading.Tasks.Task<bool> EnsureDefaultTintUnlockedAsync()
+    {
+        var grantedSomething = false;
+        if (!_owned.Contains(DefaultNoTintId))
+        {
+            _owned.Add(DefaultNoTintId);
+            grantedSomething = true;
+        }
+
+        if (!_owned.Contains(DefaultTestingTintId))
+        {
+            _owned.Add(DefaultTestingTintId);
+            grantedSomething = true;
+        }
+
+        var currentTint = GetEquippedId(CosmeticsCatalog.TintCategoryKey);
+        var needsEquip = string.IsNullOrWhiteSpace(currentTint);
+        if (needsEquip)
+        {
+            _equippedByCategory[CosmeticsCatalog.TintCategoryKey] = DefaultNoTintId;
+        }
+
+        if (!grantedSomething && !needsEquip)
+        {
+            return false;
+        }
+
+        var mapToSave = new Dictionary<string, object>();
+        foreach (var kv in _equippedByCategory)
+        {
+            mapToSave[kv.Key] = kv.Value;
+        }
+
+        var updates = new Dictionary<string, object>
+        {
+            { OwnedCosmeticsField, new List<string>(_owned) },
+            { EquippedByCategoryField, mapToSave },
+            { "equippedTintId", GetEquippedId(CosmeticsCatalog.TintCategoryKey) },
+            { UpdatedAtField, Timestamp.GetCurrentTimestamp() }
+        };
+
+        await _db.Collection("users").Document(_uid).SetAsync(updates, SetOptions.MergeAll);
+        return true;
+    }
+
     private void RenderUi()
     {
         if (shardsText != null)
@@ -225,25 +297,45 @@ public class CosmeticsController : MonoBehaviour
 
         if (equippedText != null)
         {
-            equippedText.text = "Equipped -> Tint: " + SafeOrNone(_equippedTint) + " | Weapon: " + SafeOrNone(_equippedWeapon) + " | Armor: " + SafeOrNone(_equippedArmor);
+            var tintId = GetEquippedId(CosmeticsCatalog.TintCategoryKey);
+            equippedText.text = "Equipped -> Tint: " + SafeOrNone(tintId) + " (MVP active category)";
         }
 
         if (catalogText != null)
         {
             var sb = new StringBuilder();
-            var all = CosmeticsCatalog.GetAll();
-            for (var i = 0; i < all.Count; i++)
+            var active = CosmeticsCatalog.GetEnabledInMvp();
+            sb.AppendLine("Active category now: Tint");
+            sb.AppendLine("Planned categories: Armor, Weapon, Attack FX, Companion Pet, Dungeon Music");
+            sb.AppendLine();
+
+            for (var i = 0; i < active.Count; i++)
             {
-                var c = all[i];
+                var c = active[i];
                 var ownedTag = _owned.Contains(c.Id) ? "OWNED" : "LOCKED";
                 sb.Append('[').Append(ownedTag).Append("] ")
-                  .Append(c.Id).Append(" - ").Append(c.Name)
-                  .Append(" (Slot: ").Append(c.Slot).Append(", Cost: ").Append(c.ShardCost).Append(")")
-                  .AppendLine();
+                    .Append(c.Id).Append(" - ").Append(c.Name)
+                    .Append(" (Category: ").Append(c.Category).Append(", Cost: ").Append(c.ShardCost).Append(")")
+                    .AppendLine();
             }
 
             catalogText.text = sb.ToString();
         }
+    }
+
+    private string GetEquippedId(string categoryKey)
+    {
+        if (string.IsNullOrWhiteSpace(categoryKey))
+        {
+            return string.Empty;
+        }
+
+        if (_equippedByCategory.TryGetValue(categoryKey, out var value) && !string.IsNullOrWhiteSpace(value))
+        {
+            return value;
+        }
+
+        return string.Empty;
     }
 
     private void SetBusy(bool busy, string status)
@@ -319,5 +411,49 @@ public class CosmeticsController : MonoBehaviour
         }
 
         return set;
+    }
+
+    private static Dictionary<string, string> ReadStringMap(Dictionary<string, object> data, string key)
+    {
+        var map = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+        if (!data.TryGetValue(key, out var raw) || raw == null)
+        {
+            return map;
+        }
+
+        if (raw is IDictionary dict)
+        {
+            foreach (DictionaryEntry entry in dict)
+            {
+                if (entry.Key == null || entry.Value == null)
+                {
+                    continue;
+                }
+
+                var mapKey = entry.Key.ToString().Trim().ToLowerInvariant();
+                var mapValue = entry.Value.ToString().Trim().ToLowerInvariant();
+                if (!string.IsNullOrWhiteSpace(mapKey))
+                {
+                    map[mapKey] = mapValue;
+                }
+            }
+
+            return map;
+        }
+
+        if (raw is Dictionary<string, object> objMap)
+        {
+            foreach (var kv in objMap)
+            {
+                if (string.IsNullOrWhiteSpace(kv.Key) || kv.Value == null)
+                {
+                    continue;
+                }
+
+                map[kv.Key.Trim().ToLowerInvariant()] = kv.Value.ToString().Trim().ToLowerInvariant();
+            }
+        }
+
+        return map;
     }
 }

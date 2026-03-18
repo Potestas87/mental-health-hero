@@ -15,7 +15,7 @@ PrefabInstance:
     - target: {fileID: 3305811166292741680, guid: 46f216724742d47abaf569731dde5e7e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 3440463435230094750, guid: 89882c3c5d49d49db84722107db259cc, type: 3}
+      objectReference: {fileID: -1808982527863717971, guid: d9e8114ab28214b70a837bc54d128ff5, type: 3}
     - target: {fileID: 3305811166292741680, guid: 46f216724742d47abaf569731dde5e7e, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -86,14 +86,44 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8988349784561292736, guid: 46f216724742d47abaf569731dde5e7e, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 4.77
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8988349784561292736, guid: 46f216724742d47abaf569731dde5e7e, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 5.82
+      value: 7.375
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 635490724698121277, guid: 46f216724742d47abaf569731dde5e7e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 966482633914419191}
   m_SourcePrefab: {fileID: 100100000, guid: 46f216724742d47abaf569731dde5e7e, type: 3}
+--- !u!1 &5409087258238738390 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 635490724698121277, guid: 46f216724742d47abaf569731dde5e7e, type: 3}
+  m_PrefabInstance: {fileID: 4882261818191821803}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &966482633914419191
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5409087258238738390}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eedd4d74f472c4432a4375df7e9437a1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public enum EnemyArchetype
@@ -12,6 +13,10 @@ public enum EnemyArchetype
 [RequireComponent(typeof(Rigidbody2D))]
 public class EnemyController2D : MonoBehaviour
 {
+    private const string AnimSpeedParam = "Speed";
+    private const string AnimFaceXParam = "FaceX";
+    private const string AnimFaceYParam = "FaceY";
+
     [Header("Archetype")]
     public EnemyArchetype archetype = EnemyArchetype.Chaser;
     public bool applyArchetypeStatsOnStart = true;
@@ -37,10 +42,16 @@ public class EnemyController2D : MonoBehaviour
     public float rangedBurstIntervalSeconds = 4f;
     public float rangedBurstDamageMultiplier = 1.8f;
 
+    [Header("Damage Flash")]
+    public SpriteRenderer spriteRenderer;
+    public Color damageFlashColor = new Color(1f, 0.25f, 0.25f, 1f);
+    [Range(0.01f, 0.5f)] public float damageFlashDuration = 0.08f;
+
     [Header("Optional References")]
     public Transform target;
     public DungeonRunManager runManager;
     public DungeonSpawner spawner;
+    public Animator animator;
     public bool reportDefeatToRunManager = true;
 
     private Rigidbody2D _rb;
@@ -55,10 +66,27 @@ public class EnemyController2D : MonoBehaviour
     private int _runtimeDamage;
     private float _runtimeCooldown;
     private float _runtimeAttackRange;
+    private Vector2 _facingDirection = Vector2.down;
+    private Color _baseSpriteColor = Color.white;
+    private Coroutine _damageFlashRoutine;
 
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
+        if (spriteRenderer == null)
+        {
+            spriteRenderer = GetComponent<SpriteRenderer>();
+        }
+
+        if (animator == null)
+        {
+            animator = GetComponent<Animator>();
+        }
+
+        if (spriteRenderer != null)
+        {
+            _baseSpriteColor = spriteRenderer.color;
+        }
     }
 
     private void Start()
@@ -81,6 +109,7 @@ public class EnemyController2D : MonoBehaviour
             if (target == null)
             {
                 _rb.linearVelocity = Vector2.zero;
+                UpdateAnimator(Vector2.zero, 0f);
                 return;
             }
         }
@@ -101,6 +130,7 @@ public class EnemyController2D : MonoBehaviour
             return;
         }
 
+        TriggerDamageFlash();
         _currentHp = Mathf.Max(0, _currentHp - amount);
         if (_currentHp <= 0)
         {
@@ -116,6 +146,44 @@ public class EnemyController2D : MonoBehaviour
 
             Destroy(gameObject);
         }
+    }
+
+    private void TriggerDamageFlash()
+    {
+        if (spriteRenderer == null)
+        {
+            return;
+        }
+
+        if (_damageFlashRoutine != null)
+        {
+            StopCoroutine(_damageFlashRoutine);
+            _damageFlashRoutine = null;
+        }
+
+        _damageFlashRoutine = StartCoroutine(DamageFlashRoutine());
+    }
+
+    private IEnumerator DamageFlashRoutine()
+    {
+        if (spriteRenderer == null)
+        {
+            yield break;
+        }
+
+        _baseSpriteColor = spriteRenderer.color;
+        var flashColor = damageFlashColor;
+        flashColor.a = _baseSpriteColor.a;
+        spriteRenderer.color = flashColor;
+
+        yield return new WaitForSeconds(Mathf.Max(0.01f, damageFlashDuration));
+
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.color = _baseSpriteColor;
+        }
+
+        _damageFlashRoutine = null;
     }
 
     private void ResolveTarget()
@@ -250,6 +318,7 @@ public class EnemyController2D : MonoBehaviour
         if (distance <= 0.001f)
         {
             _rb.linearVelocity = Vector2.zero;
+            UpdateAnimator(Vector2.zero, 0f);
             return;
         }
 
@@ -257,6 +326,7 @@ public class EnemyController2D : MonoBehaviour
         {
             // Short recovery window after phase transition for readable pacing.
             _rb.linearVelocity = Vector2.zero;
+            UpdateAnimator(Vector2.zero, 0f);
             return;
         }
 
@@ -276,6 +346,24 @@ public class EnemyController2D : MonoBehaviour
         }
 
         _rb.linearVelocity = direction * _runtimeMoveSpeed;
+        UpdateAnimator(direction, _rb.linearVelocity.magnitude);
+    }
+
+    private void UpdateAnimator(Vector2 moveDirection, float speed)
+    {
+        if (animator == null)
+        {
+            return;
+        }
+
+        if (moveDirection.sqrMagnitude > 0.0001f)
+        {
+            _facingDirection = moveDirection.normalized;
+        }
+
+        animator.SetFloat(AnimSpeedParam, speed);
+        animator.SetFloat(AnimFaceXParam, _facingDirection.x);
+        animator.SetFloat(AnimFaceYParam, _facingDirection.y);
     }
 
     private void TryAttackByDistance()

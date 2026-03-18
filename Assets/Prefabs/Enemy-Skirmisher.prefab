@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3864873275556681216}
   - component: {fileID: 5399963985161356866}
   - component: {fileID: 8988349784561292736}
+  - component: {fileID: 5100641315382487315}
   m_Layer: 8
   m_Name: Enemy-Skirmisher
   m_TagString: Untagged
@@ -84,7 +85,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -6575134912733565401, guid: 005f1e166f4b046ada48f63465c66850, type: 3}
+  m_Sprite: {fileID: -8556153337439913670, guid: 87bcee272a3084eea85e910d483114df, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -150,8 +151,14 @@ MonoBehaviour:
   rangedPreferredDistance: 2.2
   rangedBurstIntervalSeconds: 4
   rangedBurstDamageMultiplier: 1.8
+  spriteRenderer: {fileID: 0}
+  damageFlashColor: {r: 1, g: 0.25, b: 0.25, a: 1}
+  damageFlashDuration: 0.08
   target: {fileID: 0}
   runManager: {fileID: 0}
+  spawner: {fileID: 0}
+  animator: {fileID: 0}
+  reportDefeatToRunManager: 1
 --- !u!61 &8988349784561292736
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -190,7 +197,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.77, y: 5.13}
+    oldSize: {x: 2.75, y: 6.125}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -198,3 +205,25 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 4, y: 5}
   m_EdgeRadius: 0
+--- !u!95 &5100641315382487315
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635490724698121277}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1735fc6fe191d4e00bc46949615d0884, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
