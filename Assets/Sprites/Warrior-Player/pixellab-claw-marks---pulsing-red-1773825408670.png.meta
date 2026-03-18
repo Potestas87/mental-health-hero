@@ -1,0 +1,1079 @@
+fileFormatVersion: 2
+guid: 3b3497757171d441e9fd66892f067464
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7514322632810346370
+    second: pixellab-claw-marks---pulsing-red-1773825408670_0
+  - first:
+      213: 5164711770478980975
+    second: pixellab-claw-marks---pulsing-red-1773825408670_1
+  - first:
+      213: 7765503511201391490
+    second: pixellab-claw-marks---pulsing-red-1773825408670_2
+  - first:
+      213: -7520496637945100321
+    second: pixellab-claw-marks---pulsing-red-1773825408670_3
+  - first:
+      213: 8726992143512261081
+    second: pixellab-claw-marks---pulsing-red-1773825408670_4
+  - first:
+      213: 4814112516082549094
+    second: pixellab-claw-marks---pulsing-red-1773825408670_5
+  - first:
+      213: -6080387903095040604
+    second: pixellab-claw-marks---pulsing-red-1773825408670_6
+  - first:
+      213: 5976198504662260298
+    second: pixellab-claw-marks---pulsing-red-1773825408670_7
+  - first:
+      213: -6327431070321439742
+    second: pixellab-claw-marks---pulsing-red-1773825408670_8
+  - first:
+      213: 8014485855720160660
+    second: pixellab-claw-marks---pulsing-red-1773825408670_9
+  - first:
+      213: -4946248515778017408
+    second: pixellab-claw-marks---pulsing-red-1773825408670_10
+  - first:
+      213: 4142265952507614903
+    second: pixellab-claw-marks---pulsing-red-1773825408670_11
+  - first:
+      213: 765562221207647132
+    second: pixellab-claw-marks---pulsing-red-1773825408670_12
+  - first:
+      213: -2654037549809377812
+    second: pixellab-claw-marks---pulsing-red-1773825408670_13
+  - first:
+      213: 2503712096181725417
+    second: pixellab-claw-marks---pulsing-red-1773825408670_14
+  - first:
+      213: 5292483958105812909
+    second: pixellab-claw-marks---pulsing-red-1773825408670_15
+  - first:
+      213: 1168024548216592513
+    second: pixellab-claw-marks---pulsing-red-1773825408670_16
+  - first:
+      213: 2103645887261867184
+    second: pixellab-claw-marks---pulsing-red-1773825408670_17
+  - first:
+      213: -1592678089559773109
+    second: pixellab-claw-marks---pulsing-red-1773825408670_18
+  - first:
+      213: 4988338686113637655
+    second: pixellab-claw-marks---pulsing-red-1773825408670_19
+  - first:
+      213: -5236742151013948197
+    second: pixellab-claw-marks---pulsing-red-1773825408670_20
+  - first:
+      213: -2916254071374494463
+    second: pixellab-claw-marks---pulsing-red-1773825408670_21
+  - first:
+      213: 5000612653832148193
+    second: pixellab-claw-marks---pulsing-red-1773825408670_22
+  - first:
+      213: -6428699559573711970
+    second: pixellab-claw-marks---pulsing-red-1773825408670_23
+  - first:
+      213: -2960713015985692941
+    second: pixellab-claw-marks---pulsing-red-1773825408670_24
+  - first:
+      213: -7116043669644156001
+    second: pixellab-claw-marks---pulsing-red-1773825408670_25
+  - first:
+      213: 4200249212985787125
+    second: pixellab-claw-marks---pulsing-red-1773825408670_26
+  - first:
+      213: 3523114818224154556
+    second: pixellab-claw-marks---pulsing-red-1773825408670_27
+  - first:
+      213: -8269490318240703355
+    second: pixellab-claw-marks---pulsing-red-1773825408670_28
+  - first:
+      213: 5387842572134157562
+    second: pixellab-claw-marks---pulsing-red-1773825408670_29
+  - first:
+      213: -2931612160999131177
+    second: pixellab-claw-marks---pulsing-red-1773825408670_30
+  - first:
+      213: -4498123358552341956
+    second: pixellab-claw-marks---pulsing-red-1773825408670_31
+  - first:
+      213: -7455296679477791974
+    second: pixellab-claw-marks---pulsing-red-1773825408670_32
+  - first:
+      213: -3647380303123287835
+    second: pixellab-claw-marks---pulsing-red-1773825408670_33
+  - first:
+      213: 3518694217279926503
+    second: pixellab-claw-marks---pulsing-red-1773825408670_34
+  - first:
+      213: -253056082138616252
+    second: pixellab-claw-marks---pulsing-red-1773825408670_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pixellab-claw-marks---pulsing-red-1773825408670_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 210
+        width: 20
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 287b6583f9c384860800000000000000
+      internalID: 7514322632810346370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-claw-marks---pulsing-red-1773825408670_1
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 202
+        width: 26
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6fadaecdfdbca740800000000000000
+      internalID: 5164711770478980975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-claw-marks---pulsing-red-1773825408670_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 202
+        width: 20
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 283253fcc4c94cb60800000000000000
+      internalID: 7765503511201391490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-claw-marks---pulsing-red-1773825408670_3
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 210
+        width: 20
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd743c03724d1a790800000000000000
+      internalID: -7520496637945100321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-claw-marks---pulsing-red-1773825408670_4
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 202
+        width: 25
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d15cafed118c1970800000000000000
+      internalID: 8726992143512261081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-claw-marks---pulsing-red-1773825408670_5
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 202
+        width: 20
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 661ccddb3d92fc240800000000000000
+      internalID: 4814112516082549094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-claw-marks---pulsing-red-1773825408670_6
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 209
+        width: 22
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a5107bda6f1e9ba0800000000000000
+      internalID: -6080387903095040604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-claw-marks---pulsing-red-1773825408670_7
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 199
+        width: 27
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4a5d9170e8bfe250800000000000000
+      internalID: 5976198504662260298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-claw-marks---pulsing-red-1773825408670_8
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 202
+        width: 21
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20c88b837f27038a0800000000000000
+      internalID: -6327431070321439742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-claw-marks---pulsing-red-1773825408670_9
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 209
+        width: 22
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49db7975c6c293f60800000000000000
+      internalID: 8014485855720160660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-claw-marks---pulsing-red-1773825408670_10
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 199
+        width: 27
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0878f366e256b5bb0800000000000000
+      internalID: -4946248515778017408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-claw-marks---pulsing-red-1773825408670_11
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 202
+        width: 21
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b65968efe84c7930800000000000000
+      internalID: 4142265952507614903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-claw-marks---pulsing-red-1773825408670_12
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 134
+        width: 46
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c937a88b8c2df9a00800000000000000
+      internalID: 765562221207647132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-claw-marks---pulsing-red-1773825408670_13
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 133
+        width: 46
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ced501ff8e6fa2bd0800000000000000
+      internalID: -2654037549809377812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-claw-marks---pulsing-red-1773825408670_14
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 134
+        width: 46
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e8a2c0e2e8feb220800000000000000
+      internalID: 2503712096181725417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-claw-marks---pulsing-red-1773825408670_15
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 133
+        width: 47
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dafa95e7e1ea27940800000000000000
+      internalID: 5292483958105812909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-claw-marks---pulsing-red-1773825408670_16
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 70
+        width: 46
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 188d26d5328a53010800000000000000
+      internalID: 1168024548216592513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-claw-marks---pulsing-red-1773825408670_17
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 70
+        width: 46
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bc7473f9c6a13d10800000000000000
+      internalID: 2103645887261867184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-claw-marks---pulsing-red-1773825408670_18
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 80
+        width: 21
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b40fd3647bba5e9e0800000000000000
+      internalID: -1592678089559773109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-claw-marks---pulsing-red-1773825408670_19
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 70
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 715642d0b932a3540800000000000000
+      internalID: 4988338686113637655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-claw-marks---pulsing-red-1773825408670_20
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 74
+        width: 21
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd4af7452ca5357b0800000000000000
+      internalID: -5236742151013948197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-claw-marks---pulsing-red-1773825408670_21
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 80
+        width: 21
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 105cfe08f526787d0800000000000000
+      internalID: -2916254071374494463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-claw-marks---pulsing-red-1773825408670_22
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 70
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e41dfad6beb56540800000000000000
+      internalID: 5000612653832148193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-claw-marks---pulsing-red-1773825408670_23
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 74
+        width: 21
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9316efafcba8c6a0800000000000000
+      internalID: -6428699559573711970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-claw-marks---pulsing-red-1773825408670_24
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 17
+        width: 20
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fe1c40d23f69e6d0800000000000000
+      internalID: -2960713015985692941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-claw-marks---pulsing-red-1773825408670_25
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 7
+        width: 25
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9361b02cfbbe3d90800000000000000
+      internalID: -7116043669644156001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-claw-marks---pulsing-red-1773825408670_26
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 11
+        width: 19
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f2c124c7684a4a30800000000000000
+      internalID: 4200249212985787125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-claw-marks---pulsing-red-1773825408670_27
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 16
+        width: 21
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb76a2bc24e94e030800000000000000
+      internalID: 3523114818224154556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-claw-marks---pulsing-red-1773825408670_28
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 6
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58c1bb38e5edc3d80800000000000000
+      internalID: -8269490318240703355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-claw-marks---pulsing-red-1773825408670_29
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 10
+        width: 21
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afc88c9f54675ca40800000000000000
+      internalID: 5387842572134157562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-claw-marks---pulsing-red-1773825408670_30
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 17
+        width: 20
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d77e6c9542d057d0800000000000000
+      internalID: -2931612160999131177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-claw-marks---pulsing-red-1773825408670_31
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 7
+        width: 25
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c32c99133a47391c0800000000000000
+      internalID: -4498123358552341956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-claw-marks---pulsing-red-1773825408670_32
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 11
+        width: 19
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a13b39c7b27798890800000000000000
+      internalID: -7455296679477791974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-claw-marks---pulsing-red-1773825408670_33
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 17
+        width: 20
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e0749f50f6e16dc0800000000000000
+      internalID: -3647380303123287835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-claw-marks---pulsing-red-1773825408670_34
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 7
+        width: 25
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e0f03e6fb9e4d030800000000000000
+      internalID: 3518694217279926503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-claw-marks---pulsing-red-1773825408670_35
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 11
+        width: 19
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44e20e385d6fc7cf0800000000000000
+      internalID: -253056082138616252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      pixellab-claw-marks---pulsing-red-1773825408670_0: 7514322632810346370
+      pixellab-claw-marks---pulsing-red-1773825408670_1: 5164711770478980975
+      pixellab-claw-marks---pulsing-red-1773825408670_10: -4946248515778017408
+      pixellab-claw-marks---pulsing-red-1773825408670_11: 4142265952507614903
+      pixellab-claw-marks---pulsing-red-1773825408670_12: 765562221207647132
+      pixellab-claw-marks---pulsing-red-1773825408670_13: -2654037549809377812
+      pixellab-claw-marks---pulsing-red-1773825408670_14: 2503712096181725417
+      pixellab-claw-marks---pulsing-red-1773825408670_15: 5292483958105812909
+      pixellab-claw-marks---pulsing-red-1773825408670_16: 1168024548216592513
+      pixellab-claw-marks---pulsing-red-1773825408670_17: 2103645887261867184
+      pixellab-claw-marks---pulsing-red-1773825408670_18: -1592678089559773109
+      pixellab-claw-marks---pulsing-red-1773825408670_19: 4988338686113637655
+      pixellab-claw-marks---pulsing-red-1773825408670_2: 7765503511201391490
+      pixellab-claw-marks---pulsing-red-1773825408670_20: -5236742151013948197
+      pixellab-claw-marks---pulsing-red-1773825408670_21: -2916254071374494463
+      pixellab-claw-marks---pulsing-red-1773825408670_22: 5000612653832148193
+      pixellab-claw-marks---pulsing-red-1773825408670_23: -6428699559573711970
+      pixellab-claw-marks---pulsing-red-1773825408670_24: -2960713015985692941
+      pixellab-claw-marks---pulsing-red-1773825408670_25: -7116043669644156001
+      pixellab-claw-marks---pulsing-red-1773825408670_26: 4200249212985787125
+      pixellab-claw-marks---pulsing-red-1773825408670_27: 3523114818224154556
+      pixellab-claw-marks---pulsing-red-1773825408670_28: -8269490318240703355
+      pixellab-claw-marks---pulsing-red-1773825408670_29: 5387842572134157562
+      pixellab-claw-marks---pulsing-red-1773825408670_3: -7520496637945100321
+      pixellab-claw-marks---pulsing-red-1773825408670_30: -2931612160999131177
+      pixellab-claw-marks---pulsing-red-1773825408670_31: -4498123358552341956
+      pixellab-claw-marks---pulsing-red-1773825408670_32: -7455296679477791974
+      pixellab-claw-marks---pulsing-red-1773825408670_33: -3647380303123287835
+      pixellab-claw-marks---pulsing-red-1773825408670_34: 3518694217279926503
+      pixellab-claw-marks---pulsing-red-1773825408670_35: -253056082138616252
+      pixellab-claw-marks---pulsing-red-1773825408670_4: 8726992143512261081
+      pixellab-claw-marks---pulsing-red-1773825408670_5: 4814112516082549094
+      pixellab-claw-marks---pulsing-red-1773825408670_6: -6080387903095040604
+      pixellab-claw-marks---pulsing-red-1773825408670_7: 5976198504662260298
+      pixellab-claw-marks---pulsing-red-1773825408670_8: -6327431070321439742
+      pixellab-claw-marks---pulsing-red-1773825408670_9: 8014485855720160660
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

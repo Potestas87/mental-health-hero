@@ -1,0 +1,767 @@
+fileFormatVersion: 2
+guid: dfe3a94769f66414d899616778ca686e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1407372135690796274
+    second: pixellab-tornado---spinning-with-leaves-1773827082241_0
+  - first:
+      213: 8873922035294590280
+    second: pixellab-tornado---spinning-with-leaves-1773827082241_1
+  - first:
+      213: -7857879663589119640
+    second: pixellab-tornado---spinning-with-leaves-1773827082241_2
+  - first:
+      213: 3442905247341840144
+    second: pixellab-tornado---spinning-with-leaves-1773827082241_3
+  - first:
+      213: 2925631450370157586
+    second: pixellab-tornado---spinning-with-leaves-1773827082241_4
+  - first:
+      213: -6679893260225334567
+    second: pixellab-tornado---spinning-with-leaves-1773827082241_5
+  - first:
+      213: 7704767806925594902
+    second: pixellab-tornado---spinning-with-leaves-1773827082241_6
+  - first:
+      213: -1203657950876309083
+    second: pixellab-tornado---spinning-with-leaves-1773827082241_7
+  - first:
+      213: -1115169877672903117
+    second: pixellab-tornado---spinning-with-leaves-1773827082241_8
+  - first:
+      213: -1216698384210905151
+    second: pixellab-tornado---spinning-with-leaves-1773827082241_9
+  - first:
+      213: -3039346492184788702
+    second: pixellab-tornado---spinning-with-leaves-1773827082241_10
+  - first:
+      213: 4918457073672776537
+    second: pixellab-tornado---spinning-with-leaves-1773827082241_11
+  - first:
+      213: 6552094818299513801
+    second: pixellab-tornado---spinning-with-leaves-1773827082241_12
+  - first:
+      213: -5934353113715329157
+    second: pixellab-tornado---spinning-with-leaves-1773827082241_13
+  - first:
+      213: -8975501810894437922
+    second: pixellab-tornado---spinning-with-leaves-1773827082241_14
+  - first:
+      213: -2842882849875042844
+    second: pixellab-tornado---spinning-with-leaves-1773827082241_15
+  - first:
+      213: -8501755813234641391
+    second: pixellab-tornado---spinning-with-leaves-1773827082241_16
+  - first:
+      213: -262687658914574458
+    second: pixellab-tornado---spinning-with-leaves-1773827082241_17
+  - first:
+      213: -4204221171367304057
+    second: pixellab-tornado---spinning-with-leaves-1773827082241_18
+  - first:
+      213: 6632900314939184023
+    second: pixellab-tornado---spinning-with-leaves-1773827082241_19
+  - first:
+      213: -7878105618065385206
+    second: pixellab-tornado---spinning-with-leaves-1773827082241_20
+  - first:
+      213: 4934977735881331745
+    second: pixellab-tornado---spinning-with-leaves-1773827082241_21
+  - first:
+      213: 2594752724252186188
+    second: pixellab-tornado---spinning-with-leaves-1773827082241_22
+  - first:
+      213: 5868652170229204508
+    second: pixellab-tornado---spinning-with-leaves-1773827082241_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pixellab-tornado---spinning-with-leaves-1773827082241_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 194
+        width: 41
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fcf1a6308df78310800000000000000
+      internalID: 1407372135690796274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-tornado---spinning-with-leaves-1773827082241_1
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 195
+        width: 42
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 845de363311862b70800000000000000
+      internalID: 8873922035294590280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-tornado---spinning-with-leaves-1773827082241_2
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 194
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 869210c241433f290800000000000000
+      internalID: -7857879663589119640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-tornado---spinning-with-leaves-1773827082241_3
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 196
+        width: 42
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0178327c418a7cf20800000000000000
+      internalID: 3442905247341840144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-tornado---spinning-with-leaves-1773827082241_4
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 194
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21c260fad4ee99820800000000000000
+      internalID: 2925631450370157586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-tornado---spinning-with-leaves-1773827082241_5
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 193
+        width: 42
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d23ebea8704c43a0800000000000000
+      internalID: -6679893260225334567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-tornado---spinning-with-leaves-1773827082241_6
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 131
+        width: 42
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6116aa0bf75dcea60800000000000000
+      internalID: 7704767806925594902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-tornado---spinning-with-leaves-1773827082241_7
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 130
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a961fe887fbb4fe0800000000000000
+      internalID: -1203657950876309083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-tornado---spinning-with-leaves-1773827082241_8
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 130
+        width: 43
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33e371997ee1680f0800000000000000
+      internalID: -1115169877672903117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-tornado---spinning-with-leaves-1773827082241_9
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 130
+        width: 43
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c73152144b6d1fe0800000000000000
+      internalID: -1216698384210905151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-tornado---spinning-with-leaves-1773827082241_10
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 130
+        width: 43
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2210fffe77212d5d0800000000000000
+      internalID: -3039346492184788702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-tornado---spinning-with-leaves-1773827082241_11
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 66
+        width: 43
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95be54f36aed14440800000000000000
+      internalID: 4918457073672776537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-tornado---spinning-with-leaves-1773827082241_12
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 68
+        width: 44
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cb8b63d587bdea50800000000000000
+      internalID: 6552094818299513801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-tornado---spinning-with-leaves-1773827082241_13
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 65
+        width: 43
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b77b34dd841f4ada0800000000000000
+      internalID: -5934353113715329157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-tornado---spinning-with-leaves-1773827082241_14
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 67
+        width: 43
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed103c048ac907380800000000000000
+      internalID: -8975501810894437922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-tornado---spinning-with-leaves-1773827082241_15
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 66
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4edd52b3c1d0c88d0800000000000000
+      internalID: -2842882849875042844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-tornado---spinning-with-leaves-1773827082241_16
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 3
+        width: 43
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1167901d122b30a80800000000000000
+      internalID: -8501755813234641391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-tornado---spinning-with-leaves-1773827082241_17
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 2
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68f848b47feba5cf0800000000000000
+      internalID: -262687658914574458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-tornado---spinning-with-leaves-1773827082241_18
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 4
+        width: 43
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 784a97b9e1b97a5c0800000000000000
+      internalID: -4204221171367304057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-tornado---spinning-with-leaves-1773827082241_19
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 3
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 793d68e91bbcc0c50800000000000000
+      internalID: 6632900314939184023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-tornado---spinning-with-leaves-1773827082241_20
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 3
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a09143c2ea85ba290800000000000000
+      internalID: -7878105618065385206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-tornado---spinning-with-leaves-1773827082241_21
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 1
+        width: 43
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1241ba9aa109c7440800000000000000
+      internalID: 4934977735881331745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-tornado---spinning-with-leaves-1773827082241_22
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 3
+        width: 41
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c465709ead9620420800000000000000
+      internalID: 2594752724252186188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-tornado---spinning-with-leaves-1773827082241_23
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 1
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1646dc2e04a17150800000000000000
+      internalID: 5868652170229204508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      pixellab-tornado---spinning-with-leaves-1773827082241_0: 1407372135690796274
+      pixellab-tornado---spinning-with-leaves-1773827082241_1: 8873922035294590280
+      pixellab-tornado---spinning-with-leaves-1773827082241_10: -3039346492184788702
+      pixellab-tornado---spinning-with-leaves-1773827082241_11: 4918457073672776537
+      pixellab-tornado---spinning-with-leaves-1773827082241_12: 6552094818299513801
+      pixellab-tornado---spinning-with-leaves-1773827082241_13: -5934353113715329157
+      pixellab-tornado---spinning-with-leaves-1773827082241_14: -8975501810894437922
+      pixellab-tornado---spinning-with-leaves-1773827082241_15: -2842882849875042844
+      pixellab-tornado---spinning-with-leaves-1773827082241_16: -8501755813234641391
+      pixellab-tornado---spinning-with-leaves-1773827082241_17: -262687658914574458
+      pixellab-tornado---spinning-with-leaves-1773827082241_18: -4204221171367304057
+      pixellab-tornado---spinning-with-leaves-1773827082241_19: 6632900314939184023
+      pixellab-tornado---spinning-with-leaves-1773827082241_2: -7857879663589119640
+      pixellab-tornado---spinning-with-leaves-1773827082241_20: -7878105618065385206
+      pixellab-tornado---spinning-with-leaves-1773827082241_21: 4934977735881331745
+      pixellab-tornado---spinning-with-leaves-1773827082241_22: 2594752724252186188
+      pixellab-tornado---spinning-with-leaves-1773827082241_23: 5868652170229204508
+      pixellab-tornado---spinning-with-leaves-1773827082241_3: 3442905247341840144
+      pixellab-tornado---spinning-with-leaves-1773827082241_4: 2925631450370157586
+      pixellab-tornado---spinning-with-leaves-1773827082241_5: -6679893260225334567
+      pixellab-tornado---spinning-with-leaves-1773827082241_6: 7704767806925594902
+      pixellab-tornado---spinning-with-leaves-1773827082241_7: -1203657950876309083
+      pixellab-tornado---spinning-with-leaves-1773827082241_8: -1115169877672903117
+      pixellab-tornado---spinning-with-leaves-1773827082241_9: -1216698384210905151
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

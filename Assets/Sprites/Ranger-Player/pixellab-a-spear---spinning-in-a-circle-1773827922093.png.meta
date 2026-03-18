@@ -1,0 +1,559 @@
+fileFormatVersion: 2
+guid: 3bdcac1f25dc7467ea9a94c56ef65d12
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8214861807448362770
+    second: pixellab-a-spear---spinning-in-a-circle-1773827922093_0
+  - first:
+      213: -7201213698735282845
+    second: pixellab-a-spear---spinning-in-a-circle-1773827922093_1
+  - first:
+      213: -7208901668134176707
+    second: pixellab-a-spear---spinning-in-a-circle-1773827922093_2
+  - first:
+      213: 5425593969624872058
+    second: pixellab-a-spear---spinning-in-a-circle-1773827922093_3
+  - first:
+      213: 1618773809365941057
+    second: pixellab-a-spear---spinning-in-a-circle-1773827922093_4
+  - first:
+      213: -8102169244326852557
+    second: pixellab-a-spear---spinning-in-a-circle-1773827922093_5
+  - first:
+      213: 1302823889076498550
+    second: pixellab-a-spear---spinning-in-a-circle-1773827922093_6
+  - first:
+      213: 1760528451203362635
+    second: pixellab-a-spear---spinning-in-a-circle-1773827922093_7
+  - first:
+      213: -5248153688496971281
+    second: pixellab-a-spear---spinning-in-a-circle-1773827922093_8
+  - first:
+      213: -7564373152659894284
+    second: pixellab-a-spear---spinning-in-a-circle-1773827922093_9
+  - first:
+      213: -9012930281938830293
+    second: pixellab-a-spear---spinning-in-a-circle-1773827922093_10
+  - first:
+      213: 7959063206969574342
+    second: pixellab-a-spear---spinning-in-a-circle-1773827922093_11
+  - first:
+      213: 440971188368329434
+    second: pixellab-a-spear---spinning-in-a-circle-1773827922093_12
+  - first:
+      213: 3070276457983248265
+    second: pixellab-a-spear---spinning-in-a-circle-1773827922093_13
+  - first:
+      213: -2148511796136045999
+    second: pixellab-a-spear---spinning-in-a-circle-1773827922093_14
+  - first:
+      213: -7750917164951546514
+    second: pixellab-a-spear---spinning-in-a-circle-1773827922093_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pixellab-a-spear---spinning-in-a-circle-1773827922093_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 200
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21f02e72a4d010270800000000000000
+      internalID: 8214861807448362770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-a-spear---spinning-in-a-circle-1773827922093_1
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 213
+        width: 62
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 365e43f6b46201c90800000000000000
+      internalID: -7201213698735282845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-a-spear---spinning-in-a-circle-1773827922093_2
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 213
+        width: 62
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3834229026d4fb90800000000000000
+      internalID: -7208901668134176707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-a-spear---spinning-in-a-circle-1773827922093_3
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 201
+        width: 48
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a74fdf628f49b4b40800000000000000
+      internalID: 5425593969624872058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-a-spear---spinning-in-a-circle-1773827922093_4
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 136
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14b76f6f33a077610800000000000000
+      internalID: 1618773809365941057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-a-spear---spinning-in-a-circle-1773827922093_5
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 136
+        width: 48
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3388dc9dfff4f8f80800000000000000
+      internalID: -8102169244326852557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-a-spear---spinning-in-a-circle-1773827922093_6
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 130
+        width: 22
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6703c49ac6f841210800000000000000
+      internalID: 1302823889076498550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-a-spear---spinning-in-a-circle-1773827922093_7
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 137
+        width: 48
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4fe1f67c47ae6810800000000000000
+      internalID: 1760528451203362635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-a-spear---spinning-in-a-circle-1773827922093_8
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 72
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe16b76b600da27b0800000000000000
+      internalID: -5248153688496971281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-a-spear---spinning-in-a-circle-1773827922093_9
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 73
+        width: 49
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ff843702b2f50790800000000000000
+      internalID: -7564373152659894284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-a-spear---spinning-in-a-circle-1773827922093_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 85
+        width: 64
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2cbcaf39a3abe280800000000000000
+      internalID: -9012930281938830293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-a-spear---spinning-in-a-circle-1773827922093_11
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 72
+        width: 49
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c38d4c51d5447e60800000000000000
+      internalID: 7959063206969574342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-a-spear---spinning-in-a-circle-1773827922093_12
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 9
+        width: 48
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ada40ee95f4ae1600800000000000000
+      internalID: 440971188368329434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-a-spear---spinning-in-a-circle-1773827922093_13
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 8
+        width: 49
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9870658eb20db9a20800000000000000
+      internalID: 3070276457983248265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-a-spear---spinning-in-a-circle-1773827922093_14
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 2
+        width: 22
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 152139b97e3fe22e0800000000000000
+      internalID: -2148511796136045999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-a-spear---spinning-in-a-circle-1773827922093_15
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 9
+        width: 48
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e65d59397e53f6490800000000000000
+      internalID: -7750917164951546514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      pixellab-a-spear---spinning-in-a-circle-1773827922093_0: 8214861807448362770
+      pixellab-a-spear---spinning-in-a-circle-1773827922093_1: -7201213698735282845
+      pixellab-a-spear---spinning-in-a-circle-1773827922093_10: -9012930281938830293
+      pixellab-a-spear---spinning-in-a-circle-1773827922093_11: 7959063206969574342
+      pixellab-a-spear---spinning-in-a-circle-1773827922093_12: 440971188368329434
+      pixellab-a-spear---spinning-in-a-circle-1773827922093_13: 3070276457983248265
+      pixellab-a-spear---spinning-in-a-circle-1773827922093_14: -2148511796136045999
+      pixellab-a-spear---spinning-in-a-circle-1773827922093_15: -7750917164951546514
+      pixellab-a-spear---spinning-in-a-circle-1773827922093_2: -7208901668134176707
+      pixellab-a-spear---spinning-in-a-circle-1773827922093_3: 5425593969624872058
+      pixellab-a-spear---spinning-in-a-circle-1773827922093_4: 1618773809365941057
+      pixellab-a-spear---spinning-in-a-circle-1773827922093_5: -8102169244326852557
+      pixellab-a-spear---spinning-in-a-circle-1773827922093_6: 1302823889076498550
+      pixellab-a-spear---spinning-in-a-circle-1773827922093_7: 1760528451203362635
+      pixellab-a-spear---spinning-in-a-circle-1773827922093_8: -5248153688496971281
+      pixellab-a-spear---spinning-in-a-circle-1773827922093_9: -7564373152659894284
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

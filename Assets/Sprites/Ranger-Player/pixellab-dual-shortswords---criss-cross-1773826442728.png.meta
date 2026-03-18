@@ -1,0 +1,663 @@
+fileFormatVersion: 2
+guid: 2aa09d7cd137d490e8545bd10151a292
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2822112896006387628
+    second: pixellab-dual-shortswords---criss-cross-1773826442728_0
+  - first:
+      213: -7008425249337302043
+    second: pixellab-dual-shortswords---criss-cross-1773826442728_1
+  - first:
+      213: 2256537976163755821
+    second: pixellab-dual-shortswords---criss-cross-1773826442728_2
+  - first:
+      213: -871921475058677310
+    second: pixellab-dual-shortswords---criss-cross-1773826442728_3
+  - first:
+      213: -6462028651001264221
+    second: pixellab-dual-shortswords---criss-cross-1773826442728_4
+  - first:
+      213: -5387490350352706951
+    second: pixellab-dual-shortswords---criss-cross-1773826442728_5
+  - first:
+      213: -1211398554220043814
+    second: pixellab-dual-shortswords---criss-cross-1773826442728_6
+  - first:
+      213: -8516656709571356904
+    second: pixellab-dual-shortswords---criss-cross-1773826442728_7
+  - first:
+      213: 5940192179722060568
+    second: pixellab-dual-shortswords---criss-cross-1773826442728_8
+  - first:
+      213: -6184213309848898031
+    second: pixellab-dual-shortswords---criss-cross-1773826442728_9
+  - first:
+      213: -5408891487382126036
+    second: pixellab-dual-shortswords---criss-cross-1773826442728_10
+  - first:
+      213: -3615221009028227817
+    second: pixellab-dual-shortswords---criss-cross-1773826442728_11
+  - first:
+      213: -769135817374295879
+    second: pixellab-dual-shortswords---criss-cross-1773826442728_12
+  - first:
+      213: -3435415193561848490
+    second: pixellab-dual-shortswords---criss-cross-1773826442728_13
+  - first:
+      213: 4083706915257640750
+    second: pixellab-dual-shortswords---criss-cross-1773826442728_14
+  - first:
+      213: 907219575627764052
+    second: pixellab-dual-shortswords---criss-cross-1773826442728_15
+  - first:
+      213: 8755791522795598600
+    second: pixellab-dual-shortswords---criss-cross-1773826442728_16
+  - first:
+      213: 2738180176570031420
+    second: pixellab-dual-shortswords---criss-cross-1773826442728_17
+  - first:
+      213: -5008549908717909165
+    second: pixellab-dual-shortswords---criss-cross-1773826442728_18
+  - first:
+      213: 7705422744390776879
+    second: pixellab-dual-shortswords---criss-cross-1773826442728_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pixellab-dual-shortswords---criss-cross-1773826442728_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 193
+        width: 27
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca7728a0ab82a2720800000000000000
+      internalID: 2822112896006387628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-dual-shortswords---criss-cross-1773826442728_1
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 193
+        width: 27
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e32f523e521dbe90800000000000000
+      internalID: -7008425249337302043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-dual-shortswords---criss-cross-1773826442728_2
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 195
+        width: 57
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d276b6b6555d05f10800000000000000
+      internalID: 2256537976163755821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-dual-shortswords---criss-cross-1773826442728_3
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 193
+        width: 54
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c9c71fb90056e3f0800000000000000
+      internalID: -871921475058677310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-dual-shortswords---criss-cross-1773826442728_4
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 195
+        width: 54
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a74ca0ed234256a0800000000000000
+      internalID: -6462028651001264221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-dual-shortswords---criss-cross-1773826442728_5
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 131
+        width: 54
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 972d16c021acb35b0800000000000000
+      internalID: -5387490350352706951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-dual-shortswords---criss-cross-1773826442728_6
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 131
+        width: 54
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad1ea46ee6f303fe0800000000000000
+      internalID: -1211398554220043814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-dual-shortswords---criss-cross-1773826442728_7
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 129
+        width: 56
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8175d0888d1cec980800000000000000
+      internalID: -8516656709571356904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-dual-shortswords---criss-cross-1773826442728_8
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 129
+        width: 56
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81303e1a05dcf6250800000000000000
+      internalID: 5940192179722060568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-dual-shortswords---criss-cross-1773826442728_9
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 66
+        width: 54
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 116b63392c24d2aa0800000000000000
+      internalID: -6184213309848898031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-dual-shortswords---criss-cross-1773826442728_10
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 65
+        width: 28
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2244f989d1cfe4b0800000000000000
+      internalID: -5408891487382126036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-dual-shortswords---criss-cross-1773826442728_11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 65
+        width: 28
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71dd75485a724ddc0800000000000000
+      internalID: -3615221009028227817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-dual-shortswords---criss-cross-1773826442728_12
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 65
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b810659c0b7355f0800000000000000
+      internalID: -769135817374295879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-dual-shortswords---criss-cross-1773826442728_13
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 65
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65524c34514f250d0800000000000000
+      internalID: -3435415193561848490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-dual-shortswords---criss-cross-1773826442728_14
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e27ecb29dcd3ca830800000000000000
+      internalID: 4083706915257640750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-dual-shortswords---criss-cross-1773826442728_15
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 451d29ab567179c00800000000000000
+      internalID: 907219575627764052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-dual-shortswords---criss-cross-1773826442728_16
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 1
+        width: 25
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 803bb93fff1d28970800000000000000
+      internalID: 8755791522795598600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-dual-shortswords---criss-cross-1773826442728_17
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1
+        width: 25
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3d1973fc58fff520800000000000000
+      internalID: 2738180176570031420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-dual-shortswords---criss-cross-1773826442728_18
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 1
+        width: 25
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35bcd0bf46e0e7ab0800000000000000
+      internalID: -5008549908717909165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-dual-shortswords---criss-cross-1773826442728_19
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 1
+        width: 25
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f28b0a339292fea60800000000000000
+      internalID: 7705422744390776879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      pixellab-dual-shortswords---criss-cross-1773826442728_0: 2822112896006387628
+      pixellab-dual-shortswords---criss-cross-1773826442728_1: -7008425249337302043
+      pixellab-dual-shortswords---criss-cross-1773826442728_10: -5408891487382126036
+      pixellab-dual-shortswords---criss-cross-1773826442728_11: -3615221009028227817
+      pixellab-dual-shortswords---criss-cross-1773826442728_12: -769135817374295879
+      pixellab-dual-shortswords---criss-cross-1773826442728_13: -3435415193561848490
+      pixellab-dual-shortswords---criss-cross-1773826442728_14: 4083706915257640750
+      pixellab-dual-shortswords---criss-cross-1773826442728_15: 907219575627764052
+      pixellab-dual-shortswords---criss-cross-1773826442728_16: 8755791522795598600
+      pixellab-dual-shortswords---criss-cross-1773826442728_17: 2738180176570031420
+      pixellab-dual-shortswords---criss-cross-1773826442728_18: -5008549908717909165
+      pixellab-dual-shortswords---criss-cross-1773826442728_19: 7705422744390776879
+      pixellab-dual-shortswords---criss-cross-1773826442728_2: 2256537976163755821
+      pixellab-dual-shortswords---criss-cross-1773826442728_3: -871921475058677310
+      pixellab-dual-shortswords---criss-cross-1773826442728_4: -6462028651001264221
+      pixellab-dual-shortswords---criss-cross-1773826442728_5: -5387490350352706951
+      pixellab-dual-shortswords---criss-cross-1773826442728_6: -1211398554220043814
+      pixellab-dual-shortswords---criss-cross-1773826442728_7: -8516656709571356904
+      pixellab-dual-shortswords---criss-cross-1773826442728_8: 5940192179722060568
+      pixellab-dual-shortswords---criss-cross-1773826442728_9: -6184213309848898031
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

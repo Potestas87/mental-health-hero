@@ -1,0 +1,559 @@
+fileFormatVersion: 2
+guid: 692e09888d671470cb83c4be9c8f109a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4482410643562984673
+    second: pixellab-A-floating-sword---swiping-clo-1773824821358_0
+  - first:
+      213: 8769938456889480473
+    second: pixellab-A-floating-sword---swiping-clo-1773824821358_1
+  - first:
+      213: 7898191916174788466
+    second: pixellab-A-floating-sword---swiping-clo-1773824821358_2
+  - first:
+      213: -1564507115070626229
+    second: pixellab-A-floating-sword---swiping-clo-1773824821358_3
+  - first:
+      213: 1851080053971968720
+    second: pixellab-A-floating-sword---swiping-clo-1773824821358_4
+  - first:
+      213: -3675904706890349883
+    second: pixellab-A-floating-sword---swiping-clo-1773824821358_5
+  - first:
+      213: -3503638871519972121
+    second: pixellab-A-floating-sword---swiping-clo-1773824821358_6
+  - first:
+      213: -8344740578372825367
+    second: pixellab-A-floating-sword---swiping-clo-1773824821358_7
+  - first:
+      213: 9097783008341171624
+    second: pixellab-A-floating-sword---swiping-clo-1773824821358_8
+  - first:
+      213: -7703000133456374562
+    second: pixellab-A-floating-sword---swiping-clo-1773824821358_9
+  - first:
+      213: 3620255684502397857
+    second: pixellab-A-floating-sword---swiping-clo-1773824821358_10
+  - first:
+      213: 4871450205278110204
+    second: pixellab-A-floating-sword---swiping-clo-1773824821358_11
+  - first:
+      213: -8831019028583656400
+    second: pixellab-A-floating-sword---swiping-clo-1773824821358_12
+  - first:
+      213: 5702404069939135956
+    second: pixellab-A-floating-sword---swiping-clo-1773824821358_13
+  - first:
+      213: 3717249420942314884
+    second: pixellab-A-floating-sword---swiping-clo-1773824821358_14
+  - first:
+      213: -8767992740376733471
+    second: pixellab-A-floating-sword---swiping-clo-1773824821358_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pixellab-A-floating-sword---swiping-clo-1773824821358_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 191
+        width: 45
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e470034bb8b43e30800000000000000
+      internalID: 4482410643562984673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-floating-sword---swiping-clo-1773824821358_1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 200
+        width: 56
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9155fe8bf8415b970800000000000000
+      internalID: 8769938456889480473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-floating-sword---swiping-clo-1773824821358_2
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 193
+        width: 56
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 277c57b83b30c9d60800000000000000
+      internalID: 7898191916174788466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-floating-sword---swiping-clo-1773824821358_3
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 191
+        width: 56
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b46e4a56111c94ae0800000000000000
+      internalID: -1564507115070626229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-floating-sword---swiping-clo-1773824821358_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 129
+        width: 64
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d26fcb608b50b910800000000000000
+      internalID: 1851080053971968720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-floating-sword---swiping-clo-1773824821358_5
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 136
+        width: 55
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c24d9515209cfcc0800000000000000
+      internalID: -3675904706890349883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-floating-sword---swiping-clo-1773824821358_6
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 136
+        width: 55
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e43dc96203906fc0800000000000000
+      internalID: -3503638871519972121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-floating-sword---swiping-clo-1773824821358_7
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 128
+        width: 55
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eecc4308a6813c80800000000000000
+      internalID: -8344740578372825367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-floating-sword---swiping-clo-1773824821358_8
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 64
+        width: 30
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ad92c7a171d14e70800000000000000
+      internalID: 9097783008341171624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-floating-sword---swiping-clo-1773824821358_9
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 65
+        width: 54
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed4db8cd032791590800000000000000
+      internalID: -7703000133456374562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-floating-sword---swiping-clo-1773824821358_10
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 65
+        width: 54
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a3aad63d5bbd3230800000000000000
+      internalID: 3620255684502397857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-floating-sword---swiping-clo-1773824821358_11
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 66
+        width: 61
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf10b92d62eda9340800000000000000
+      internalID: 4871450205278110204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-floating-sword---swiping-clo-1773824821358_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4
+        width: 64
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0345e847bfae17580800000000000000
+      internalID: -8831019028583656400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-floating-sword---swiping-clo-1773824821358_13
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 3
+        width: 55
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d5c67af942032f40800000000000000
+      internalID: 5702404069939135956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-floating-sword---swiping-clo-1773824821358_14
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 7
+        width: 48
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48d0bcc47a2569330800000000000000
+      internalID: 3717249420942314884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-floating-sword---swiping-clo-1773824821358_15
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 3
+        width: 55
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e814a4be05d15680800000000000000
+      internalID: -8767992740376733471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      pixellab-A-floating-sword---swiping-clo-1773824821358_0: 4482410643562984673
+      pixellab-A-floating-sword---swiping-clo-1773824821358_1: 8769938456889480473
+      pixellab-A-floating-sword---swiping-clo-1773824821358_10: 3620255684502397857
+      pixellab-A-floating-sword---swiping-clo-1773824821358_11: 4871450205278110204
+      pixellab-A-floating-sword---swiping-clo-1773824821358_12: -8831019028583656400
+      pixellab-A-floating-sword---swiping-clo-1773824821358_13: 5702404069939135956
+      pixellab-A-floating-sword---swiping-clo-1773824821358_14: 3717249420942314884
+      pixellab-A-floating-sword---swiping-clo-1773824821358_15: -8767992740376733471
+      pixellab-A-floating-sword---swiping-clo-1773824821358_2: 7898191916174788466
+      pixellab-A-floating-sword---swiping-clo-1773824821358_3: -1564507115070626229
+      pixellab-A-floating-sword---swiping-clo-1773824821358_4: 1851080053971968720
+      pixellab-A-floating-sword---swiping-clo-1773824821358_5: -3675904706890349883
+      pixellab-A-floating-sword---swiping-clo-1773824821358_6: -3503638871519972121
+      pixellab-A-floating-sword---swiping-clo-1773824821358_7: -8344740578372825367
+      pixellab-A-floating-sword---swiping-clo-1773824821358_8: 9097783008341171624
+      pixellab-A-floating-sword---swiping-clo-1773824821358_9: -7703000133456374562
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

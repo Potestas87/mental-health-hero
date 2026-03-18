@@ -1,0 +1,559 @@
+fileFormatVersion: 2
+guid: 38e038f2749a640829402b486c342a79
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8760952994665797592
+    second: pixellab-A-floating-axe---moving-forwar-1773825008895_0
+  - first:
+      213: -5682811211206588513
+    second: pixellab-A-floating-axe---moving-forwar-1773825008895_1
+  - first:
+      213: 1781683126392497412
+    second: pixellab-A-floating-axe---moving-forwar-1773825008895_2
+  - first:
+      213: 2779988346500584299
+    second: pixellab-A-floating-axe---moving-forwar-1773825008895_3
+  - first:
+      213: -7674796101193580330
+    second: pixellab-A-floating-axe---moving-forwar-1773825008895_4
+  - first:
+      213: -4978453191644279249
+    second: pixellab-A-floating-axe---moving-forwar-1773825008895_5
+  - first:
+      213: 3104373249760810168
+    second: pixellab-A-floating-axe---moving-forwar-1773825008895_6
+  - first:
+      213: 2445177098934734671
+    second: pixellab-A-floating-axe---moving-forwar-1773825008895_7
+  - first:
+      213: -3435039148991958106
+    second: pixellab-A-floating-axe---moving-forwar-1773825008895_8
+  - first:
+      213: 6994193955600305479
+    second: pixellab-A-floating-axe---moving-forwar-1773825008895_9
+  - first:
+      213: 1745193185344069309
+    second: pixellab-A-floating-axe---moving-forwar-1773825008895_10
+  - first:
+      213: 3993478312714438783
+    second: pixellab-A-floating-axe---moving-forwar-1773825008895_11
+  - first:
+      213: 1717902670375813438
+    second: pixellab-A-floating-axe---moving-forwar-1773825008895_12
+  - first:
+      213: 1808702166780535011
+    second: pixellab-A-floating-axe---moving-forwar-1773825008895_13
+  - first:
+      213: -1424263816100692488
+    second: pixellab-A-floating-axe---moving-forwar-1773825008895_14
+  - first:
+      213: -7536557467917588211
+    second: pixellab-A-floating-axe---moving-forwar-1773825008895_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pixellab-A-floating-axe---moving-forwar-1773825008895_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 203
+        width: 56
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d713f4c458259970800000000000000
+      internalID: 8760952994665797592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-floating-axe---moving-forwar-1773825008895_1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 205
+        width: 51
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f978c6eef499221b0800000000000000
+      internalID: -5682811211206588513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-floating-axe---moving-forwar-1773825008895_2
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 202
+        width: 47
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 405aeea1d5fc9b810800000000000000
+      internalID: 1781683126392497412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-floating-axe---moving-forwar-1773825008895_3
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 203
+        width: 46
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6394e01ca0849620800000000000000
+      internalID: 2779988346500584299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-floating-axe---moving-forwar-1773825008895_4
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 138
+        width: 47
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d0cdc8db95ad7590800000000000000
+      internalID: -7674796101193580330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-floating-axe---moving-forwar-1773825008895_5
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 143
+        width: 55
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2e022df23bf8eab0800000000000000
+      internalID: -4978453191644279249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-floating-axe---moving-forwar-1773825008895_6
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 134
+        width: 36
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b4d732e503f41b20800000000000000
+      internalID: 3104373249760810168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-floating-axe---moving-forwar-1773825008895_7
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 143
+        width: 55
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4fcceacd930fe120800000000000000
+      internalID: 2445177098934734671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-floating-axe---moving-forwar-1773825008895_8
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 72
+        width: 55
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a336c6f71a4450d0800000000000000
+      internalID: -3435039148991958106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-floating-axe---moving-forwar-1773825008895_9
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 75
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74d8db5885e501160800000000000000
+      internalID: 6994193955600305479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-floating-axe---moving-forwar-1773825008895_10
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 75
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbe9dd4a4fb283810800000000000000
+      internalID: 1745193185344069309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-floating-axe---moving-forwar-1773825008895_11
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 78
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f780297fd5fab6730800000000000000
+      internalID: 3993478312714438783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-floating-axe---moving-forwar-1773825008895_12
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 5
+        width: 36
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e31027a706737d710800000000000000
+      internalID: 1717902670375813438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-floating-axe---moving-forwar-1773825008895_13
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 5
+        width: 36
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e0ee6ba90dc91910800000000000000
+      internalID: 1808702166780535011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-floating-axe---moving-forwar-1773825008895_14
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 5
+        width: 36
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fd30e6fa9ffb3ce0800000000000000
+      internalID: -1424263816100692488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-floating-axe---moving-forwar-1773825008895_15
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 5
+        width: 36
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d09647fc9e4c86790800000000000000
+      internalID: -7536557467917588211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      pixellab-A-floating-axe---moving-forwar-1773825008895_0: 8760952994665797592
+      pixellab-A-floating-axe---moving-forwar-1773825008895_1: -5682811211206588513
+      pixellab-A-floating-axe---moving-forwar-1773825008895_10: 1745193185344069309
+      pixellab-A-floating-axe---moving-forwar-1773825008895_11: 3993478312714438783
+      pixellab-A-floating-axe---moving-forwar-1773825008895_12: 1717902670375813438
+      pixellab-A-floating-axe---moving-forwar-1773825008895_13: 1808702166780535011
+      pixellab-A-floating-axe---moving-forwar-1773825008895_14: -1424263816100692488
+      pixellab-A-floating-axe---moving-forwar-1773825008895_15: -7536557467917588211
+      pixellab-A-floating-axe---moving-forwar-1773825008895_2: 1781683126392497412
+      pixellab-A-floating-axe---moving-forwar-1773825008895_3: 2779988346500584299
+      pixellab-A-floating-axe---moving-forwar-1773825008895_4: -7674796101193580330
+      pixellab-A-floating-axe---moving-forwar-1773825008895_5: -4978453191644279249
+      pixellab-A-floating-axe---moving-forwar-1773825008895_6: 3104373249760810168
+      pixellab-A-floating-axe---moving-forwar-1773825008895_7: 2445177098934734671
+      pixellab-A-floating-axe---moving-forwar-1773825008895_8: -3435039148991958106
+      pixellab-A-floating-axe---moving-forwar-1773825008895_9: 6994193955600305479
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

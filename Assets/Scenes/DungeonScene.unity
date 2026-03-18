@@ -2483,6 +2483,10 @@ MonoBehaviour:
     basicFxTriggerName: PlayBasic
     movementFxTriggerName: PlayMove
     aoeFxTriggerName: PlayAoe
+    basicFxRotationOffsetZ: 0
+    movementFxRotationOffsetZ: 0
+    aoeFxRotationOffsetZ: 0
+    snapFxToEightDirections: 1
     attackEffectOffset: 0.9
     attackEffectLifetime: 0.25
     movementAbilityCooldownSeconds: 4.5
@@ -2517,6 +2521,10 @@ MonoBehaviour:
     basicFxTriggerName: PlayBasic
     movementFxTriggerName: PlayMove
     aoeFxTriggerName: PlayAoe
+    basicFxRotationOffsetZ: 0
+    movementFxRotationOffsetZ: 0
+    aoeFxRotationOffsetZ: 0
+    snapFxToEightDirections: 1
     attackEffectOffset: 0.9
     attackEffectLifetime: 0.25
     movementAbilityCooldownSeconds: 3.4
@@ -2551,6 +2559,10 @@ MonoBehaviour:
     basicFxTriggerName: PlayBasic
     movementFxTriggerName: PlayMove
     aoeFxTriggerName: PlayAoe
+    basicFxRotationOffsetZ: 0
+    movementFxRotationOffsetZ: 0
+    aoeFxRotationOffsetZ: 0
+    snapFxToEightDirections: 1
     attackEffectOffset: 0.9
     attackEffectLifetime: 0.25
     movementAbilityCooldownSeconds: 3.2
@@ -5187,6 +5199,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1344805388836259010, guid: 54a287d962d064d868057cf5393753c8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8760952994665797592, guid: 38e038f2749a640829402b486c342a79, type: 3}
     - target: {fileID: 4301200417219590784, guid: 54a287d962d064d868057cf5393753c8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.34443
