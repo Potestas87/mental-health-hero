@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: b4938019ac65e4371b2101568158f0b0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8880331321431760631
+    second: pixellab-flaring-in-and-out-1773784411844_0
+  - first:
+      213: 5763332130907081219
+    second: pixellab-flaring-in-and-out-1773784411844_1
+  - first:
+      213: 7505111915087467605
+    second: pixellab-flaring-in-and-out-1773784411844_2
+  - first:
+      213: -2086119245574155847
+    second: pixellab-flaring-in-and-out-1773784411844_3
+  - first:
+      213: 581854421262940609
+    second: pixellab-flaring-in-and-out-1773784411844_4
+  - first:
+      213: 6562716454106099798
+    second: pixellab-flaring-in-and-out-1773784411844_5
+  - first:
+      213: -4906963442383068992
+    second: pixellab-flaring-in-and-out-1773784411844_6
+  - first:
+      213: 7959603300176040871
+    second: pixellab-flaring-in-and-out-1773784411844_7
+  - first:
+      213: -2141914263144228262
+    second: pixellab-flaring-in-and-out-1773784411844_8
+  - first:
+      213: 5753640483331331615
+    second: pixellab-flaring-in-and-out-1773784411844_9
+  - first:
+      213: 8581362656731698730
+    second: pixellab-flaring-in-and-out-1773784411844_10
+  - first:
+      213: 3602010324336473946
+    second: pixellab-flaring-in-and-out-1773784411844_11
+  - first:
+      213: -1875085094221978674
+    second: pixellab-flaring-in-and-out-1773784411844_12
+  - first:
+      213: -2975246498859158644
+    second: pixellab-flaring-in-and-out-1773784411844_13
+  - first:
+      213: 8010008017987124077
+    second: pixellab-flaring-in-and-out-1773784411844_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pixellab-flaring-in-and-out-1773784411844_0
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 169
+        width: 46
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fe17bd69464d3b70800000000000000
+      internalID: 8880331321431760631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-flaring-in-and-out-1773784411844_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 164
+        width: 62
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30acf41a9087bff40800000000000000
+      internalID: 5763332130907081219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-flaring-in-and-out-1773784411844_2
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 156
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5541752e583872860800000000000000
+      internalID: 7505111915087467605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-flaring-in-and-out-1773784411844_3
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 147
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b15270599d9c03e0800000000000000
+      internalID: -2086119245574155847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-flaring-in-and-out-1773784411844_4
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 157
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c93e5a6389231800800000000000000
+      internalID: 581854421262940609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-flaring-in-and-out-1773784411844_5
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 152
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 650fa9028d3731b50800000000000000
+      internalID: 6562716454106099798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-flaring-in-and-out-1773784411844_6
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 156
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c0ede25fb6f6ebb0800000000000000
+      internalID: -4906963442383068992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-flaring-in-and-out-1773784411844_7
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 83
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a3150c9701367e60800000000000000
+      internalID: 7959603300176040871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-flaring-in-and-out-1773784411844_8
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 29
+        width: 87
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5a12f573546642e0800000000000000
+      internalID: -2141914263144228262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-flaring-in-and-out-1773784411844_9
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 97
+        width: 21
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f165546198909df40800000000000000
+      internalID: 5753640483331331615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-flaring-in-and-out-1773784411844_10
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 97
+        width: 21
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a269b4bcedf171770800000000000000
+      internalID: 8581362656731698730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-flaring-in-and-out-1773784411844_11
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 83
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a577d534e49ecf130800000000000000
+      internalID: 3602010324336473946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-flaring-in-and-out-1773784411844_12
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 37
+        width: 58
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec3e44b9a0c5af5e0800000000000000
+      internalID: -1875085094221978674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-flaring-in-and-out-1773784411844_13
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 23
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c837644a21dc5b6d0800000000000000
+      internalID: -2975246498859158644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-flaring-in-and-out-1773784411844_14
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 25
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6b37208ad3492f60800000000000000
+      internalID: 8010008017987124077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      pixellab-flaring-in-and-out-1773784411844_0: 8880331321431760631
+      pixellab-flaring-in-and-out-1773784411844_1: 5763332130907081219
+      pixellab-flaring-in-and-out-1773784411844_10: 8581362656731698730
+      pixellab-flaring-in-and-out-1773784411844_11: 3602010324336473946
+      pixellab-flaring-in-and-out-1773784411844_12: -1875085094221978674
+      pixellab-flaring-in-and-out-1773784411844_13: -2975246498859158644
+      pixellab-flaring-in-and-out-1773784411844_14: 8010008017987124077
+      pixellab-flaring-in-and-out-1773784411844_2: 7505111915087467605
+      pixellab-flaring-in-and-out-1773784411844_3: -2086119245574155847
+      pixellab-flaring-in-and-out-1773784411844_4: 581854421262940609
+      pixellab-flaring-in-and-out-1773784411844_5: 6562716454106099798
+      pixellab-flaring-in-and-out-1773784411844_6: -4906963442383068992
+      pixellab-flaring-in-and-out-1773784411844_7: 7959603300176040871
+      pixellab-flaring-in-and-out-1773784411844_8: -2141914263144228262
+      pixellab-flaring-in-and-out-1773784411844_9: 5753640483331331615
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

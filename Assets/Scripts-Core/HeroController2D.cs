@@ -14,6 +14,29 @@ public class HeroController2D : MonoBehaviour
         public int attackDamage = 20;
         public float attackRange = 1.2f;
         public float attackCooldownSeconds = 0.3f;
+        public float basicAttackMovementLockSeconds = 0.35f;
+        public GameObject classFxPrefab;
+        public string basicFxTriggerName = "PlayBasic";
+        public string movementFxTriggerName = "PlayMove";
+        public string aoeFxTriggerName = "PlayAoe";
+        public float basicFxRotationOffsetZ;
+        public float movementFxRotationOffsetZ;
+        public float aoeFxRotationOffsetZ;
+        public bool snapFxToEightDirections = true;
+        public float attackEffectOffset = 0.9f;
+        public float attackEffectLifetime = 0.25f;
+        public float movementAbilityCooldownSeconds = 4f;
+        public float movementAbilityDashDistance = 2.5f;
+        public int movementAbilityDamage = 12;
+        public float movementAbilityDamageRadius = 1.1f;
+        public float movementAbilityEffectOffset = 0.9f;
+        public float movementAbilityEffectLifetime = 0.3f;
+        public float aoeAbilityCooldownSeconds = 8f;
+        public int aoeAbilityDamage = 14;
+        public float aoeAbilityRadius = 1.8f;
+        public float aoeAbilityMovementLockSeconds = 0.45f;
+        public float aoeAbilityEffectOffset = 0f;
+        public float aoeAbilityEffectLifetime = 0.4f;
         public Sprite idleSprite;
         public RuntimeAnimatorController animatorController;
         public AnimationClip idleClip;
@@ -42,7 +65,16 @@ public class HeroController2D : MonoBehaviour
             moveSpeed = 3.5f,
             attackDamage = 24,
             attackRange = 1.15f,
-            attackCooldownSeconds = 0.34f
+            attackCooldownSeconds = 0.34f,
+            basicAttackMovementLockSeconds = 0.42f,
+            movementAbilityCooldownSeconds = 4.5f,
+            movementAbilityDashDistance = 2.2f,
+            movementAbilityDamage = 18,
+            movementAbilityDamageRadius = 1.15f,
+            aoeAbilityCooldownSeconds = 10f,
+            aoeAbilityDamage = 24,
+            aoeAbilityRadius = 2.0f,
+            aoeAbilityMovementLockSeconds = 0.58f
         },
         new PlayerClassArchetype
         {
@@ -51,7 +83,16 @@ public class HeroController2D : MonoBehaviour
             moveSpeed = 5.2f,
             attackDamage = 19,
             attackRange = 1.5f,
-            attackCooldownSeconds = 0.24f
+            attackCooldownSeconds = 0.24f,
+            basicAttackMovementLockSeconds = 0.22f,
+            movementAbilityCooldownSeconds = 3.4f,
+            movementAbilityDashDistance = 3.0f,
+            movementAbilityDamage = 12,
+            movementAbilityDamageRadius = 0.95f,
+            aoeAbilityCooldownSeconds = 9f,
+            aoeAbilityDamage = 16,
+            aoeAbilityRadius = 1.7f,
+            aoeAbilityMovementLockSeconds = 0.38f
         },
         new PlayerClassArchetype
         {
@@ -60,7 +101,16 @@ public class HeroController2D : MonoBehaviour
             moveSpeed = 4.1f,
             attackDamage = 16,
             attackRange = 2.25f,
-            attackCooldownSeconds = 0.2f
+            attackCooldownSeconds = 0.2f,
+            basicAttackMovementLockSeconds = 0.2f,
+            movementAbilityCooldownSeconds = 3.2f,
+            movementAbilityDashDistance = 2.7f,
+            movementAbilityDamage = 10,
+            movementAbilityDamageRadius = 1.25f,
+            aoeAbilityCooldownSeconds = 8f,
+            aoeAbilityDamage = 22,
+            aoeAbilityRadius = 2.25f,
+            aoeAbilityMovementLockSeconds = 0.5f
         }
     };
 
@@ -95,11 +145,37 @@ public class HeroController2D : MonoBehaviour
     private Vector2 _moveInput;
     private int _currentHp;
     private float _nextAttackTime;
+    private float _nextMovementAbilityTime;
+    private float _nextAoeAbilityTime;
+    private float _movementLockUntilTime;
     private bool _invertHorizontalFacing;
     private float _idleAnimSpeed = 1f;
     private float _runAnimSpeed = 1f;
     private float _attackAnimSpeed = 1f;
     private Vector2 _facingDirection = Vector2.down;
+    private float _attackEffectOffset = 0.9f;
+    private float _attackEffectLifetime = 0.25f;
+    private float _movementAbilityCooldownSeconds = 4f;
+    private float _movementAbilityDashDistance = 2.5f;
+    private int _movementAbilityDamage = 12;
+    private float _movementAbilityDamageRadius = 1.1f;
+    private float _movementAbilityEffectOffset = 0.9f;
+    private float _movementAbilityEffectLifetime = 0.3f;
+    private float _aoeAbilityCooldownSeconds = 8f;
+    private int _aoeAbilityDamage = 14;
+    private float _aoeAbilityRadius = 1.8f;
+    private float _aoeAbilityEffectOffset;
+    private float _aoeAbilityEffectLifetime = 0.4f;
+    private float _basicAttackMovementLockSeconds = 0.35f;
+    private float _aoeAbilityMovementLockSeconds = 0.45f;
+    private GameObject _classFxPrefab;
+    private string _basicFxTriggerName = "PlayBasic";
+    private string _movementFxTriggerName = "PlayMove";
+    private string _aoeFxTriggerName = "PlayAoe";
+    private float _basicFxRotationOffsetZ;
+    private float _movementFxRotationOffsetZ;
+    private float _aoeFxRotationOffsetZ;
+    private bool _snapFxToEightDirections = true;
 
     public int MaxHp => maxHp;
     public int CurrentHp => _currentHp;
@@ -115,15 +191,19 @@ public class HeroController2D : MonoBehaviour
 
     private void Update()
     {
+        var movementLocked = Time.time < _movementLockUntilTime;
         var keyboard = Keyboard.current;
         if (keyboard != null)
         {
             _moveInput = Vector2.zero;
 
-            if (keyboard.aKey.isPressed || keyboard.leftArrowKey.isPressed) _moveInput.x -= 1f;
-            if (keyboard.dKey.isPressed || keyboard.rightArrowKey.isPressed) _moveInput.x += 1f;
-            if (keyboard.sKey.isPressed || keyboard.downArrowKey.isPressed) _moveInput.y -= 1f;
-            if (keyboard.wKey.isPressed || keyboard.upArrowKey.isPressed) _moveInput.y += 1f;
+            if (!movementLocked)
+            {
+                if (keyboard.aKey.isPressed || keyboard.leftArrowKey.isPressed) _moveInput.x -= 1f;
+                if (keyboard.dKey.isPressed || keyboard.rightArrowKey.isPressed) _moveInput.x += 1f;
+                if (keyboard.sKey.isPressed || keyboard.downArrowKey.isPressed) _moveInput.y -= 1f;
+                if (keyboard.wKey.isPressed || keyboard.upArrowKey.isPressed) _moveInput.y += 1f;
+            }
         }
 
         _moveInput = _moveInput.normalized;
@@ -150,11 +230,17 @@ public class HeroController2D : MonoBehaviour
 
         if (keyboard != null && keyboard.spaceKey.wasPressedThisFrame)
         {
-            if (_animator != null)
-            {
-                _animator.SetTrigger(AttackTriggerName);
-            }
             PerformAttack();
+        }
+
+        if (keyboard != null && keyboard.qKey.wasPressedThisFrame)
+        {
+            UseMovementAbility();
+        }
+
+        if (keyboard != null && keyboard.eKey.wasPressedThisFrame)
+        {
+            UseAoeAbility();
         }
     }
 
@@ -171,6 +257,8 @@ public class HeroController2D : MonoBehaviour
         }
 
         _nextAttackTime = Time.time + Mathf.Max(0.05f, attackCooldownSeconds);
+        BeginMovementLock(_basicAttackMovementLockSeconds);
+        TriggerAttackAnimationAndEffect(_attackEffectOffset, _attackEffectLifetime, _basicFxTriggerName);
 
         var origin = attackOrigin != null ? (Vector2)attackOrigin.position : (Vector2)transform.position;
         var hits = Physics2D.OverlapCircleAll(origin, attackRange, enemyLayerMask);
@@ -183,6 +271,47 @@ public class HeroController2D : MonoBehaviour
                 enemy.TakeDamage(attackDamage);
             }
         }
+    }
+
+    public void UseMovementAbility()
+    {
+        if (Time.time < _nextMovementAbilityTime)
+        {
+            return;
+        }
+
+        _nextMovementAbilityTime = Time.time + Mathf.Max(0.1f, _movementAbilityCooldownSeconds);
+
+        var dir = _moveInput.sqrMagnitude > 0.0001f ? _moveInput : _facingDirection;
+        if (dir.sqrMagnitude <= 0.0001f)
+        {
+            dir = Vector2.down;
+        }
+        dir = dir.normalized;
+        _facingDirection = dir;
+
+        var dashDistance = Mathf.Max(0.1f, _movementAbilityDashDistance);
+        var startPos = _rb.position;
+        var endPos = startPos + dir * dashDistance;
+        _rb.position = endPos;
+
+        SpawnClassEffect(dir, _movementAbilityEffectOffset, _movementAbilityEffectLifetime, _movementFxTriggerName);
+        DamageEnemiesInCircle(endPos, _movementAbilityDamageRadius, _movementAbilityDamage);
+    }
+
+    public void UseAoeAbility()
+    {
+        if (Time.time < _nextAoeAbilityTime)
+        {
+            return;
+        }
+
+        _nextAoeAbilityTime = Time.time + Mathf.Max(0.1f, _aoeAbilityCooldownSeconds);
+        BeginMovementLock(_aoeAbilityMovementLockSeconds);
+        TriggerAttackAnimationAndEffect(_aoeAbilityEffectOffset, _aoeAbilityEffectLifetime, _aoeFxTriggerName);
+
+        var center = (Vector2)transform.position;
+        DamageEnemiesInCircle(center, _aoeAbilityRadius, _aoeAbilityDamage);
     }
 
     public void TakeDamage(int amount)
@@ -236,6 +365,29 @@ public class HeroController2D : MonoBehaviour
         _idleAnimSpeed = Mathf.Max(0.05f, archetype.idleAnimSpeed);
         _runAnimSpeed = Mathf.Max(0.05f, archetype.runAnimSpeed);
         _attackAnimSpeed = Mathf.Max(0.05f, archetype.attackAnimSpeed);
+        _attackEffectOffset = Mathf.Max(0f, archetype.attackEffectOffset);
+        _attackEffectLifetime = Mathf.Max(0.05f, archetype.attackEffectLifetime);
+        _classFxPrefab = archetype.classFxPrefab;
+        _basicFxTriggerName = string.IsNullOrWhiteSpace(archetype.basicFxTriggerName) ? "PlayBasic" : archetype.basicFxTriggerName.Trim();
+        _movementFxTriggerName = string.IsNullOrWhiteSpace(archetype.movementFxTriggerName) ? "PlayMove" : archetype.movementFxTriggerName.Trim();
+        _aoeFxTriggerName = string.IsNullOrWhiteSpace(archetype.aoeFxTriggerName) ? "PlayAoe" : archetype.aoeFxTriggerName.Trim();
+        _basicFxRotationOffsetZ = archetype.basicFxRotationOffsetZ;
+        _movementFxRotationOffsetZ = archetype.movementFxRotationOffsetZ;
+        _aoeFxRotationOffsetZ = archetype.aoeFxRotationOffsetZ;
+        _snapFxToEightDirections = archetype.snapFxToEightDirections;
+        _movementAbilityCooldownSeconds = Mathf.Max(0.1f, archetype.movementAbilityCooldownSeconds);
+        _movementAbilityDashDistance = Mathf.Max(0.1f, archetype.movementAbilityDashDistance);
+        _movementAbilityDamage = Mathf.Max(1, archetype.movementAbilityDamage);
+        _movementAbilityDamageRadius = Mathf.Max(0.2f, archetype.movementAbilityDamageRadius);
+        _movementAbilityEffectOffset = Mathf.Max(0f, archetype.movementAbilityEffectOffset);
+        _movementAbilityEffectLifetime = Mathf.Max(0.05f, archetype.movementAbilityEffectLifetime);
+        _aoeAbilityCooldownSeconds = Mathf.Max(0.1f, archetype.aoeAbilityCooldownSeconds);
+        _aoeAbilityDamage = Mathf.Max(1, archetype.aoeAbilityDamage);
+        _aoeAbilityRadius = Mathf.Max(0.2f, archetype.aoeAbilityRadius);
+        _aoeAbilityEffectOffset = archetype.aoeAbilityEffectOffset;
+        _aoeAbilityEffectLifetime = Mathf.Max(0.05f, archetype.aoeAbilityEffectLifetime);
+        _basicAttackMovementLockSeconds = Mathf.Max(0f, archetype.basicAttackMovementLockSeconds);
+        _aoeAbilityMovementLockSeconds = Mathf.Max(0f, archetype.aoeAbilityMovementLockSeconds);
         maxHp = Mathf.Max(1, archetype.maxHp);
         moveSpeed = Mathf.Max(0.5f, archetype.moveSpeed);
         attackDamage = Mathf.Max(1, archetype.attackDamage);
@@ -243,6 +395,99 @@ public class HeroController2D : MonoBehaviour
         attackCooldownSeconds = Mathf.Max(0.05f, archetype.attackCooldownSeconds);
         ApplyArchetypeVisuals(archetype);
         ResetHealthToFull();
+    }
+
+    private void BeginMovementLock(float durationSeconds)
+    {
+        var lockUntil = Time.time + Mathf.Max(0f, durationSeconds);
+        if (lockUntil > _movementLockUntilTime)
+        {
+            _movementLockUntilTime = lockUntil;
+        }
+    }
+
+    private void TriggerAttackAnimationAndEffect(float offset, float lifetime, string fxTriggerName)
+    {
+        if (_animator != null)
+        {
+            _animator.SetTrigger(AttackTriggerName);
+        }
+
+        SpawnClassEffect(_facingDirection, offset, lifetime, fxTriggerName);
+    }
+
+    private void SpawnClassEffect(Vector2 direction, float forwardOffset, float lifetime, string fxTriggerName)
+    {
+        if (_classFxPrefab == null)
+        {
+            return;
+        }
+
+        var dir = direction.sqrMagnitude > 0.0001f ? direction.normalized : Vector2.down;
+        var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        if (_snapFxToEightDirections)
+        {
+            angle = SnapAngleToEightDirections(angle);
+            var radians = angle * Mathf.Deg2Rad;
+            dir = new Vector2(Mathf.Cos(radians), Mathf.Sin(radians));
+        }
+
+        var spawnPos = (Vector2)transform.position + (dir * forwardOffset);
+        var rotation = Quaternion.Euler(0f, 0f, angle + GetFxRotationOffset(fxTriggerName));
+
+        // Use a rotated parent so clip-authored child transform keys do not cancel facing orientation.
+        var fxHolder = new GameObject("ClassFxHolder");
+        fxHolder.transform.SetPositionAndRotation(spawnPos, rotation);
+        var spawned = Instantiate(_classFxPrefab, fxHolder.transform);
+        spawned.transform.localPosition = Vector3.zero;
+        spawned.transform.localRotation = Quaternion.identity;
+
+        var fxAnimator = spawned.GetComponent<Animator>();
+        if (fxAnimator != null && !string.IsNullOrWhiteSpace(fxTriggerName))
+        {
+            fxAnimator.SetTrigger(fxTriggerName);
+        }
+
+        Destroy(fxHolder, Mathf.Max(0.05f, lifetime));
+    }
+
+    private static float SnapAngleToEightDirections(float angle)
+    {
+        var normalized = Mathf.Repeat(angle, 360f);
+        return Mathf.Round(normalized / 45f) * 45f;
+    }
+
+    private float GetFxRotationOffset(string fxTriggerName)
+    {
+        if (string.Equals(fxTriggerName, _basicFxTriggerName, System.StringComparison.Ordinal))
+        {
+            return _basicFxRotationOffsetZ;
+        }
+
+        if (string.Equals(fxTriggerName, _movementFxTriggerName, System.StringComparison.Ordinal))
+        {
+            return _movementFxRotationOffsetZ;
+        }
+
+        if (string.Equals(fxTriggerName, _aoeFxTriggerName, System.StringComparison.Ordinal))
+        {
+            return _aoeFxRotationOffsetZ;
+        }
+
+        return 0f;
+    }
+
+    private void DamageEnemiesInCircle(Vector2 center, float radius, int damage)
+    {
+        var hits = Physics2D.OverlapCircleAll(center, Mathf.Max(0.1f, radius), enemyLayerMask);
+        for (var i = 0; i < hits.Length; i++)
+        {
+            var enemy = hits[i].GetComponent<EnemyController2D>();
+            if (enemy != null)
+            {
+                enemy.TakeDamage(Mathf.Max(1, damage));
+            }
+        }
     }
 
     private bool TryGetClassArchetype(string classId, out PlayerClassArchetype archetype)

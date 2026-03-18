@@ -1,0 +1,585 @@
+fileFormatVersion: 2
+guid: 60a9b8894fdb64cdea7cd2d7411586ef
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8324578926322598777
+    second: pixellab-a-sparkling-streak-of-white-li-1773819579238_0
+  - first:
+      213: 441390862742396312
+    second: pixellab-a-sparkling-streak-of-white-li-1773819579238_1
+  - first:
+      213: 3399542947539125244
+    second: pixellab-a-sparkling-streak-of-white-li-1773819579238_2
+  - first:
+      213: 2399963944463118509
+    second: pixellab-a-sparkling-streak-of-white-li-1773819579238_3
+  - first:
+      213: -4745259670671221614
+    second: pixellab-a-sparkling-streak-of-white-li-1773819579238_4
+  - first:
+      213: 7352020179812299098
+    second: pixellab-a-sparkling-streak-of-white-li-1773819579238_5
+  - first:
+      213: 1912046712202182139
+    second: pixellab-a-sparkling-streak-of-white-li-1773819579238_6
+  - first:
+      213: 8125552123851901176
+    second: pixellab-a-sparkling-streak-of-white-li-1773819579238_7
+  - first:
+      213: 8616011798564786891
+    second: pixellab-a-sparkling-streak-of-white-li-1773819579238_8
+  - first:
+      213: -6495710758368997772
+    second: pixellab-a-sparkling-streak-of-white-li-1773819579238_9
+  - first:
+      213: 840996031287876231
+    second: pixellab-a-sparkling-streak-of-white-li-1773819579238_10
+  - first:
+      213: 1002464995850369743
+    second: pixellab-a-sparkling-streak-of-white-li-1773819579238_11
+  - first:
+      213: 8122117411017313244
+    second: pixellab-a-sparkling-streak-of-white-li-1773819579238_12
+  - first:
+      213: -8407161249718615328
+    second: pixellab-a-sparkling-streak-of-white-li-1773819579238_13
+  - first:
+      213: -7764604788001695545
+    second: pixellab-a-sparkling-streak-of-white-li-1773819579238_14
+  - first:
+      213: 1894048979737187304
+    second: pixellab-a-sparkling-streak-of-white-li-1773819579238_15
+  - first:
+      213: -4396871895145571159
+    second: pixellab-a-sparkling-streak-of-white-li-1773819579238_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pixellab-a-sparkling-streak-of-white-li-1773819579238_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 223
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78cb6df6297297c80800000000000000
+      internalID: -8324578926322598777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-a-sparkling-streak-of-white-li-1773819579238_1
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 217
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89d1ddca6a2202600800000000000000
+      internalID: 441390862742396312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-a-sparkling-streak-of-white-li-1773819579238_2
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 218
+        width: 34
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf301ca9c4a9d2f20800000000000000
+      internalID: 3399542947539125244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-a-sparkling-streak-of-white-li-1773819579238_3
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 216
+        width: 46
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da0387fed726e4120800000000000000
+      internalID: 2399963944463118509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-a-sparkling-streak-of-white-li-1773819579238_4
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 218
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29c97a29873752eb0800000000000000
+      internalID: -4745259670671221614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-a-sparkling-streak-of-white-li-1773819579238_5
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 218
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a51373f966f970660800000000000000
+      internalID: 7352020179812299098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-a-sparkling-streak-of-white-li-1773819579238_6
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 216
+        width: 51
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfdb3c2ba54f88a10800000000000000
+      internalID: 1912046712202182139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-a-sparkling-streak-of-white-li-1773819579238_7
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 150
+        width: 63
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f80d1a0b92c3c070800000000000000
+      internalID: 8125552123851901176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-a-sparkling-streak-of-white-li-1773819579238_8
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 148
+        width: 62
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc2570ac419329770800000000000000
+      internalID: 8616011798564786891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-a-sparkling-streak-of-white-li-1773819579238_9
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 167
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47e8bb32b799ad5a0800000000000000
+      internalID: -6495710758368997772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-a-sparkling-streak-of-white-li-1773819579238_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 148
+        width: 64
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78a5d664f61dbab00800000000000000
+      internalID: 840996031287876231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-a-sparkling-streak-of-white-li-1773819579238_11
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 147
+        width: 64
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcabc693a9879ed00800000000000000
+      internalID: 1002464995850369743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-a-sparkling-streak-of-white-li-1773819579238_12
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 168
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdbc3b3a0ce87b070800000000000000
+      internalID: 8122117411017313244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-a-sparkling-streak-of-white-li-1773819579238_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 82
+        width: 64
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e2c71de263c35b80800000000000000
+      internalID: -8407161249718615328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-a-sparkling-streak-of-white-li-1773819579238_14
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 101
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c89cdd75159e3490800000000000000
+      internalID: -7764604788001695545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-a-sparkling-streak-of-white-li-1773819579238_15
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 82
+        width: 60
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e31d601383094a10800000000000000
+      internalID: 1894048979737187304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-a-sparkling-streak-of-white-li-1773819579238_16
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 80
+        width: 53
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ac13f69e4c2bf2c0800000000000000
+      internalID: -4396871895145571159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      pixellab-a-sparkling-streak-of-white-li-1773819579238_0: -8324578926322598777
+      pixellab-a-sparkling-streak-of-white-li-1773819579238_1: 441390862742396312
+      pixellab-a-sparkling-streak-of-white-li-1773819579238_10: 840996031287876231
+      pixellab-a-sparkling-streak-of-white-li-1773819579238_11: 1002464995850369743
+      pixellab-a-sparkling-streak-of-white-li-1773819579238_12: 8122117411017313244
+      pixellab-a-sparkling-streak-of-white-li-1773819579238_13: -8407161249718615328
+      pixellab-a-sparkling-streak-of-white-li-1773819579238_14: -7764604788001695545
+      pixellab-a-sparkling-streak-of-white-li-1773819579238_15: 1894048979737187304
+      pixellab-a-sparkling-streak-of-white-li-1773819579238_16: -4396871895145571159
+      pixellab-a-sparkling-streak-of-white-li-1773819579238_2: 3399542947539125244
+      pixellab-a-sparkling-streak-of-white-li-1773819579238_3: 2399963944463118509
+      pixellab-a-sparkling-streak-of-white-li-1773819579238_4: -4745259670671221614
+      pixellab-a-sparkling-streak-of-white-li-1773819579238_5: 7352020179812299098
+      pixellab-a-sparkling-streak-of-white-li-1773819579238_6: 1912046712202182139
+      pixellab-a-sparkling-streak-of-white-li-1773819579238_7: 8125552123851901176
+      pixellab-a-sparkling-streak-of-white-li-1773819579238_8: 8616011798564786891
+      pixellab-a-sparkling-streak-of-white-li-1773819579238_9: -6495710758368997772
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
