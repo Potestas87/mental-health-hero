@@ -1118,8 +1118,8 @@ MonoBehaviour:
   resultShardsText: {fileID: 345009612}
   totalFloors: 3
   maxRunsPerDay: 2
-  enforceDailyLives: 0
-  useAuthoritativeFunctions: 0
+  enforceDailyLives: 1
+  useAuthoritativeFunctions: 1
   allowManualFloorClearForDebug: 0
   useWaveSpawning: 1
   wavesToSpawn: 3

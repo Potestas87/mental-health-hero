@@ -61,6 +61,7 @@ public class DungeonRunManager : MonoBehaviour
 
     private void Start()
     {
+        ResolveFunctionClientIfNeeded();
         ShowResultPanel(false, string.Empty, 0, 0);
         UpdateFloorHud();
         UpdateHpHud();
@@ -85,6 +86,7 @@ public class DungeonRunManager : MonoBehaviour
         {
             if (useAuthoritativeFunctions)
             {
+                ResolveFunctionClientIfNeeded();
                 if (functionClient == null)
                 {
                     SetStatus("CloudFunctionClient is not assigned.");
@@ -324,6 +326,7 @@ public class DungeonRunManager : MonoBehaviour
         {
             if (useAuthoritativeFunctions)
             {
+                ResolveFunctionClientIfNeeded();
                 if (functionClient == null)
                 {
                     SetStatus("CloudFunctionClient is not assigned.");
@@ -695,6 +698,20 @@ public class DungeonRunManager : MonoBehaviour
         {
             Debug.LogError("DungeonRunManager: Firebase init/sign-in failed: " + ex);
             return false;
+        }
+    }
+
+    private void ResolveFunctionClientIfNeeded()
+    {
+        if (functionClient != null)
+        {
+            return;
+        }
+
+        functionClient = FindFirstObjectByType<CloudFunctionClient>();
+        if (useAuthoritativeFunctions && functionClient == null)
+        {
+            Debug.LogWarning("DungeonRunManager: useAuthoritativeFunctions is enabled, but no CloudFunctionClient exists in scene.");
         }
     }
 
