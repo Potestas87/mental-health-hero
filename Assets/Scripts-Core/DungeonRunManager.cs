@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Firebase;
 using Firebase.Auth;
 using Firebase.Firestore;
+using Firebase.Functions;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -214,7 +215,7 @@ public class DungeonRunManager : MonoBehaviour
         catch (Exception ex)
         {
             Debug.LogError("StartRun failed: " + ex);
-            SetStatus("Start run failed: " + ex.Message);
+            SetStatus("Start run failed: " + FormatFirebaseError(ex));
         }
     }
 
@@ -462,7 +463,7 @@ public class DungeonRunManager : MonoBehaviour
         catch (Exception ex)
         {
             Debug.LogError("EndRun failed: " + ex);
-            SetStatus("Run save failed.");
+            SetStatus("Run save failed: " + FormatFirebaseError(ex));
             ShowResultPanel(true, "error", 0, 0);
             ApplyHudControlState();
         }
@@ -737,5 +738,15 @@ public class DungeonRunManager : MonoBehaviour
         }
 
         return raw.ToString();
+    }
+
+    private static string FormatFirebaseError(Exception ex)
+    {
+        if (ex is FunctionsException functionsEx)
+        {
+            return functionsEx.ErrorCode + " - " + functionsEx.Message;
+        }
+
+        return ex.Message;
     }
 }

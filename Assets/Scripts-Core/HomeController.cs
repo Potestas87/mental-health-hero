@@ -73,7 +73,7 @@ public class HomeController : MonoBehaviour
             CurrentSkillPoints = ReadInt(data, "skillPoints", 0);
             CurrentShards = ReadInt(data, "shards", 0);
 
-            var dayKey = DateTime.Now.ToString("yyyy_MM_dd");
+            var dayKey = GetServerDayKeyUtc();
             var dailyRef = BootstrapController.Db.Collection("users").Document(uid).Collection("daily_state").Document(dayKey);
             var dailySnap = await dailyRef.GetSnapshotAsync();
             var dailyData = dailySnap.Exists ? dailySnap.ToDictionary() : new Dictionary<string, object>();
@@ -186,5 +186,11 @@ public class HomeController : MonoBehaviour
         }
 
         return raw.ToString();
+    }
+
+    private static string GetServerDayKeyUtc()
+    {
+        var now = DateTime.UtcNow;
+        return now.ToString("yyyy_MM_dd");
     }
 }

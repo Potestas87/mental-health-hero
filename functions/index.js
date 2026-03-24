@@ -58,7 +58,7 @@ function requireAuth(request) {
   return uid;
 }
 
-exports.startRun = onCall({ region: REGION }, async (request) => {
+exports.startRun = onCall({ region: REGION, invoker: 'public' }, async (request) => {
   const uid = requireAuth(request);
 
   const userRef = db.collection('users').doc(uid);
@@ -120,7 +120,7 @@ exports.startRun = onCall({ region: REGION }, async (request) => {
   };
 });
 
-exports.endRun = onCall({ region: REGION }, async (request) => {
+exports.endRun = onCall({ region: REGION, invoker: 'public' }, async (request) => {
   const uid = requireAuth(request);
 
   const input = request.data || {};

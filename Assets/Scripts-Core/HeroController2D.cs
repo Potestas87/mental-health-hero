@@ -218,7 +218,8 @@ public class HeroController2D : MonoBehaviour
             else if (_moveInput.x > 0.01f) _spriteRenderer.flipX = _invertHorizontalFacing;
         }
 
-        if (_animator != null)
+        var hasAnimatorController = _animator != null && _animator.runtimeAnimatorController != null;
+        if (hasAnimatorController)
         {
             _animator.SetFloat(SpeedParam, _moveInput.sqrMagnitude);
             _animator.SetFloat(MoveXParam, _moveInput.x);
@@ -612,6 +613,11 @@ public class HeroController2D : MonoBehaviour
     private void ApplyAnimatorSpeedForCurrentClip()
     {
         if (_animator == null)
+        {
+            return;
+        }
+
+        if (_animator.runtimeAnimatorController == null || !_animator.isActiveAndEnabled)
         {
             return;
         }
